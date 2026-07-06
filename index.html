@@ -125,6 +125,71 @@
     }
 
     /* Hero Banner */
+
+    /* ── Hero ── */
+    .hero-slide {
+      width: 100%;
+      height: 70vh;
+      min-height: 520px;
+      position: relative;
+      background: linear-gradient(135deg, #1A1A1A 0%, #2C1810 50%, #1A1A1A 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .hero-slide::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 30% 50%, rgba(201,169,110,0.25), transparent 60%),
+                  radial-gradient(circle at 70% 30%, rgba(201,169,110,0.15), transparent 50%);
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 600'%3E%3C/svg%3E") center/cover;
+      opacity: 0.18;
+      mix-blend-mode: overlay;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: 2rem;
+    }
+    .hero-title {
+      font-family: 'Playfair Display',Georgia,serif;
+      font-size: clamp(2.4rem,6vw,4.2rem);
+      color: #fff;
+      text-shadow: 0 4px 30px rgba(201,169,110,0.9);
+      margin-bottom: 0.4rem;
+      letter-spacing: 2px;
+    }
+    .hero-sub {
+      color: rgba(255,255,255,0.85);
+      font-size: clamp(0.9rem,2.5vw,1.5rem);
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-bottom: 1.6rem;
+    }
+
+
+    .hero-slide { width:100%; height:70vh; min-height:520px; position:relative; background:linear-gradient(135deg,#1A1A1A 0%,#2C1810 50%,#1A1A1A 100%); display:flex; align-items:center; justify-content:center; overflow:hidden; }
+    .hero-slide::before { content:""; position:absolute; inset:0; background:radial-gradient(circle at 30% 50%, rgba(201,169,110,0.25), transparent 60%), radial-gradient(circle at 70% 30%, rgba(201,169,110,0.15), transparent 50%); }
+    .hero-overlay { position:absolute; inset:0; opacity:0.18; mix-blend-mode:overlay; }
+    .hero-content { position:relative; z-index:2; text-align:center; padding:2rem; }
+    .hero-title { font-family:'Playfair Display',Georgia,serif; font-size:clamp(2.4rem,6vw,4.2rem); color:#fff; text-shadow:0 4px 30px rgba(201,169,110,0.9); margin-bottom:0.4rem; letter-spacing:2px; }
+    .hero-sub { color:rgba(255,255,255,0.85); font-size:clamp(0.9rem,2.5vw,1.5rem); letter-spacing:4px; text-transform:uppercase; margin-bottom:1.6rem; }
+
+
+    .hero-slide { width:100%; height:70vh; min-height:520px; position:relative; background:linear-gradient(135deg,#1A1A1A 0%,#2C1810 50%,#1A1A1A 100%); display:flex; align-items:center; justify-content:center; overflow:hidden; }
+    .hero-slide::before { content:""; position:absolute; inset:0; background:radial-gradient(circle at 30% 50%, rgba(201,169,110,0.25), transparent 60%), radial-gradient(circle at 70% 30%, rgba(201,169,110,0.15), transparent 50%); }
+    .hero-overlay { position:absolute; inset:0; opacity:0.18; mix-blend-mode:overlay; }
+    .hero-content { position:relative; z-index:2; text-align:center; padding:2rem; }
+    .hero-title { font-family:'Playfair Display',Georgia,serif; font-size:clamp(2.4rem,6vw,4.2rem); color:#fff; text-shadow:0 4px 30px rgba(201,169,110,0.9); margin-bottom:0.4rem; letter-spacing:2px; }
+    .hero-sub { color:rgba(255,255,255,0.85); font-size:clamp(0.9rem,2.5vw,1.5rem); letter-spacing:4px; text-transform:uppercase; margin-bottom:1.6rem; }
+
     .hero-banner {
       background: linear-gradient(135deg, var(--gold-light) 0%, #F5ECD0 100%);
       text-align: center;
@@ -354,554 +419,67 @@
     @media (max-width: 400px) {
       .products { grid-template-columns: 1fr; }
     }
-  </style>
+  </style></style></style></style>
 </head>
 <body>
 
 <header>
-  <h1>Chez <span>Virginie</span></h1>
-  <div class="divider"></div>
-  <p>Parfums &middot; Maquillage &middot; Soins Visage &middot; Bien-être</p>
+  <div class="hero-slide">
+    <div class="hero-overlay"></div>
+  </div>
+  <div class="hero-content">
+    <h1 class="hero-title">Chez Virginie</h1>
+    <p class="hero-sub">Copy Shogun — Reproduction certifiée</p>
+    <a href="#shogun-homme" class="btn-cta">🛒 Commander maintenant</a>
+  </div>
 </header>
 
 <nav id="nav">
-  <a href="#parfums-femme" class="active">Parfums Femme</a>
-  <a href="#parfums-homme">Parfums Homme</a>
-  <a href="#coffrets">Coffrets</a>
-  <a href="#makeup">Maquillage</a>
-  <a href="#soins-visage">Soins Visage</a>
-  <a href="#soins-homme">Soins Homme</a>
-  <a href="#olfazeta">Olfazeta</a>
-  <a href="#baby">Bébé</a>
-  <a href="#ambiance">Ambiance</a>
+  <a href="#shogun-homme" class="active">Shogun Homme</a>
+  <a href="#shogun-mixte">Shogun Mixte</a>
+  <a href="#luxury-olfazeta">Luxury Olfazeta</a>
+  <a href="#tom-ford-luxury">Tom Ford Luxury</a>
+  <a href="#parfums-d-ambiance">Ambiance</a>
 </nav>
 
-<section id="shogun-homme">
-  <div class="section-title">
-    <h2>Shogun Homme</h2>
-    <div class="divider"></div>
-    <p>Codes 001-292 — Reproduction certifiée Shogun</p>
-  </div>
-  <div class="products">
+
+
+
     <div class="product-card">
-      <div class="img-wrap"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjgwIj4KICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjI4MCIgZmlsbD0iI0M5QTk2RSIvPgogIDxyZWN0IHg9IjYwIiB5PSI0MCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjIwIiByeD0iMiIgZmlsbD0iIzFBMUExQSIvPgogIDxyZWN0IHg9IjcwIiB5PSI2MCIgd2lkdGg9IjYwIiBoZWlnaHQ9IjE1IiBmaWxsPSIjMUExQTFBIiBvcGFjaXR5PSIwLjciLz4KICA8cmVjdCB4PSI1MCIgeT0iNzUiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTQwIiByeD0iNCIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4yNSIvPgogIDxyZWN0IHg9IjU1IiB5PSI4MCIgd2lkdGg9IjkwIiBoZWlnaHQ9IjEzMCIgcng9IjIiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjkiLz4KICA8cmVjdCB4PSI2NSIgeT0iOTAiIHdpZHRoPSI3MCIgaGVpZ2h0PSI0MCIgcng9IjIiIGZpbGw9IiNDOUE5NkUiIG9wYWNpdHk9IjAuNiIvPgogIDx0ZXh0IHg9IjEwMCIgeT0iMTE1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2VyaWYiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IndoaXRlIiBmb250LXdlaWdodD0iYm9sZCI+U0hPR1VOPC90ZXh0PgogIDx0ZXh0IHg9IjEwMCIgeT0iMTMwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSI3IiBmaWxsPSIjMUExQTFBIj5QQVJGVU08L3RleHQ+CiAgPHJlY3QgeD0iODAiIHk9IjIzMCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjI1IiByeD0iMiIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4zIi8+Cjwvc3ZnPg==" alt="ONE MILLION" loading="lazy"></div>
+      <div class="img-wrap"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjgwIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjI4MCIgZmlsbD0iI0U3RDRDNCIvPjxjaXJjbGUgY3g9IjEwMCIgY3k9IjE2MCIgcj0iMzAiIGZpbGw9IiMxQTFEMUEiLz48dGV4dCB4PSIxMDAiIHk9IjE4MCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXNpemU9IjEwIj5TVyBBQlJFPC90ZXh0Pjwvc3ZnPg==" alt="Code 010 Parfums d'intérieur" loading="lazy"></div>
       <div class="info">
-        <span class="category-label">#001</span><span class="category-label" style="background:#e74c3c;margin-left:6px;">Gel douche</span>
-        <h3>ONE MILLION</h3>
-        <div class="brand">PACO RABANNE</div>
-        <div class="desc">Copy certifiée Shogun — Reproduction fidèle.</div>
-        <div style="margin-top:8px;"><a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : ONE MILLION PACO RABANNE - 15ml - Code 001" target="_blank" class="btn-order-wa" style="margin:2px;">💬 15ml — 1,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : ONE MILLION PACO RABANNE - 30ml - Code 001" target="_blank" class="btn-order-wa" style="margin:2px;">💬 30ml — 2,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : ONE MILLION PACO RABANNE - 70ml - Code 001" target="_blank" class="btn-order-wa" style="margin:2px;">💬 70ml — 4,500 FCFA</a> </div>
+        <span class="category-label">#010</span>
+        <h3>Parfums d'Ambiance</h3>
+        <div class="brand">Chogan</div>
+        <div class="desc">Parfums d'intérieur certifiés Shogun — Diffusez l'élégance dans vos espaces.</div>
+        <div style="margin-top:8px;"><a href="https://wa.me/237691719393?text=Bonjour%20!%20Je%20souhaite%20commander%20les%20Parfums%20d%27Ambiance%20Chogan%20-%20Code%20010%20(100ml%2F%20200ml%2F%20500ml)" target="_blank" class="btn-order-wa" style="margin:2px;">💬 100ml — 4,000 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour%20!%20Je%20souhaite%20commander%20les%20Parfums%20d%27Ambiance%20Chogan%20-%20Code%20010%20(100ml%2F%20200ml%2F%20500ml)" target="_blank" class="btn-order-wa" style="margin:2px;">💬 200ml — 6,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour%20!%20Je%20souhaite%20commander%20les%20Parfums%20d%27Ambiance%20Chogan%20-%20Code%20010%20(100ml%2F%20200ml%2F%20500ml)" target="_blank" class="btn-order-wa" style="margin:2px;">💬 500ml — 12,000 FCFA</a></div>
       </div>
     </div>
+
     <div class="product-card">
-      <div class="img-wrap"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjgwIj4KICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjI4MCIgZmlsbD0iI0M5QTk2RSIvPgogIDxyZWN0IHg9IjYwIiB5PSI0MCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjIwIiByeD0iMiIgZmlsbD0iIzFBMUExQSIvPgogIDxyZWN0IHg9IjcwIiB5PSI2MCIgd2lkdGg9IjYwIiBoZWlnaHQ9IjE1IiBmaWxsPSIjMUExQTFBIiBvcGFjaXR5PSIwLjciLz4KICA8cmVjdCB4PSI1MCIgeT0iNzUiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTQwIiByeD0iNCIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4yNSIvPgogIDxyZWN0IHg9IjU1IiB5PSI4MCIgd2lkdGg9IjkwIiBoZWlnaHQ9IjEzMCIgcng9IjIiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjkiLz4KICA8cmVjdCB4PSI2NSIgeT0iOTAiIHdpZHRoPSI3MCIgaGVpZ2h0PSI0MCIgcng9IjIiIGZpbGw9IiNDOUE5NkUiIG9wYWNpdHk9IjAuNiIvPgogIDx0ZXh0IHg9IjEwMCIgeT0iMTE1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2VyaWYiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IndoaXRlIiBmb250LXdlaWdodD0iYm9sZCI+U0hPR1VOPC90ZXh0PgogIDx0ZXh0IHg9IjEwMCIgeT0iMTMwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSI3IiBmaWxsPSIjMUExQTFBIj5QQVJGVU08L3RleHQ+CiAgPHJlY3QgeD0iODAiIHk9IjIzMCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjI1IiByeD0iMiIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4zIi8+Cjwvc3ZnPg==" alt="ACQUA DI GIO" loading="lazy"></div>
+      <div class="img-wrap"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjgwIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjI4MCIgZmlsbD0iIzFBNTVFMUIiLz48cmVjdCB4PSI0MCIgeT0iOTAiIHdpZHRoPSIxMjAiIGhlaWdodD0iMTUwIiBmaWxsPSIjRkZGRkZGIiBvcGFjaXR5PSIwLjk1Ii8+PHRleHQgeD0iMTAwIiB5PSIxNjAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmaWxsPSIjMkUzRjcwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXNpemU9IjEyIj4xOTkgQ0RFIDwvdGV4dD48L3N2Zz4=" alt="Code 099 Tom Ford Mandarino di Amalfi" loading="lazy"></div>
       <div class="info">
-        <span class="category-label">#002</span><span class="category-label" style="background:#e74c3c;margin-left:6px;">Gel douche</span>
-        <h3>ACQUA DI GIO</h3>
-        <div class="brand">ARMANI</div>
-        <div class="desc">Copy certifiée Shogun — Reproduction fidèle.</div>
-        <div style="margin-top:8px;"><a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : ACQUA DI GIO ARMANI - 15ml - Code 002" target="_blank" class="btn-order-wa" style="margin:2px;">💬 15ml — 1,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : ACQUA DI GIO ARMANI - 30ml - Code 002" target="_blank" class="btn-order-wa" style="margin:2px;">💬 30ml — 2,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : ACQUA DI GIO ARMANI - 70ml - Code 002" target="_blank" class="btn-order-wa" style="margin:2px;">💬 70ml — 4,500 FCFA</a> </div>
+        <span class="category-label">#099</span>
+        <h3>Mandarino di Amalfi</h3>
+        <div class="brand">Tom Ford</div>
+        <div class="desc">Eau de Parfum 50ml — Essence Luxury certifiée Shogun.</div>
+        <div style="margin-top:8px;"><a href="https://wa.me/237691719393?text=Bonjour%20!%20Je%20souhaite%20commander%20Mandrino%20di%20Amalfi%20Tom%20Ford%20-%20Code%20099%20-%2050ml" target="_blank" class="btn-order-wa" style="margin:2px;">💬 50ml — 7,500 FCFA</a></div>
       </div>
     </div>
+
     <div class="product-card">
-      <div class="img-wrap"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjgwIj4KICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjI4MCIgZmlsbD0iI0M5QTk2RSIvPgogIDxyZWN0IHg9IjYwIiB5PSI0MCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjIwIiByeD0iMiIgZmlsbD0iIzFBMUExQSIvPgogIDxyZWN0IHg9IjcwIiB5PSI2MCIgd2lkdGg9IjYwIiBoZWlnaHQ9IjE1IiBmaWxsPSIjMUExQTFBIiBvcGFjaXR5PSIwLjciLz4KICA8cmVjdCB4PSI1MCIgeT0iNzUiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTQwIiByeD0iNCIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4yNSIvPgogIDxyZWN0IHg9IjU1IiB5PSI4MCIgd2lkdGg9IjkwIiBoZWlnaHQ9IjEzMCIgcng9IjIiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjkiLz4KICA8cmVjdCB4PSI2NSIgeT0iOTAiIHdpZHRoPSI3MCIgaGVpZ2h0PSI0MCIgcng9IjIiIGZpbGw9IiNDOUE5NkUiIG9wYWNpdHk9IjAuNiIvPgogIDx0ZXh0IHg9IjEwMCIgeT0iMTE1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2VyaWYiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IndoaXRlIiBmb250LXdlaWdodD0iYm9sZCI+U0hPR1VOPC90ZXh0PgogIDx0ZXh0IHg9IjEwMCIgeT0iMTMwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSI3IiBmaWxsPSIjMUExQTFBIj5QQVJGVU08L3RleHQ+CiAgPHJlY3QgeD0iODAiIHk9IjIzMCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjI1IiByeD0iMiIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4zIi8+Cjwvc3ZnPg==" alt="FAHRENHEIT" loading="lazy"></div>
+      <div class="img-wrap"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjgwIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjI4MCIgZmlsbD0iIzAwMDAwMCIvPjxyZWN0IHg9IjQwIiB5PSI5MCIgd2lkdGg9IjEyMCIgaGVpZ2h0PSIxNTAiIGZpbGw9IiM5NTk1OTUiIG9wYWNpdHk9IjAuOTUiLz48dGV4dCB4PSIxMDAiIHk9IjE2MCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXNpemU9IjEyIj5MQU5JTEUgREFUSUZBPC90ZXh0Pjwvc3ZnPg==" alt="Code 128 Tom Ford Vanille Fatale" loading="lazy"></div>
       <div class="info">
-        <span class="category-label">#003</span><span class="category-label" style="background:#e74c3c;margin-left:6px;">Gel douche</span>
-        <h3>FAHRENHEIT</h3>
-        <div class="brand">DIOR</div>
-        <div class="desc">Copy certifiée Shogun — Reproduction fidèle.</div>
-        <div style="margin-top:8px;"><a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : FAHRENHEIT DIOR - 15ml - Code 003" target="_blank" class="btn-order-wa" style="margin:2px;">💬 15ml — 1,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : FAHRENHEIT DIOR - 30ml - Code 003" target="_blank" class="btn-order-wa" style="margin:2px;">💬 30ml — 2,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : FAHRENHEIT DIOR - 70ml - Code 003" target="_blank" class="btn-order-wa" style="margin:2px;">💬 70ml — 4,500 FCFA</a> </div>
+        <span class="category-label">#128</span>
+        <h3>Vanille Fatale</h3>
+        <div class="brand">Tom Ford</div>
+        <div class="desc">Eau de Parfum 100ml — Essence Luxury certifiée Shogun.</div>
+        <div style="margin-top:8px;"><a href="https://wa.me/237691719393?text=Bonjour%20!%20Je%20souhaite%20commander%20Vanille%20Fatale%20Tom%20Ford%20-%20Code%20128%20-%20100ml" target="_blank" class="btn-order-wa" style="margin:2px;">💬 100ml — 9,500 FCFA</a></div>
       </div>
     </div>
-    <div class="product-card">
-      <div class="img-wrap"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjgwIj4KICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjI4MCIgZmlsbD0iI0M5QTk2RSIvPgogIDxyZWN0IHg9IjYwIiB5PSI0MCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjIwIiByeD0iMiIgZmlsbD0iIzFBMUExQSIvPgogIDxyZWN0IHg9IjcwIiB5PSI2MCIgd2lkdGg9IjYwIiBoZWlnaHQ9IjE1IiBmaWxsPSIjMUExQTFBIiBvcGFjaXR5PSIwLjciLz4KICA8cmVjdCB4PSI1MCIgeT0iNzUiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTQwIiByeD0iNCIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4yNSIvPgogIDxyZWN0IHg9IjU1IiB5PSI4MCIgd2lkdGg9IjkwIiBoZWlnaHQ9IjEzMCIgcng9IjIiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjkiLz4KICA8cmVjdCB4PSI2NSIgeT0iOTAiIHdpZHRoPSI3MCIgaGVpZ2h0PSI0MCIgcng9IjIiIGZpbGw9IiNDOUE5NkUiIG9wYWNpdHk9IjAuNiIvPgogIDx0ZXh0IHg9IjEwMCIgeT0iMTE1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2VyaWYiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IndoaXRlIiBmb250LXdlaWdodD0iYm9sZCI+U0hPR1VOPC90ZXh0PgogIDx0ZXh0IHg9IjEwMCIgeT0iMTMwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSI3IiBmaWxsPSIjMUExQTFBIj5QQVJGVU08L3RleHQ+CiAgPHJlY3QgeD0iODAiIHk9IjIzMCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjI1IiByeD0iMiIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4zIi8+Cjwvc3ZnPg==" alt="THE ONE" loading="lazy"></div>
-      <div class="info">
-        <span class="category-label">#004</span>
-        <h3>THE ONE</h3>
-        <div class="brand">D&amp;G</div>
-        <div class="desc">Copy certifiée Shogun — Reproduction fidèle.</div>
-        <div style="margin-top:8px;"><a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : THE ONE D&amp;G - 15ml - Code 004" target="_blank" class="btn-order-wa" style="margin:2px;">💬 15ml — 1,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : THE ONE D&amp;G - 30ml - Code 004" target="_blank" class="btn-order-wa" style="margin:2px;">💬 30ml — 2,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : THE ONE D&amp;G - 70ml - Code 004" target="_blank" class="btn-order-wa" style="margin:2px;">💬 70ml — 4,500 FCFA</a> </div>
-      </div>
-    </div>
-    <div class="product-card">
-      <div class="img-wrap"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjgwIj4KICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjI4MCIgZmlsbD0iI0M5QTk2RSIvPgogIDxyZWN0IHg9IjYwIiB5PSI0MCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjIwIiByeD0iMiIgZmlsbD0iIzFBMUExQSIvPgogIDxyZWN0IHg9IjcwIiB5PSI2MCIgd2lkdGg9IjYwIiBoZWlnaHQ9IjE1IiBmaWxsPSIjMUExQTFBIiBvcGFjaXR5PSIwLjciLz4KICA8cmVjdCB4PSI1MCIgeT0iNzUiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTQwIiByeD0iNCIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4yNSIvPgogIDxyZWN0IHg9IjU1IiB5PSI4MCIgd2lkdGg9IjkwIiBoZWlnaHQ9IjEzMCIgcng9IjIiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjkiLz4KICA8cmVjdCB4PSI2NSIgeT0iOTAiIHdpZHRoPSI3MCIgaGVpZ2h0PSI0MCIgcng9IjIiIGZpbGw9IiNDOUE5NkUiIG9wYWNpdHk9IjAuNiIvPgogIDx0ZXh0IHg9IjEwMCIgeT0iMTE1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2VyaWYiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IndoaXRlIiBmb250LXdlaWdodD0iYm9sZCI+U0hPR1VOPC90ZXh0PgogIDx0ZXh0IHg9IjEwMCIgeT0iMTMwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSI3IiBmaWxsPSIjMUExQTFBIj5QQVJGVU08L3RleHQ+CiAgPHJlY3QgeD0iODAiIHk9IjIzMCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjI1IiByeD0iMiIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4zIi8+Cjwvc3ZnPg==" alt="HUGO" loading="lazy"></div>
-      <div class="info">
-        <span class="category-label">#205</span>
-        <h3>HUGO</h3>
-        <div class="brand">HUGO BOSS</div>
-        <div class="desc">Copy certifiée Shogun — Reproduction fidèle.</div>
-        <div style="margin-top:8px;"><a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : HUGO HUGO BOSS - 15ml - Code 205" target="_blank" class="btn-order-wa" style="margin:2px;">💬 15ml — 1,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : HUGO HUGO BOSS - 30ml - Code 205" target="_blank" class="btn-order-wa" style="margin:2px;">💬 30ml — 2,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : HUGO HUGO BOSS - 70ml - Code 205" target="_blank" class="btn-order-wa" style="margin:2px;">💬 70ml — 4,500 FCFA</a> </div>
-      </div>
-    </div>
-    <div class="product-card">
-      <div class="img-wrap"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjgwIj4KICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjI4MCIgZmlsbD0iI0M5QTk2RSIvPgogIDxyZWN0IHg9IjYwIiB5PSI0MCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjIwIiByeD0iMiIgZmlsbD0iIzFBMUExQSIvPgogIDxyZWN0IHg9IjcwIiB5PSI2MCIgd2lkdGg9IjYwIiBoZWlnaHQ9IjE1IiBmaWxsPSIjMUExQTFBIiBvcGFjaXR5PSIwLjciLz4KICA8cmVjdCB4PSI1MCIgeT0iNzUiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTQwIiByeD0iNCIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4yNSIvPgogIDxyZWN0IHg9IjU1IiB5PSI4MCIgd2lkdGg9IjkwIiBoZWlnaHQ9IjEzMCIgcng9IjIiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjkiLz4KICA8cmVjdCB4PSI2NSIgeT0iOTAiIHdpZHRoPSI3MCIgaGVpZ2h0PSI0MCIgcng9IjIiIGZpbGw9IiNDOUE5NkUiIG9wYWNpdHk9IjAuNiIvPgogIDx0ZXh0IHg9IjEwMCIgeT0iMTE1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2VyaWYiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IndoaXRlIiBmb250LXdlaWdodD0iYm9sZCI+U0hPR1VOPC90ZXh0PgogIDx0ZXh0IHg9IjEwMCIgeT0iMTMwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSI3IiBmaWxsPSIjMUExQTFBIj5QQVJGVU08L3RleHQ+CiAgPHJlY3QgeD0iODAiIHk9IjIzMCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjI1IiByeD0iMiIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4zIi8+Cjwvc3ZnPg==" alt="EAU SAUVAGE" loading="lazy"></div>
-      <div class="info">
-        <span class="category-label">#012</span>
-        <h3>EAU SAUVAGE</h3>
-        <div class="brand">DIOR</div>
-        <div class="desc">Copy certifiée Shogun — Reproduction fidèle.</div>
-        <div style="margin-top:8px;"><a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : EAU SAUVAGE DIOR - 15ml - Code 012" target="_blank" class="btn-order-wa" style="margin:2px;">💬 15ml — 1,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : EAU SAUVAGE DIOR - 30ml - Code 012" target="_blank" class="btn-order-wa" style="margin:2px;">💬 30ml — 2,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : EAU SAUVAGE DIOR - 70ml - Code 012" target="_blank" class="btn-order-wa" style="margin:2px;">💬 70ml — 4,500 FCFA</a> </div>
-      </div>
-    </div>
-    <div class="product-card">
-      <div class="img-wrap"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjgwIj4KICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjI4MCIgZmlsbD0iI0M5QTk2RSIvPgogIDxyZWN0IHg9IjYwIiB5PSI0MCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjIwIiByeD0iMiIgZmlsbD0iIzFBMUExQSIvPgogIDxyZWN0IHg9IjcwIiB5PSI2MCIgd2lkdGg9IjYwIiBoZWlnaHQ9IjE1IiBmaWxsPSIjMUExQTFBIiBvcGFjaXR5PSIwLjciLz4KICA8cmVjdCB4PSI1MCIgeT0iNzUiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTQwIiByeD0iNCIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4yNSIvPgogIDxyZWN0IHg9IjU1IiB5PSI4MCIgd2lkdGg9IjkwIiBoZWlnaHQ9IjEzMCIgcng9IjIiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjkiLz4KICA8cmVjdCB4PSI2NSIgeT0iOTAiIHdpZHRoPSI3MCIgaGVpZ2h0PSI0MCIgcng9IjIiIGZpbGw9IiNDOUE5NkUiIG9wYWNpdHk9IjAuNiIvPgogIDx0ZXh0IHg9IjEwMCIgeT0iMTE1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2VyaWYiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IndoaXRlIiBmb250LXdlaWdodD0iYm9sZCI+U0hPR1VOPC90ZXh0PgogIDx0ZXh0IHg9IjEwMCIgeT0iMTMwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSI3IiBmaWxsPSIjMUExQTFBIj5QQVJGVU08L3RleHQ+CiAgPHJlY3QgeD0iODAiIHk9IjIzMCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjI1IiByeD0iMiIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4zIi8+Cjwvc3ZnPg==" alt="ROMA UOMO" loading="lazy"></div>
-      <div class="info">
-        <span class="category-label">#015</span>
-        <h3>ROMA UOMO</h3>
-        <div class="brand">LAURA BIAGIOTTI</div>
-        <div class="desc">Copy certifiée Shogun — Reproduction fidèle.</div>
-        <div style="margin-top:8px;"><a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : ROMA UOMO LAURA BIAGIOTTI - 15ml - Code 015" target="_blank" class="btn-order-wa" style="margin:2px;">💬 15ml — 1,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : ROMA UOMO LAURA BIAGIOTTI - 30ml - Code 015" target="_blank" class="btn-order-wa" style="margin:2px;">💬 30ml — 2,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : ROMA UOMO LAURA BIAGIOTTI - 70ml - Code 015" target="_blank" class="btn-order-wa" style="margin:2px;">💬 70ml — 4,500 FCFA</a> </div>
-      </div>
-    </div>
-    <div class="product-card">
-      <div class="img-wrap"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjgwIj4KICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjI4MCIgZmlsbD0iI0M5QTk2RSIvPgogIDxyZWN0IHg9IjYwIiB5PSI0MCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjIwIiByeD0iMiIgZmlsbD0iIzFBMUExQSIvPgogIDxyZWN0IHg9IjcwIiB5PSI2MCIgd2lkdGg9IjYwIiBoZWlnaHQ9IjE1IiBmaWxsPSIjMUExQTFBIiBvcGFjaXR5PSIwLjciLz4KICA8cmVjdCB4PSI1MCIgeT0iNzUiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTQwIiByeD0iNCIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4yNSIvPgogIDxyZWN0IHg9IjU1IiB5PSI4MCIgd2lkdGg9IjkwIiBoZWlnaHQ9IjEzMCIgcng9IjIiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjkiLz4KICA8cmVjdCB4PSI2NSIgeT0iOTAiIHdpZHRoPSI3MCIgaGVpZ2h0PSI0MCIgcng9IjIiIGZpbGw9IiNDOUE5NkUiIG9wYWNpdHk9IjAuNiIvPgogIDx0ZXh0IHg9IjEwMCIgeT0iMTE1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2VyaWYiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IndoaXRlIiBmb250LXdlaWdodD0iYm9sZCI+U0hPR1VOPC90ZXh0PgogIDx0ZXh0IHg9IjEwMCIgeT0iMTMwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSI3IiBmaWxsPSIjMUExQTFBIj5QQVJGVU08L3RleHQ+CiAgPHJlY3QgeD0iODAiIHk9IjIzMCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjI1IiByeD0iMiIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4zIi8+Cjwvc3ZnPg==" alt="LE MÂLE" loading="lazy"></div>
-      <div class="info">
-        <span class="category-label">#016</span>
-        <h3>LE MÂLE</h3>
-        <div class="brand">JP GAUTIER</div>
-        <div class="desc">Copy certifiée Shogun — Reproduction fidèle.</div>
-        <div style="margin-top:8px;"><a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : LE MÂLE JP GAUTIER - 15ml - Code 016" target="_blank" class="btn-order-wa" style="margin:2px;">💬 15ml — 1,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : LE MÂLE JP GAUTIER - 30ml - Code 016" target="_blank" class="btn-order-wa" style="margin:2px;">💬 30ml — 2,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : LE MÂLE JP GAUTIER - 70ml - Code 016" target="_blank" class="btn-order-wa" style="margin:2px;">💬 70ml — 4,500 FCFA</a> </div>
-      </div>
-    </div>
-    <div class="product-card">
-      <div class="img-wrap"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjgwIj4KICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjI4MCIgZmlsbD0iI0M5QTk2RSIvPgogIDxyZWN0IHg9IjYwIiB5PSI0MCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjIwIiByeD0iMiIgZmlsbD0iIzFBMUExQSIvPgogIDxyZWN0IHg9IjcwIiB5PSI2MCIgd2lkdGg9IjYwIiBoZWlnaHQ9IjE1IiBmaWxsPSIjMUExQTFBIiBvcGFjaXR5PSIwLjciLz4KICA8cmVjdCB4PSI1MCIgeT0iNzUiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTQwIiByeD0iNCIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4yNSIvPgogIDxyZWN0IHg9IjU1IiB5PSI4MCIgd2lkdGg9IjkwIiBoZWlnaHQ9IjEzMCIgcng9IjIiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjkiLz4KICA8cmVjdCB4PSI2NSIgeT0iOTAiIHdpZHRoPSI3MCIgaGVpZ2h0PSI0MCIgcng9IjIiIGZpbGw9IiNDOUE5NkUiIG9wYWNpdHk9IjAuNiIvPgogIDx0ZXh0IHg9IjEwMCIgeT0iMTE1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2VyaWYiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IndoaXRlIiBmb250LXdlaWdodD0iYm9sZCI+U0hPR1VOPC90ZXh0PgogIDx0ZXh0IHg9IjEwMCIgeT0iMTMwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSI3IiBmaWxsPSIjMUExQTFBIj5QQVJGVU08L3RleHQ+CiAgPHJlY3QgeD0iODAiIHk9IjIzMCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjI1IiByeD0iMiIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4zIi8+Cjwvc3ZnPg==" alt="GUILTY" loading="lazy"></div>
-      <div class="info">
-        <span class="category-label">#217</span>
-        <h3>GUILTY</h3>
-        <div class="brand">GUCCI</div>
-        <div class="desc">Copy certifiée Shogun — Reproduction fidèle.</div>
-        <div style="margin-top:8px;"><a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : GUILTY GUCCI - 15ml - Code 217" target="_blank" class="btn-order-wa" style="margin:2px;">💬 15ml — 1,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : GUILTY GUCCI - 30ml - Code 217" target="_blank" class="btn-order-wa" style="margin:2px;">💬 30ml — 2,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : GUILTY GUCCI - 70ml - Code 217" target="_blank" class="btn-order-wa" style="margin:2px;">💬 70ml — 4,500 FCFA</a> </div>
-      </div>
-    </div>
-    <div class="product-card">
-      <div class="img-wrap"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjgwIj4KICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjI4MCIgZmlsbD0iI0M5QTk2RSIvPgogIDxyZWN0IHg9IjYwIiB5PSI0MCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjIwIiByeD0iMiIgZmlsbD0iIzFBMUExQSIvPgogIDxyZWN0IHg9IjcwIiB5PSI2MCIgd2lkdGg9IjYwIiBoZWlnaHQ9IjE1IiBmaWxsPSIjMUExQTFBIiBvcGFjaXR5PSIwLjciLz4KICA8cmVjdCB4PSI1MCIgeT0iNzUiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTQwIiByeD0iNCIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4yNSIvPgogIDxyZWN0IHg9IjU1IiB5PSI4MCIgd2lkdGg9IjkwIiBoZWlnaHQ9IjEzMCIgcng9IjIiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjkiLz4KICA8cmVjdCB4PSI2NSIgeT0iOTAiIHdpZHRoPSI3MCIgaGVpZ2h0PSI0MCIgcng9IjIiIGZpbGw9IiNDOUE5NkUiIG9wYWNpdHk9IjAuNiIvPgogIDx0ZXh0IHg9IjEwMCIgeT0iMTE1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2VyaWYiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IndoaXRlIiBmb250LXdlaWdodD0iYm9sZCI+U0hPR1VOPC90ZXh0PgogIDx0ZXh0IHg9IjEwMCIgeT0iMTMwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSI3IiBmaWxsPSIjMUExQTFBIj5QQVJGVU08L3RleHQ+CiAgPHJlY3QgeD0iODAiIHk9IjIzMCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjI1IiByeD0iMiIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4zIi8+Cjwvc3ZnPg==" alt="DECLARATION" loading="lazy"></div>
-      <div class="info">
-        <span class="category-label">#018</span>
-        <h3>DECLARATION</h3>
-        <div class="brand">CARTIER</div>
-        <div class="desc">Copy certifiée Shogun — Reproduction fidèle.</div>
-        <div style="margin-top:8px;"><a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : DECLARATION CARTIER - 15ml - Code 018" target="_blank" class="btn-order-wa" style="margin:2px;">💬 15ml — 1,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : DECLARATION CARTIER - 30ml - Code 018" target="_blank" class="btn-order-wa" style="margin:2px;">💬 30ml — 2,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : DECLARATION CARTIER - 70ml - Code 018" target="_blank" class="btn-order-wa" style="margin:2px;">💬 70ml — 4,500 FCFA</a> </div>
-      </div>
-    </div>
-    <div class="product-card">
-      <div class="img-wrap"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjgwIj4KICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjI4MCIgZmlsbD0iI0M5QTk2RSIvPgogIDxyZWN0IHg9IjYwIiB5PSI0MCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjIwIiByeD0iMiIgZmlsbD0iIzFBMUExQSIvPgogIDxyZWN0IHg9IjcwIiB5PSI2MCIgd2lkdGg9IjYwIiBoZWlnaHQ9IjE1IiBmaWxsPSIjMUExQTFBIiBvcGFjaXR5PSIwLjciLz4KICA8cmVjdCB4PSI1MCIgeT0iNzUiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTQwIiByeD0iNCIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4yNSIvPgogIDxyZWN0IHg9IjU1IiB5PSI4MCIgd2lkdGg9IjkwIiBoZWlnaHQ9IjEzMCIgcng9IjIiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjkiLz4KICA8cmVjdCB4PSI2NSIgeT0iOTAiIHdpZHRoPSI3MCIgaGVpZ2h0PSI0MCIgcng9IjIiIGZpbGw9IiNDOUE5NkUiIG9wYWNpdHk9IjAuNiIvPgogIDx0ZXh0IHg9IjEwMCIgeT0iMTE1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2VyaWYiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IndoaXRlIiBmb250LXdlaWdodD0iYm9sZCI+U0hPR1VOPC90ZXh0PgogIDx0ZXh0IHg9IjEwMCIgeT0iMTMwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSI3IiBmaWxsPSIjMUExQTFBIj5QQVJGVU08L3RleHQ+CiAgPHJlY3QgeD0iODAiIHk9IjIzMCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjI1IiByeD0iMiIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4zIi8+Cjwvc3ZnPg==" alt="LA NUIT DE L&#x27;HOMME" loading="lazy"></div>
-      <div class="info">
-        <span class="category-label">#020</span><span class="category-label" style="background:#e74c3c;margin-left:6px;">Gel douche</span>
-        <h3>LA NUIT DE L&#x27;HOMME</h3>
-        <div class="brand">YVES SAINT LAURENT</div>
-        <div class="desc">Copy certifiée Shogun — Reproduction fidèle.</div>
-        <div style="margin-top:8px;"><a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : LA NUIT DE L&#x27;HOMME YVES SAINT LAURENT - 15ml - Code 020" target="_blank" class="btn-order-wa" style="margin:2px;">💬 15ml — 1,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : LA NUIT DE L&#x27;HOMME YVES SAINT LAURENT - 30ml - Code 020" target="_blank" class="btn-order-wa" style="margin:2px;">💬 30ml — 2,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : LA NUIT DE L&#x27;HOMME YVES SAINT LAURENT - 70ml - Code 020" target="_blank" class="btn-order-wa" style="margin:2px;">💬 70ml — 4,500 FCFA</a> </div>
-      </div>
-    </div>
-    <div class="product-card">
-      <div class="img-wrap"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjgwIj4KICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjI4MCIgZmlsbD0iI0M5QTk2RSIvPgogIDxyZWN0IHg9IjYwIiB5PSI0MCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjIwIiByeD0iMiIgZmlsbD0iIzFBMUExQSIvPgogIDxyZWN0IHg9IjcwIiB5PSI2MCIgd2lkdGg9IjYwIiBoZWlnaHQ9IjE1IiBmaWxsPSIjMUExQTFBIiBvcGFjaXR5PSIwLjciLz4KICA8cmVjdCB4PSI1MCIgeT0iNzUiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTQwIiByeD0iNCIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4yNSIvPgogIDxyZWN0IHg9IjU1IiB5PSI4MCIgd2lkdGg9IjkwIiBoZWlnaHQ9IjEzMCIgcng9IjIiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjkiLz4KICA8cmVjdCB4PSI2NSIgeT0iOTAiIHdpZHRoPSI3MCIgaGVpZ2h0PSI0MCIgcng9IjIiIGZpbGw9IiNDOUE5NkUiIG9wYWNpdHk9IjAuNiIvPgogIDx0ZXh0IHg9IjEwMCIgeT0iMTE1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2VyaWYiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IndoaXRlIiBmb250LXdlaWdodD0iYm9sZCI+U0hPR1VOPC90ZXh0PgogIDx0ZXh0IHg9IjEwMCIgeT0iMTMwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSI3IiBmaWxsPSIjMUExQTFBIj5QQVJGVU08L3RleHQ+CiAgPHJlY3QgeD0iODAiIHk9IjIzMCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjI1IiByeD0iMiIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4zIi8+Cjwvc3ZnPg==" alt="LIGHT BLUE" loading="lazy"></div>
-      <div class="info">
-        <span class="category-label">#021</span>
-        <h3>LIGHT BLUE</h3>
-        <div class="brand">D&amp;G</div>
-        <div class="desc">Copy certifiée Shogun — Reproduction fidèle.</div>
-        <div style="margin-top:8px;"><a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : LIGHT BLUE D&amp;G - 15ml - Code 021" target="_blank" class="btn-order-wa" style="margin:2px;">💬 15ml — 1,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : LIGHT BLUE D&amp;G - 30ml - Code 021" target="_blank" class="btn-order-wa" style="margin:2px;">💬 30ml — 2,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : LIGHT BLUE D&amp;G - 70ml - Code 021" target="_blank" class="btn-order-wa" style="margin:2px;">💬 70ml — 4,500 FCFA</a> </div>
-      </div>
-    </div>
-    <div class="product-card">
-      <div class="img-wrap"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjgwIj4KICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjI4MCIgZmlsbD0iI0M5QTk2RSIvPgogIDxyZWN0IHg9IjYwIiB5PSI0MCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjIwIiByeD0iMiIgZmlsbD0iIzFBMUExQSIvPgogIDxyZWN0IHg9IjcwIiB5PSI2MCIgd2lkdGg9IjYwIiBoZWlnaHQ9IjE1IiBmaWxsPSIjMUExQTFBIiBvcGFjaXR5PSIwLjciLz4KICA8cmVjdCB4PSI1MCIgeT0iNzUiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTQwIiByeD0iNCIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4yNSIvPgogIDxyZWN0IHg9IjU1IiB5PSI4MCIgd2lkdGg9IjkwIiBoZWlnaHQ9IjEzMCIgcng9IjIiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjkiLz4KICA8cmVjdCB4PSI2NSIgeT0iOTAiIHdpZHRoPSI3MCIgaGVpZ2h0PSI0MCIgcng9IjIiIGZpbGw9IiNDOUE5NkUiIG9wYWNpdHk9IjAuNiIvPgogIDx0ZXh0IHg9IjEwMCIgeT0iMTE1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2VyaWYiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IndoaXRlIiBmb250LXdlaWdodD0iYm9sZCI+U0hPR1VOPC90ZXh0PgogIDx0ZXh0IHg9IjEwMCIgeT0iMTMwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSI3IiBmaWxsPSIjMUExQTFBIj5QQVJGVU08L3RleHQ+CiAgPHJlY3QgeD0iODAiIHk9IjIzMCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjI1IiByeD0iMiIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4zIi8+Cjwvc3ZnPg==" alt="TERRE D&#x27;HERMÈS" loading="lazy"></div>
-      <div class="info">
-        <span class="category-label">#022</span>
-        <h3>TERRE D&#x27;HERMÈS</h3>
-        <div class="brand">HERMÈS</div>
-        <div class="desc">Copy certifiée Shogun — Reproduction fidèle.</div>
-        <div style="margin-top:8px;"><a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : TERRE D&#x27;HERMÈS HERMÈS - 15ml - Code 022" target="_blank" class="btn-order-wa" style="margin:2px;">💬 15ml — 1,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : TERRE D&#x27;HERMÈS HERMÈS - 30ml - Code 022" target="_blank" class="btn-order-wa" style="margin:2px;">💬 30ml — 2,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : TERRE D&#x27;HERMÈS HERMÈS - 70ml - Code 022" target="_blank" class="btn-order-wa" style="margin:2px;">💬 70ml — 4,500 FCFA</a> </div>
-      </div>
-    </div>
-    <div class="product-card">
-      <div class="img-wrap"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjgwIj4KICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjI4MCIgZmlsbD0iI0M5QTk2RSIvPgogIDxyZWN0IHg9IjYwIiB5PSI0MCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjIwIiByeD0iMiIgZmlsbD0iIzFBMUExQSIvPgogIDxyZWN0IHg9IjcwIiB5PSI2MCIgd2lkdGg9IjYwIiBoZWlnaHQ9IjE1IiBmaWxsPSIjMUExQTFBIiBvcGFjaXR5PSIwLjciLz4KICA8cmVjdCB4PSI1MCIgeT0iNzUiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTQwIiByeD0iNCIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4yNSIvPgogIDxyZWN0IHg9IjU1IiB5PSI4MCIgd2lkdGg9IjkwIiBoZWlnaHQ9IjEzMCIgcng9IjIiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjkiLz4KICA8cmVjdCB4PSI2NSIgeT0iOTAiIHdpZHRoPSI3MCIgaGVpZ2h0PSI0MCIgcng9IjIiIGZpbGw9IiNDOUE5NkUiIG9wYWNpdHk9IjAuNiIvPgogIDx0ZXh0IHg9IjEwMCIgeT0iMTE1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2VyaWYiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IndoaXRlIiBmb250LXdlaWdodD0iYm9sZCI+U0hPR1VOPC90ZXh0PgogIDx0ZXh0IHg9IjEwMCIgeT0iMTMwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSI3IiBmaWxsPSIjMUExQTFBIj5QQVJGVU08L3RleHQ+CiAgPHJlY3QgeD0iODAiIHk9IjIzMCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjI1IiByeD0iMiIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4zIi8+Cjwvc3ZnPg==" alt="BLACK XS" loading="lazy"></div>
-      <div class="info">
-        <span class="category-label">#030</span>
-        <h3>BLACK XS</h3>
-        <div class="brand">PACO RABANNE</div>
-        <div class="desc">Copy certifiée Shogun — Reproduction fidèle.</div>
-        <div style="margin-top:8px;"><a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : BLACK XS PACO RABANNE - 15ml - Code 030" target="_blank" class="btn-order-wa" style="margin:2px;">💬 15ml — 1,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : BLACK XS PACO RABANNE - 30ml - Code 030" target="_blank" class="btn-order-wa" style="margin:2px;">💬 30ml — 2,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : BLACK XS PACO RABANNE - 70ml - Code 030" target="_blank" class="btn-order-wa" style="margin:2px;">💬 70ml — 4,500 FCFA</a> </div>
-      </div>
-    </div>
-    <div class="product-card">
-      <div class="img-wrap"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjgwIj4KICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjI4MCIgZmlsbD0iI0M5QTk2RSIvPgogIDxyZWN0IHg9IjYwIiB5PSI0MCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjIwIiByeD0iMiIgZmlsbD0iIzFBMUExQSIvPgogIDxyZWN0IHg9IjcwIiB5PSI2MCIgd2lkdGg9IjYwIiBoZWlnaHQ9IjE1IiBmaWxsPSIjMUExQTFBIiBvcGFjaXR5PSIwLjciLz4KICA8cmVjdCB4PSI1MCIgeT0iNzUiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTQwIiByeD0iNCIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4yNSIvPgogIDxyZWN0IHg9IjU1IiB5PSI4MCIgd2lkdGg9IjkwIiBoZWlnaHQ9IjEzMCIgcng9IjIiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjkiLz4KICA8cmVjdCB4PSI2NSIgeT0iOTAiIHdpZHRoPSI3MCIgaGVpZ2h0PSI0MCIgcng9IjIiIGZpbGw9IiNDOUE5NkUiIG9wYWNpdHk9IjAuNiIvPgogIDx0ZXh0IHg9IjEwMCIgeT0iMTE1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2VyaWYiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IndoaXRlIiBmb250LXdlaWdodD0iYm9sZCI+U0hPR1VOPC90ZXh0PgogIDx0ZXh0IHg9IjEwMCIgeT0iMTMwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSI3IiBmaWxsPSIjMUExQTFBIj5QQVJGVU08L3RleHQ+CiAgPHJlY3QgeD0iODAiIHk9IjIzMCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjI1IiByeD0iMiIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4zIi8+Cjwvc3ZnPg==" alt="BLV" loading="lazy"></div>
-      <div class="info">
-        <span class="category-label">#031</span>
-        <h3>BLV</h3>
-        <div class="brand">BVLGARI</div>
-        <div class="desc">Copy certifiée Shogun — Reproduction fidèle.</div>
-        <div style="margin-top:8px;"><a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : BLV BVLGARI - 15ml - Code 031" target="_blank" class="btn-order-wa" style="margin:2px;">💬 15ml — 1,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : BLV BVLGARI - 30ml - Code 031" target="_blank" class="btn-order-wa" style="margin:2px;">💬 30ml — 2,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : BLV BVLGARI - 70ml - Code 031" target="_blank" class="btn-order-wa" style="margin:2px;">💬 70ml — 4,500 FCFA</a> </div>
-      </div>
-    </div>
-    <div class="product-card">
-      <div class="img-wrap"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjgwIj4KICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjI4MCIgZmlsbD0iI0M5QTk2RSIvPgogIDxyZWN0IHg9IjYwIiB5PSI0MCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjIwIiByeD0iMiIgZmlsbD0iIzFBMUExQSIvPgogIDxyZWN0IHg9IjcwIiB5PSI2MCIgd2lkdGg9IjYwIiBoZWlnaHQ9IjE1IiBmaWxsPSIjMUExQTFBIiBvcGFjaXR5PSIwLjciLz4KICA8cmVjdCB4PSI1MCIgeT0iNzUiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTQwIiByeD0iNCIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4yNSIvPgogIDxyZWN0IHg9IjU1IiB5PSI4MCIgd2lkdGg9IjkwIiBoZWlnaHQ9IjEzMCIgcng9IjIiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjkiLz4KICA8cmVjdCB4PSI2NSIgeT0iOTAiIHdpZHRoPSI3MCIgaGVpZ2h0PSI0MCIgcng9IjIiIGZpbGw9IiNDOUE5NkUiIG9wYWNpdHk9IjAuNiIvPgogIDx0ZXh0IHg9IjEwMCIgeT0iMTE1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2VyaWYiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IndoaXRlIiBmb250LXdlaWdodD0iYm9sZCI+U0hPR1VOPC90ZXh0PgogIDx0ZXh0IHg9IjEwMCIgeT0iMTMwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSI3IiBmaWxsPSIjMUExQTFBIj5QQVJGVU08L3RleHQ+CiAgPHJlY3QgeD0iODAiIHk9IjIzMCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjI1IiByeD0iMiIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4zIi8+Cjwvc3ZnPg==" alt="SPICE BOMB" loading="lazy"></div>
-      <div class="info">
-        <span class="category-label">#032</span>
-        <h3>SPICE BOMB</h3>
-        <div class="brand">VIKTOR &amp; ROLF</div>
-        <div class="desc">Copy certifiée Shogun — Reproduction fidèle.</div>
-        <div style="margin-top:8px;"><a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : SPICE BOMB VIKTOR &amp; ROLF - 15ml - Code 032" target="_blank" class="btn-order-wa" style="margin:2px;">💬 15ml — 1,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : SPICE BOMB VIKTOR &amp; ROLF - 30ml - Code 032" target="_blank" class="btn-order-wa" style="margin:2px;">💬 30ml — 2,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : SPICE BOMB VIKTOR &amp; ROLF - 70ml - Code 032" target="_blank" class="btn-order-wa" style="margin:2px;">💬 70ml — 4,500 FCFA</a> </div>
-      </div>
-    </div>
-    <div class="product-card">
-      <div class="img-wrap"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjgwIj4KICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjI4MCIgZmlsbD0iI0M5QTk2RSIvPgogIDxyZWN0IHg9IjYwIiB5PSI0MCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjIwIiByeD0iMiIgZmlsbD0iIzFBMUExQSIvPgogIDxyZWN0IHg9IjcwIiB5PSI2MCIgd2lkdGg9IjYwIiBoZWlnaHQ9IjE1IiBmaWxsPSIjMUExQTFBIiBvcGFjaXR5PSIwLjciLz4KICA8cmVjdCB4PSI1MCIgeT0iNzUiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTQwIiByeD0iNCIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4yNSIvPgogIDxyZWN0IHg9IjU1IiB5PSI4MCIgd2lkdGg9IjkwIiBoZWlnaHQ9IjEzMCIgcng9IjIiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjkiLz4KICA8cmVjdCB4PSI2NSIgeT0iOTAiIHdpZHRoPSI3MCIgaGVpZ2h0PSI0MCIgcng9IjIiIGZpbGw9IiNDOUE5NkUiIG9wYWNpdHk9IjAuNiIvPgogIDx0ZXh0IHg9IjEwMCIgeT0iMTE1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2VyaWYiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IndoaXRlIiBmb250LXdlaWdodD0iYm9sZCI+U0hPR1VOPC90ZXh0PgogIDx0ZXh0IHg9IjEwMCIgeT0iMTMwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSI3IiBmaWxsPSIjMUExQTFBIj5QQVJGVU08L3RleHQ+CiAgPHJlY3QgeD0iODAiIHk9IjIzMCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjI1IiByeD0iMiIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4zIi8+Cjwvc3ZnPg==" alt="BLACK CODE" loading="lazy"></div>
-      <div class="info">
-        <span class="category-label">#033</span>
-        <h3>BLACK CODE</h3>
-        <div class="brand">ARMANI</div>
-        <div class="desc">Copy certifiée Shogun — Reproduction fidèle.</div>
-        <div style="margin-top:8px;"><a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : BLACK CODE ARMANI - 15ml - Code 033" target="_blank" class="btn-order-wa" style="margin:2px;">💬 15ml — 1,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : BLACK CODE ARMANI - 30ml - Code 033" target="_blank" class="btn-order-wa" style="margin:2px;">💬 30ml — 2,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : BLACK CODE ARMANI - 70ml - Code 033" target="_blank" class="btn-order-wa" style="margin:2px;">💬 70ml — 4,500 FCFA</a> </div>
-      </div>
-    </div>
-    <div class="product-card">
-      <div class="img-wrap"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjgwIj4KICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjI4MCIgZmlsbD0iI0M5QTk2RSIvPgogIDxyZWN0IHg9IjYwIiB5PSI0MCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjIwIiByeD0iMiIgZmlsbD0iIzFBMUExQSIvPgogIDxyZWN0IHg9IjcwIiB5PSI2MCIgd2lkdGg9IjYwIiBoZWlnaHQ9IjE1IiBmaWxsPSIjMUExQTFBIiBvcGFjaXR5PSIwLjciLz4KICA8cmVjdCB4PSI1MCIgeT0iNzUiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTQwIiByeD0iNCIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4yNSIvPgogIDxyZWN0IHg9IjU1IiB5PSI4MCIgd2lkdGg9IjkwIiBoZWlnaHQ9IjEzMCIgcng9IjIiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjkiLz4KICA8cmVjdCB4PSI2NSIgeT0iOTAiIHdpZHRoPSI3MCIgaGVpZ2h0PSI0MCIgcng9IjIiIGZpbGw9IiNDOUE5NkUiIG9wYWNpdHk9IjAuNiIvPgogIDx0ZXh0IHg9IjEwMCIgeT0iMTE1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2VyaWYiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IndoaXRlIiBmb250LXdlaWdodD0iYm9sZCI+U0hPR1VOPC90ZXh0PgogIDx0ZXh0IHg9IjEwMCIgeT0iMTMwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSI3IiBmaWxsPSIjMUExQTFBIj5QQVJGVU08L3RleHQ+CiAgPHJlY3QgeD0iODAiIHk9IjIzMCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjI1IiByeD0iMiIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4zIi8+Cjwvc3ZnPg==" alt="MAN" loading="lazy"></div>
-      <div class="info">
-        <span class="category-label">#037</span>
-        <h3>MAN</h3>
-        <div class="brand">BVLGARI</div>
-        <div class="desc">Copy certifiée Shogun — Reproduction fidèle.</div>
-        <div style="margin-top:8px;"><a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : MAN BVLGARI - 15ml - Code 037" target="_blank" class="btn-order-wa" style="margin:2px;">💬 15ml — 1,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : MAN BVLGARI - 30ml - Code 037" target="_blank" class="btn-order-wa" style="margin:2px;">💬 30ml — 2,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : MAN BVLGARI - 70ml - Code 037" target="_blank" class="btn-order-wa" style="margin:2px;">💬 70ml — 4,500 FCFA</a> </div>
-      </div>
-    </div>
-    <div class="product-card">
-      <div class="img-wrap"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjgwIj4KICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjI4MCIgZmlsbD0iI0M5QTk2RSIvPgogIDxyZWN0IHg9IjYwIiB5PSI0MCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjIwIiByeD0iMiIgZmlsbD0iIzFBMUExQSIvPgogIDxyZWN0IHg9IjcwIiB5PSI2MCIgd2lkdGg9IjYwIiBoZWlnaHQ9IjE1IiBmaWxsPSIjMUExQTFBIiBvcGFjaXR5PSIwLjciLz4KICA8cmVjdCB4PSI1MCIgeT0iNzUiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTQwIiByeD0iNCIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4yNSIvPgogIDxyZWN0IHg9IjU1IiB5PSI4MCIgd2lkdGg9IjkwIiBoZWlnaHQ9IjEzMCIgcng9IjIiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjkiLz4KICA8cmVjdCB4PSI2NSIgeT0iOTAiIHdpZHRoPSI3MCIgaGVpZ2h0PSI0MCIgcng9IjIiIGZpbGw9IiNDOUE5NkUiIG9wYWNpdHk9IjAuNiIvPgogIDx0ZXh0IHg9IjEwMCIgeT0iMTE1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2VyaWYiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IndoaXRlIiBmb250LXdlaWdodD0iYm9sZCI+U0hPR1VOPC90ZXh0PgogIDx0ZXh0IHg9IjEwMCIgeT0iMTMwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSI3IiBmaWxsPSIjMUExQTFBIj5QQVJGVU08L3RleHQ+CiAgPHJlY3QgeD0iODAiIHk9IjIzMCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjI1IiByeD0iMiIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4zIi8+Cjwvc3ZnPg==" alt="BLEU" loading="lazy"></div>
-      <div class="info">
-        <span class="category-label">#038</span>
-        <h3>BLEU</h3>
-        <div class="brand">CHANEL</div>
-        <div class="desc">Copy certifiée Shogun — Reproduction fidèle.</div>
-        <div style="margin-top:8px;"><a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : BLEU CHANEL - 15ml - Code 038" target="_blank" class="btn-order-wa" style="margin:2px;">💬 15ml — 1,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : BLEU CHANEL - 30ml - Code 038" target="_blank" class="btn-order-wa" style="margin:2px;">💬 30ml — 2,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : BLEU CHANEL - 70ml - Code 038" target="_blank" class="btn-order-wa" style="margin:2px;">💬 70ml — 4,500 FCFA</a> </div>
-      </div>
-    </div>
-    <div class="product-card">
-      <div class="img-wrap"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjgwIj4KICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjI4MCIgZmlsbD0iI0M5QTk2RSIvPgogIDxyZWN0IHg9IjYwIiB5PSI0MCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjIwIiByeD0iMiIgZmlsbD0iIzFBMUExQSIvPgogIDxyZWN0IHg9IjcwIiB5PSI2MCIgd2lkdGg9IjYwIiBoZWlnaHQ9IjE1IiBmaWxsPSIjMUExQTFBIiBvcGFjaXR5PSIwLjciLz4KICA8cmVjdCB4PSI1MCIgeT0iNzUiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTQwIiByeD0iNCIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4yNSIvPgogIDxyZWN0IHg9IjU1IiB5PSI4MCIgd2lkdGg9IjkwIiBoZWlnaHQ9IjEzMCIgcng9IjIiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjkiLz4KICA8cmVjdCB4PSI2NSIgeT0iOTAiIHdpZHRoPSI3MCIgaGVpZ2h0PSI0MCIgcng9IjIiIGZpbGw9IiNDOUE5NkUiIG9wYWNpdHk9IjAuNiIvPgogIDx0ZXh0IHg9IjEwMCIgeT0iMTE1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2VyaWYiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IndoaXRlIiBmb250LXdlaWdodD0iYm9sZCI+U0hPR1VOPC90ZXh0PgogIDx0ZXh0IHg9IjEwMCIgeT0iMTMwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSI3IiBmaWxsPSIjMUExQTFBIj5QQVJGVU08L3RleHQ+CiAgPHJlY3QgeD0iODAiIHk9IjIzMCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjI1IiByeD0iMiIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4zIi8+Cjwvc3ZnPg==" alt="ALLURE HOMME" loading="lazy"></div>
-      <div class="info">
-        <span class="category-label">#048</span>
-        <h3>ALLURE HOMME</h3>
-        <div class="brand">CHANEL</div>
-        <div class="desc">Copy certifiée Shogun — Reproduction fidèle.</div>
-        <div style="margin-top:8px;"><a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : ALLURE HOMME CHANEL - 15ml - Code 048" target="_blank" class="btn-order-wa" style="margin:2px;">💬 15ml — 1,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : ALLURE HOMME CHANEL - 30ml - Code 048" target="_blank" class="btn-order-wa" style="margin:2px;">💬 30ml — 2,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : ALLURE HOMME CHANEL - 70ml - Code 048" target="_blank" class="btn-order-wa" style="margin:2px;">💬 70ml — 4,500 FCFA</a> </div>
-      </div>
-    </div>
-    <div class="product-card">
-      <div class="img-wrap"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjgwIj4KICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjI4MCIgZmlsbD0iI0M5QTk2RSIvPgogIDxyZWN0IHg9IjYwIiB5PSI0MCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjIwIiByeD0iMiIgZmlsbD0iIzFBMUExQSIvPgogIDxyZWN0IHg9IjcwIiB5PSI2MCIgd2lkdGg9IjYwIiBoZWlnaHQ9IjE1IiBmaWxsPSIjMUExQTFBIiBvcGFjaXR5PSIwLjciLz4KICA8cmVjdCB4PSI1MCIgeT0iNzUiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTQwIiByeD0iNCIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4yNSIvPgogIDxyZWN0IHg9IjU1IiB5PSI4MCIgd2lkdGg9IjkwIiBoZWlnaHQ9IjEzMCIgcng9IjIiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjkiLz4KICA8cmVjdCB4PSI2NSIgeT0iOTAiIHdpZHRoPSI3MCIgaGVpZ2h0PSI0MCIgcng9IjIiIGZpbGw9IiNDOUE5NkUiIG9wYWNpdHk9IjAuNiIvPgogIDx0ZXh0IHg9IjEwMCIgeT0iMTE1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2VyaWYiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IndoaXRlIiBmb250LXdlaWdodD0iYm9sZCI+U0hPR1VOPC90ZXh0PgogIDx0ZXh0IHg9IjEwMCIgeT0iMTMwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSI3IiBmaWxsPSIjMUExQTFBIj5QQVJGVU08L3RleHQ+CiAgPHJlY3QgeD0iODAiIHk9IjIzMCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjI1IiByeD0iMiIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4zIi8+Cjwvc3ZnPg==" alt="BURBERRY FOR MEN" loading="lazy"></div>
-      <div class="info">
-        <span class="category-label">#250</span>
-        <h3>BURBERRY FOR MEN</h3>
-        <div class="brand">BURBERRY</div>
-        <div class="desc">Copy certifiée Shogun — Reproduction fidèle.</div>
-        <div style="margin-top:8px;"><a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : BURBERRY FOR MEN BURBERRY - 15ml - Code 250" target="_blank" class="btn-order-wa" style="margin:2px;">💬 15ml — 1,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : BURBERRY FOR MEN BURBERRY - 30ml - Code 250" target="_blank" class="btn-order-wa" style="margin:2px;">💬 30ml — 2,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : BURBERRY FOR MEN BURBERRY - 70ml - Code 250" target="_blank" class="btn-order-wa" style="margin:2px;">💬 70ml — 4,500 FCFA</a> </div>
-      </div>
-    </div>
-    <div class="product-card">
-      <div class="img-wrap"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjgwIj4KICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjI4MCIgZmlsbD0iI0M5QTk2RSIvPgogIDxyZWN0IHg9IjYwIiB5PSI0MCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjIwIiByeD0iMiIgZmlsbD0iIzFBMUExQSIvPgogIDxyZWN0IHg9IjcwIiB5PSI2MCIgd2lkdGg9IjYwIiBoZWlnaHQ9IjE1IiBmaWxsPSIjMUExQTFBIiBvcGFjaXR5PSIwLjciLz4KICA8cmVjdCB4PSI1MCIgeT0iNzUiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTQwIiByeD0iNCIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4yNSIvPgogIDxyZWN0IHg9IjU1IiB5PSI4MCIgd2lkdGg9IjkwIiBoZWlnaHQ9IjEzMCIgcng9IjIiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjkiLz4KICA8cmVjdCB4PSI2NSIgeT0iOTAiIHdpZHRoPSI3MCIgaGVpZ2h0PSI0MCIgcng9IjIiIGZpbGw9IiNDOUE5NkUiIG9wYWNpdHk9IjAuNiIvPgogIDx0ZXh0IHg9IjEwMCIgeT0iMTE1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2VyaWYiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IndoaXRlIiBmb250LXdlaWdodD0iYm9sZCI+U0hPR1VOPC90ZXh0PgogIDx0ZXh0IHg9IjEwMCIgeT0iMTMwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSI3IiBmaWxsPSIjMUExQTFBIj5QQVJGVU08L3RleHQ+CiAgPHJlY3QgeD0iODAiIHk9IjIzMCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjI1IiByeD0iMiIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4zIi8+Cjwvc3ZnPg==" alt="PASHA 150" loading="lazy"></div>
-      <div class="info">
-        <span class="category-label">#052</span>
-        <h3>PASHA 150</h3>
-        <div class="brand">CARTIER</div>
-        <div class="desc">Copy certifiée Shogun — Reproduction fidèle.</div>
-        <div style="margin-top:8px;"><a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : PASHA 150 CARTIER - 15ml - Code 052" target="_blank" class="btn-order-wa" style="margin:2px;">💬 15ml — 1,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : PASHA 150 CARTIER - 30ml - Code 052" target="_blank" class="btn-order-wa" style="margin:2px;">💬 30ml — 2,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : PASHA 150 CARTIER - 70ml - Code 052" target="_blank" class="btn-order-wa" style="margin:2px;">💬 70ml — 4,500 FCFA</a> </div>
-      </div>
-    </div>
-    <div class="product-card">
-      <div class="img-wrap"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjgwIj4KICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjI4MCIgZmlsbD0iI0M5QTk2RSIvPgogIDxyZWN0IHg9IjYwIiB5PSI0MCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjIwIiByeD0iMiIgZmlsbD0iIzFBMUExQSIvPgogIDxyZWN0IHg9IjcwIiB5PSI2MCIgd2lkdGg9IjYwIiBoZWlnaHQ9IjE1IiBmaWxsPSIjMUExQTFBIiBvcGFjaXR5PSIwLjciLz4KICA8cmVjdCB4PSI1MCIgeT0iNzUiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTQwIiByeD0iNCIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4yNSIvPgogIDxyZWN0IHg9IjU1IiB5PSI4MCIgd2lkdGg9IjkwIiBoZWlnaHQ9IjEzMCIgcng9IjIiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjkiLz4KICA8cmVjdCB4PSI2NSIgeT0iOTAiIHdpZHRoPSI3MCIgaGVpZ2h0PSI0MCIgcng9IjIiIGZpbGw9IiNDOUE5NkUiIG9wYWNpdHk9IjAuNiIvPgogIDx0ZXh0IHg9IjEwMCIgeT0iMTE1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2VyaWYiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IndoaXRlIiBmb250LXdlaWdodD0iYm9sZCI+U0hPR1VOPC90ZXh0PgogIDx0ZXh0IHg9IjEwMCIgeT0iMTMwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSI3IiBmaWxsPSIjMUExQTFBIj5QQVJGVU08L3RleHQ+CiAgPHJlY3QgeD0iODAiIHk9IjIzMCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjI1IiByeD0iMiIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4zIi8+Cjwvc3ZnPg==" alt="INVICTUS" loading="lazy"></div>
-      <div class="info">
-        <span class="category-label">#061</span><span class="category-label" style="background:#e74c3c;margin-left:6px;">Gel douche</span>
-        <h3>INVICTUS</h3>
-        <div class="brand">PACO RABANNE</div>
-        <div class="desc">Copy certifiée Shogun — Reproduction fidèle.</div>
-        <div style="margin-top:8px;"><a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : INVICTUS PACO RABANNE - 15ml - Code 061" target="_blank" class="btn-order-wa" style="margin:2px;">💬 15ml — 1,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : INVICTUS PACO RABANNE - 30ml - Code 061" target="_blank" class="btn-order-wa" style="margin:2px;">💬 30ml — 2,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : INVICTUS PACO RABANNE - 70ml - Code 061" target="_blank" class="btn-order-wa" style="margin:2px;">💬 70ml — 4,500 FCFA</a> </div>
-      </div>
-    </div>
-    <div class="product-card">
-      <div class="img-wrap"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjgwIj4KICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjI4MCIgZmlsbD0iI0M5QTk2RSIvPgogIDxyZWN0IHg9IjYwIiB5PSI0MCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjIwIiByeD0iMiIgZmlsbD0iIzFBMUExQSIvPgogIDxyZWN0IHg9IjcwIiB5PSI2MCIgd2lkdGg9IjYwIiBoZWlnaHQ9IjE1IiBmaWxsPSIjMUExQTFBIiBvcGFjaXR5PSIwLjciLz4KICA8cmVjdCB4PSI1MCIgeT0iNzUiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTQwIiByeD0iNCIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4yNSIvPgogIDxyZWN0IHg9IjU1IiB5PSI4MCIgd2lkdGg9IjkwIiBoZWlnaHQ9IjEzMCIgcng9IjIiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjkiLz4KICA8cmVjdCB4PSI2NSIgeT0iOTAiIHdpZHRoPSI3MCIgaGVpZ2h0PSI0MCIgcng9IjIiIGZpbGw9IiNDOUE5NkUiIG9wYWNpdHk9IjAuNiIvPgogIDx0ZXh0IHg9IjEwMCIgeT0iMTE1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2VyaWYiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IndoaXRlIiBmb250LXdlaWdodD0iYm9sZCI+U0hPR1VOPC90ZXh0PgogIDx0ZXh0IHg9IjEwMCIgeT0iMTMwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSI3IiBmaWxsPSIjMUExQTFBIj5QQVJGVU08L3RleHQ+CiAgPHJlY3QgeD0iODAiIHk9IjIzMCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjI1IiByeD0iMiIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4zIi8+Cjwvc3ZnPg==" alt="INTENSO" loading="lazy"></div>
-      <div class="info">
-        <span class="category-label">#062</span>
-        <h3>INTENSO</h3>
-        <div class="brand">D&amp;G</div>
-        <div class="desc">Copy certifiée Shogun — Reproduction fidèle.</div>
-        <div style="margin-top:8px;"><a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : INTENSO D&amp;G - 15ml - Code 062" target="_blank" class="btn-order-wa" style="margin:2px;">💬 15ml — 1,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : INTENSO D&amp;G - 30ml - Code 062" target="_blank" class="btn-order-wa" style="margin:2px;">💬 30ml — 2,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : INTENSO D&amp;G - 70ml - Code 062" target="_blank" class="btn-order-wa" style="margin:2px;">💬 70ml — 4,500 FCFA</a> </div>
-      </div>
-    </div>
-    <div class="product-card">
-      <div class="img-wrap"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjgwIj4KICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjI4MCIgZmlsbD0iI0M5QTk2RSIvPgogIDxyZWN0IHg9IjYwIiB5PSI0MCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjIwIiByeD0iMiIgZmlsbD0iIzFBMUExQSIvPgogIDxyZWN0IHg9IjcwIiB5PSI2MCIgd2lkdGg9IjYwIiBoZWlnaHQ9IjE1IiBmaWxsPSIjMUExQTFBIiBvcGFjaXR5PSIwLjciLz4KICA8cmVjdCB4PSI1MCIgeT0iNzUiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTQwIiByeD0iNCIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4yNSIvPgogIDxyZWN0IHg9IjU1IiB5PSI4MCIgd2lkdGg9IjkwIiBoZWlnaHQ9IjEzMCIgcng9IjIiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjkiLz4KICA8cmVjdCB4PSI2NSIgeT0iOTAiIHdpZHRoPSI3MCIgaGVpZ2h0PSI0MCIgcng9IjIiIGZpbGw9IiNDOUE5NkUiIG9wYWNpdHk9IjAuNiIvPgogIDx0ZXh0IHg9IjEwMCIgeT0iMTE1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2VyaWYiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IndoaXRlIiBmb250LXdlaWdodD0iYm9sZCI+U0hPR1VOPC90ZXh0PgogIDx0ZXh0IHg9IjEwMCIgeT0iMTMwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSI3IiBmaWxsPSIjMUExQTFBIj5QQVJGVU08L3RleHQ+CiAgPHJlY3QgeD0iODAiIHk9IjIzMCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjI1IiByeD0iMiIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4zIi8+Cjwvc3ZnPg==" alt="THE SCENT" loading="lazy"></div>
-      <div class="info">
-        <span class="category-label">#265</span>
-        <h3>THE SCENT</h3>
-        <div class="brand">HUGO BOSS</div>
-        <div class="desc">Copy certifiée Shogun — Reproduction fidèle.</div>
-        <div style="margin-top:8px;"><a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : THE SCENT HUGO BOSS - 15ml - Code 265" target="_blank" class="btn-order-wa" style="margin:2px;">💬 15ml — 1,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : THE SCENT HUGO BOSS - 30ml - Code 265" target="_blank" class="btn-order-wa" style="margin:2px;">💬 30ml — 2,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : THE SCENT HUGO BOSS - 70ml - Code 265" target="_blank" class="btn-order-wa" style="margin:2px;">💬 70ml — 4,500 FCFA</a> </div>
-      </div>
-    </div>
-    <div class="product-card">
-      <div class="img-wrap"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjgwIj4KICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjI4MCIgZmlsbD0iI0M5QTk2RSIvPgogIDxyZWN0IHg9IjYwIiB5PSI0MCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjIwIiByeD0iMiIgZmlsbD0iIzFBMUExQSIvPgogIDxyZWN0IHg9IjcwIiB5PSI2MCIgd2lkdGg9IjYwIiBoZWlnaHQ9IjE1IiBmaWxsPSIjMUExQTFBIiBvcGFjaXR5PSIwLjciLz4KICA8cmVjdCB4PSI1MCIgeT0iNzUiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTQwIiByeD0iNCIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4yNSIvPgogIDxyZWN0IHg9IjU1IiB5PSI4MCIgd2lkdGg9IjkwIiBoZWlnaHQ9IjEzMCIgcng9IjIiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjkiLz4KICA8cmVjdCB4PSI2NSIgeT0iOTAiIHdpZHRoPSI3MCIgaGVpZ2h0PSI0MCIgcng9IjIiIGZpbGw9IiNDOUE5NkUiIG9wYWNpdHk9IjAuNiIvPgogIDx0ZXh0IHg9IjEwMCIgeT0iMTE1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2VyaWYiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IndoaXRlIiBmb250LXdlaWdodD0iYm9sZCI+U0hPR1VOPC90ZXh0PgogIDx0ZXh0IHg9IjEwMCIgeT0iMTMwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSI3IiBmaWxsPSIjMUExQTFBIj5QQVJGVU08L3RleHQ+CiAgPHJlY3QgeD0iODAiIHk9IjIzMCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjI1IiByeD0iMiIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4zIi8+Cjwvc3ZnPg==" alt="SCENT INTENSE" loading="lazy"></div>
-      <div class="info">
-        <span class="category-label">#066</span>
-        <h3>SCENT INTENSE</h3>
-        <div class="brand">COSTUME NATIONAL</div>
-        <div class="desc">Copy certifiée Shogun — Reproduction fidèle.</div>
-        <div style="margin-top:8px;"><a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : SCENT INTENSE COSTUME NATIONAL - 15ml - Code 066" target="_blank" class="btn-order-wa" style="margin:2px;">💬 15ml — 1,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : SCENT INTENSE COSTUME NATIONAL - 30ml - Code 066" target="_blank" class="btn-order-wa" style="margin:2px;">💬 30ml — 2,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : SCENT INTENSE COSTUME NATIONAL - 70ml - Code 066" target="_blank" class="btn-order-wa" style="margin:2px;">💬 70ml — 4,500 FCFA</a> </div>
-      </div>
-    </div>
-    <div class="product-card">
-      <div class="img-wrap"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjgwIj4KICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjI4MCIgZmlsbD0iI0M5QTk2RSIvPgogIDxyZWN0IHg9IjYwIiB5PSI0MCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjIwIiByeD0iMiIgZmlsbD0iIzFBMUExQSIvPgogIDxyZWN0IHg9IjcwIiB5PSI2MCIgd2lkdGg9IjYwIiBoZWlnaHQ9IjE1IiBmaWxsPSIjMUExQTFBIiBvcGFjaXR5PSIwLjciLz4KICA8cmVjdCB4PSI1MCIgeT0iNzUiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTQwIiByeD0iNCIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4yNSIvPgogIDxyZWN0IHg9IjU1IiB5PSI4MCIgd2lkdGg9IjkwIiBoZWlnaHQ9IjEzMCIgcng9IjIiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjkiLz4KICA8cmVjdCB4PSI2NSIgeT0iOTAiIHdpZHRoPSI3MCIgaGVpZ2h0PSI0MCIgcng9IjIiIGZpbGw9IiNDOUE5NkUiIG9wYWNpdHk9IjAuNiIvPgogIDx0ZXh0IHg9IjEwMCIgeT0iMTE1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2VyaWYiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IndoaXRlIiBmb250LXdlaWdodD0iYm9sZCI+U0hPR1VOPC90ZXh0PgogIDx0ZXh0IHg9IjEwMCIgeT0iMTMwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSI3IiBmaWxsPSIjMUExQTFBIj5QQVJGVU08L3RleHQ+CiAgPHJlY3QgeD0iODAiIHk9IjIzMCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjI1IiByeD0iMiIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4zIi8+Cjwvc3ZnPg==" alt="ACQUA DI SALE" loading="lazy"></div>
-      <div class="info">
-        <span class="category-label">#069</span>
-        <h3>ACQUA DI SALE</h3>
-        <div class="brand">PROFUMUM ROMA</div>
-        <div class="desc">Copy certifiée Shogun — Reproduction fidèle.</div>
-        <div style="margin-top:8px;"><a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : ACQUA DI SALE PROFUMUM ROMA - 15ml - Code 069" target="_blank" class="btn-order-wa" style="margin:2px;">💬 15ml — 1,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : ACQUA DI SALE PROFUMUM ROMA - 30ml - Code 069" target="_blank" class="btn-order-wa" style="margin:2px;">💬 30ml — 2,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : ACQUA DI SALE PROFUMUM ROMA - 70ml - Code 069" target="_blank" class="btn-order-wa" style="margin:2px;">💬 70ml — 4,500 FCFA</a> </div>
-      </div>
-    </div>
-    <div class="product-card">
-      <div class="img-wrap"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjgwIj4KICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjI4MCIgZmlsbD0iI0M5QTk2RSIvPgogIDxyZWN0IHg9IjYwIiB5PSI0MCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjIwIiByeD0iMiIgZmlsbD0iIzFBMUExQSIvPgogIDxyZWN0IHg9IjcwIiB5PSI2MCIgd2lkdGg9IjYwIiBoZWlnaHQ9IjE1IiBmaWxsPSIjMUExQTFBIiBvcGFjaXR5PSIwLjciLz4KICA8cmVjdCB4PSI1MCIgeT0iNzUiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTQwIiByeD0iNCIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4yNSIvPgogIDxyZWN0IHg9IjU1IiB5PSI4MCIgd2lkdGg9IjkwIiBoZWlnaHQ9IjEzMCIgcng9IjIiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjkiLz4KICA8cmVjdCB4PSI2NSIgeT0iOTAiIHdpZHRoPSI3MCIgaGVpZ2h0PSI0MCIgcng9IjIiIGZpbGw9IiNDOUE5NkUiIG9wYWNpdHk9IjAuNiIvPgogIDx0ZXh0IHg9IjEwMCIgeT0iMTE1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2VyaWYiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IndoaXRlIiBmb250LXdlaWdodD0iYm9sZCI+U0hPR1VOPC90ZXh0PgogIDx0ZXh0IHg9IjEwMCIgeT0iMTMwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSI3IiBmaWxsPSIjMUExQTFBIj5QQVJGVU08L3RleHQ+CiAgPHJlY3QgeD0iODAiIHk9IjIzMCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjI1IiByeD0iMiIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4zIi8+Cjwvc3ZnPg==" alt="ULTRAVIOLET" loading="lazy"></div>
-      <div class="info">
-        <span class="category-label">#078</span>
-        <h3>ULTRAVIOLET</h3>
-        <div class="brand">PACO RABANNE</div>
-        <div class="desc">Copy certifiée Shogun — Reproduction fidèle.</div>
-        <div style="margin-top:8px;"><a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : ULTRAVIOLET PACO RABANNE - 15ml - Code 078" target="_blank" class="btn-order-wa" style="margin:2px;">💬 15ml — 1,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : ULTRAVIOLET PACO RABANNE - 30ml - Code 078" target="_blank" class="btn-order-wa" style="margin:2px;">💬 30ml — 2,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : ULTRAVIOLET PACO RABANNE - 70ml - Code 078" target="_blank" class="btn-order-wa" style="margin:2px;">💬 70ml — 4,500 FCFA</a> </div>
-      </div>
-    </div>
-    <div class="product-card">
-      <div class="img-wrap"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjgwIj4KICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjI4MCIgZmlsbD0iI0M5QTk2RSIvPgogIDxyZWN0IHg9IjYwIiB5PSI0MCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjIwIiByeD0iMiIgZmlsbD0iIzFBMUExQSIvPgogIDxyZWN0IHg9IjcwIiB5PSI2MCIgd2lkdGg9IjYwIiBoZWlnaHQ9IjE1IiBmaWxsPSIjMUExQTFBIiBvcGFjaXR5PSIwLjciLz4KICA8cmVjdCB4PSI1MCIgeT0iNzUiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTQwIiByeD0iNCIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4yNSIvPgogIDxyZWN0IHg9IjU1IiB5PSI4MCIgd2lkdGg9IjkwIiBoZWlnaHQ9IjEzMCIgcng9IjIiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjkiLz4KICA8cmVjdCB4PSI2NSIgeT0iOTAiIHdpZHRoPSI3MCIgaGVpZ2h0PSI0MCIgcng9IjIiIGZpbGw9IiNDOUE5NkUiIG9wYWNpdHk9IjAuNiIvPgogIDx0ZXh0IHg9IjEwMCIgeT0iMTE1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2VyaWYiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IndoaXRlIiBmb250LXdlaWdodD0iYm9sZCI+U0hPR1VOPC90ZXh0PgogIDx0ZXh0IHg9IjEwMCIgeT0iMTMwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSI3IiBmaWxsPSIjMUExQTFBIj5QQVJGVU08L3RleHQ+CiAgPHJlY3QgeD0iODAiIHk9IjIzMCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjI1IiByeD0iMiIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4zIi8+Cjwvc3ZnPg==" alt="UOMO" loading="lazy"></div>
-      <div class="info">
-        <span class="category-label">#283</span>
-        <h3>UOMO</h3>
-        <div class="brand">ROBERTO CAVALLI</div>
-        <div class="desc">Copy certifiée Shogun — Reproduction fidèle.</div>
-        <div style="margin-top:8px;"><a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : UOMO ROBERTO CAVALLI - 15ml - Code 283" target="_blank" class="btn-order-wa" style="margin:2px;">💬 15ml — 1,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : UOMO ROBERTO CAVALLI - 30ml - Code 283" target="_blank" class="btn-order-wa" style="margin:2px;">💬 30ml — 2,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : UOMO ROBERTO CAVALLI - 70ml - Code 283" target="_blank" class="btn-order-wa" style="margin:2px;">💬 70ml — 4,500 FCFA</a> </div>
-      </div>
-    </div>
-    <div class="product-card">
-      <div class="img-wrap"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjgwIj4KICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjI4MCIgZmlsbD0iI0M5QTk2RSIvPgogIDxyZWN0IHg9IjYwIiB5PSI0MCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjIwIiByeD0iMiIgZmlsbD0iIzFBMUExQSIvPgogIDxyZWN0IHg9IjcwIiB5PSI2MCIgd2lkdGg9IjYwIiBoZWlnaHQ9IjE1IiBmaWxsPSIjMUExQTFBIiBvcGFjaXR5PSIwLjciLz4KICA8cmVjdCB4PSI1MCIgeT0iNzUiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTQwIiByeD0iNCIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4yNSIvPgogIDxyZWN0IHg9IjU1IiB5PSI4MCIgd2lkdGg9IjkwIiBoZWlnaHQ9IjEzMCIgcng9IjIiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjkiLz4KICA8cmVjdCB4PSI2NSIgeT0iOTAiIHdpZHRoPSI3MCIgaGVpZ2h0PSI0MCIgcng9IjIiIGZpbGw9IiNDOUE5NkUiIG9wYWNpdHk9IjAuNiIvPgogIDx0ZXh0IHg9IjEwMCIgeT0iMTE1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2VyaWYiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IndoaXRlIiBmb250LXdlaWdodD0iYm9sZCI+U0hPR1VOPC90ZXh0PgogIDx0ZXh0IHg9IjEwMCIgeT0iMTMwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSI3IiBmaWxsPSIjMUExQTFBIj5QQVJGVU08L3RleHQ+CiAgPHJlY3QgeD0iODAiIHk9IjIzMCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjI1IiByeD0iMiIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4zIi8+Cjwvc3ZnPg==" alt="DYLAN BLUE" loading="lazy"></div>
-      <div class="info">
-        <span class="category-label">#084</span>
-        <h3>DYLAN BLUE</h3>
-        <div class="brand">VERSACE</div>
-        <div class="desc">Copy certifiée Shogun — Reproduction fidèle.</div>
-        <div style="margin-top:8px;"><a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : DYLAN BLUE VERSACE - 15ml - Code 084" target="_blank" class="btn-order-wa" style="margin:2px;">💬 15ml — 1,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : DYLAN BLUE VERSACE - 30ml - Code 084" target="_blank" class="btn-order-wa" style="margin:2px;">💬 30ml — 2,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : DYLAN BLUE VERSACE - 70ml - Code 084" target="_blank" class="btn-order-wa" style="margin:2px;">💬 70ml — 4,500 FCFA</a> </div>
-      </div>
-    </div>
-    <div class="product-card">
-      <div class="img-wrap"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjgwIj4KICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjI4MCIgZmlsbD0iI0M5QTk2RSIvPgogIDxyZWN0IHg9IjYwIiB5PSI0MCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjIwIiByeD0iMiIgZmlsbD0iIzFBMUExQSIvPgogIDxyZWN0IHg9IjcwIiB5PSI2MCIgd2lkdGg9IjYwIiBoZWlnaHQ9IjE1IiBmaWxsPSIjMUExQTFBIiBvcGFjaXR5PSIwLjciLz4KICA8cmVjdCB4PSI1MCIgeT0iNzUiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTQwIiByeD0iNCIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4yNSIvPgogIDxyZWN0IHg9IjU1IiB5PSI4MCIgd2lkdGg9IjkwIiBoZWlnaHQ9IjEzMCIgcng9IjIiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjkiLz4KICA8cmVjdCB4PSI2NSIgeT0iOTAiIHdpZHRoPSI3MCIgaGVpZ2h0PSI0MCIgcng9IjIiIGZpbGw9IiNDOUE5NkUiIG9wYWNpdHk9IjAuNiIvPgogIDx0ZXh0IHg9IjEwMCIgeT0iMTE1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2VyaWYiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IndoaXRlIiBmb250LXdlaWdodD0iYm9sZCI+U0hPR1VOPC90ZXh0PgogIDx0ZXh0IHg9IjEwMCIgeT0iMTMwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSI3IiBmaWxsPSIjMUExQTFBIj5QQVJGVU08L3RleHQ+CiAgPHJlY3QgeD0iODAiIHk9IjIzMCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjI1IiByeD0iMiIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4zIi8+Cjwvc3ZnPg==" alt="LEGEND" loading="lazy"></div>
-      <div class="info">
-        <span class="category-label">#086</span>
-        <h3>LEGEND</h3>
-        <div class="brand">MONT BLANC</div>
-        <div class="desc">Copy certifiée Shogun — Reproduction fidèle.</div>
-        <div style="margin-top:8px;"><a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : LEGEND MONT BLANC - 15ml - Code 086" target="_blank" class="btn-order-wa" style="margin:2px;">💬 15ml — 1,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : LEGEND MONT BLANC - 30ml - Code 086" target="_blank" class="btn-order-wa" style="margin:2px;">💬 30ml — 2,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : LEGEND MONT BLANC - 70ml - Code 086" target="_blank" class="btn-order-wa" style="margin:2px;">💬 70ml — 4,500 FCFA</a> </div>
-      </div>
-    </div>
-    <div class="product-card">
-      <div class="img-wrap"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjgwIj4KICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjI4MCIgZmlsbD0iI0M5QTk2RSIvPgogIDxyZWN0IHg9IjYwIiB5PSI0MCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjIwIiByeD0iMiIgZmlsbD0iIzFBMUExQSIvPgogIDxyZWN0IHg9IjcwIiB5PSI2MCIgd2lkdGg9IjYwIiBoZWlnaHQ9IjE1IiBmaWxsPSIjMUExQTFBIiBvcGFjaXR5PSIwLjciLz4KICA8cmVjdCB4PSI1MCIgeT0iNzUiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTQwIiByeD0iNCIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4yNSIvPgogIDxyZWN0IHg9IjU1IiB5PSI4MCIgd2lkdGg9IjkwIiBoZWlnaHQ9IjEzMCIgcng9IjIiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjkiLz4KICA8cmVjdCB4PSI2NSIgeT0iOTAiIHdpZHRoPSI3MCIgaGVpZ2h0PSI0MCIgcng9IjIiIGZpbGw9IiNDOUE5NkUiIG9wYWNpdHk9IjAuNiIvPgogIDx0ZXh0IHg9IjEwMCIgeT0iMTE1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2VyaWYiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IndoaXRlIiBmb250LXdlaWdodD0iYm9sZCI+U0hPR1VOPC90ZXh0PgogIDx0ZXh0IHg9IjEwMCIgeT0iMTMwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSI3IiBmaWxsPSIjMUExQTFBIj5QQVJGVU08L3RleHQ+CiAgPHJlY3QgeD0iODAiIHk9IjIzMCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjI1IiByeD0iMiIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4zIi8+Cjwvc3ZnPg==" alt="WANTED" loading="lazy"></div>
-      <div class="info">
-        <span class="category-label">#087</span>
-        <h3>WANTED</h3>
-        <div class="brand">AZZARO</div>
-        <div class="desc">Copy certifiée Shogun — Reproduction fidèle.</div>
-        <div style="margin-top:8px;"><a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : WANTED AZZARO - 15ml - Code 087" target="_blank" class="btn-order-wa" style="margin:2px;">💬 15ml — 1,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : WANTED AZZARO - 30ml - Code 087" target="_blank" class="btn-order-wa" style="margin:2px;">💬 30ml — 2,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : WANTED AZZARO - 70ml - Code 087" target="_blank" class="btn-order-wa" style="margin:2px;">💬 70ml — 4,500 FCFA</a> </div>
-      </div>
-    </div>
-    <div class="product-card">
-      <div class="img-wrap"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjgwIj4KICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjI4MCIgZmlsbD0iI0M5QTk2RSIvPgogIDxyZWN0IHg9IjYwIiB5PSI0MCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjIwIiByeD0iMiIgZmlsbD0iIzFBMUExQSIvPgogIDxyZWN0IHg9IjcwIiB5PSI2MCIgd2lkdGg9IjYwIiBoZWlnaHQ9IjE1IiBmaWxsPSIjMUExQTFBIiBvcGFjaXR5PSIwLjciLz4KICA8cmVjdCB4PSI1MCIgeT0iNzUiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTQwIiByeD0iNCIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4yNSIvPgogIDxyZWN0IHg9IjU1IiB5PSI4MCIgd2lkdGg9IjkwIiBoZWlnaHQ9IjEzMCIgcng9IjIiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjkiLz4KICA8cmVjdCB4PSI2NSIgeT0iOTAiIHdpZHRoPSI3MCIgaGVpZ2h0PSI0MCIgcng9IjIiIGZpbGw9IiNDOUE5NkUiIG9wYWNpdHk9IjAuNiIvPgogIDx0ZXh0IHg9IjEwMCIgeT0iMTE1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2VyaWYiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IndoaXRlIiBmb250LXdlaWdodD0iYm9sZCI+U0hPR1VOPC90ZXh0PgogIDx0ZXh0IHg9IjEwMCIgeT0iMTMwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSI3IiBmaWxsPSIjMUExQTFBIj5QQVJGVU08L3RleHQ+CiAgPHJlY3QgeD0iODAiIHk9IjIzMCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjI1IiByeD0iMiIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4zIi8+Cjwvc3ZnPg==" alt="MAN IN BLACK" loading="lazy"></div>
-      <div class="info">
-        <span class="category-label">#088</span>
-        <h3>MAN IN BLACK</h3>
-        <div class="brand">BVLGARI</div>
-        <div class="desc">Copy certifiée Shogun — Reproduction fidèle.</div>
-        <div style="margin-top:8px;"><a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : MAN IN BLACK BVLGARI - 15ml - Code 088" target="_blank" class="btn-order-wa" style="margin:2px;">💬 15ml — 1,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : MAN IN BLACK BVLGARI - 30ml - Code 088" target="_blank" class="btn-order-wa" style="margin:2px;">💬 30ml — 2,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : MAN IN BLACK BVLGARI - 70ml - Code 088" target="_blank" class="btn-order-wa" style="margin:2px;">💬 70ml — 4,500 FCFA</a> </div>
-      </div>
-    </div>
-    <div class="product-card">
-      <div class="img-wrap"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjgwIj4KICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjI4MCIgZmlsbD0iI0M5QTk2RSIvPgogIDxyZWN0IHg9IjYwIiB5PSI0MCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjIwIiByeD0iMiIgZmlsbD0iIzFBMUExQSIvPgogIDxyZWN0IHg9IjcwIiB5PSI2MCIgd2lkdGg9IjYwIiBoZWlnaHQ9IjE1IiBmaWxsPSIjMUExQTFBIiBvcGFjaXR5PSIwLjciLz4KICA8cmVjdCB4PSI1MCIgeT0iNzUiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTQwIiByeD0iNCIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4yNSIvPgogIDxyZWN0IHg9IjU1IiB5PSI4MCIgd2lkdGg9IjkwIiBoZWlnaHQ9IjEzMCIgcng9IjIiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjkiLz4KICA8cmVjdCB4PSI2NSIgeT0iOTAiIHdpZHRoPSI3MCIgaGVpZ2h0PSI0MCIgcng9IjIiIGZpbGw9IiNDOUE5NkUiIG9wYWNpdHk9IjAuNiIvPgogIDx0ZXh0IHg9IjEwMCIgeT0iMTE1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2VyaWYiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IndoaXRlIiBmb250LXdlaWdodD0iYm9sZCI+U0hPR1VOPC90ZXh0PgogIDx0ZXh0IHg9IjEwMCIgeT0iMTMwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSI3IiBmaWxsPSIjMUExQTFBIj5QQVJGVU08L3RleHQ+CiAgPHJlY3QgeD0iODAiIHk9IjIzMCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjI1IiByeD0iMiIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4zIi8+Cjwvc3ZnPg==" alt="CHROME AZZARO" loading="lazy"></div>
-      <div class="info">
-        <span class="category-label">#091</span>
-        <h3>CHROME AZZARO</h3>
-        <div class="brand">AZZARO</div>
-        <div class="desc">Copy certifiée Shogun — Reproduction fidèle.</div>
-        <div style="margin-top:8px;"><a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : CHROME AZZARO AZZARO - 15ml - Code 091" target="_blank" class="btn-order-wa" style="margin:2px;">💬 15ml — 1,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : CHROME AZZARO AZZARO - 30ml - Code 091" target="_blank" class="btn-order-wa" style="margin:2px;">💬 30ml — 2,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : CHROME AZZARO AZZARO - 70ml - Code 091" target="_blank" class="btn-order-wa" style="margin:2px;">💬 70ml — 4,500 FCFA</a> </div>
-      </div>
-    </div>
-    <div class="product-card">
-      <div class="img-wrap"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjgwIj4KICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjI4MCIgZmlsbD0iI0M5QTk2RSIvPgogIDxyZWN0IHg9IjYwIiB5PSI0MCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjIwIiByeD0iMiIgZmlsbD0iIzFBMUExQSIvPgogIDxyZWN0IHg9IjcwIiB5PSI2MCIgd2lkdGg9IjYwIiBoZWlnaHQ9IjE1IiBmaWxsPSIjMUExQTFBIiBvcGFjaXR5PSIwLjciLz4KICA8cmVjdCB4PSI1MCIgeT0iNzUiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTQwIiByeD0iNCIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4yNSIvPgogIDxyZWN0IHg9IjU1IiB5PSI4MCIgd2lkdGg9IjkwIiBoZWlnaHQ9IjEzMCIgcng9IjIiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjkiLz4KICA8cmVjdCB4PSI2NSIgeT0iOTAiIHdpZHRoPSI3MCIgaGVpZ2h0PSI0MCIgcng9IjIiIGZpbGw9IiNDOUE5NkUiIG9wYWNpdHk9IjAuNiIvPgogIDx0ZXh0IHg9IjEwMCIgeT0iMTE1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2VyaWYiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IndoaXRlIiBmb250LXdlaWdodD0iYm9sZCI+U0hPR1VOPC90ZXh0PgogIDx0ZXh0IHg9IjEwMCIgeT0iMTMwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSI3IiBmaWxsPSIjMUExQTFBIj5QQVJGVU08L3RleHQ+CiAgPHJlY3QgeD0iODAiIHk9IjIzMCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjI1IiByeD0iMiIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4zIi8+Cjwvc3ZnPg==" alt="SAUVAGE" loading="lazy"></div>
-      <div class="info">
-        <span class="category-label">#094</span><span class="category-label" style="background:#e74c3c;margin-left:6px;">Attention prix</span>
-        <h3>SAUVAGE</h3>
-        <div class="brand">DIOR</div>
-        <div class="desc">Copy certifiée Shogun — Reproduction fidèle.</div>
-        <div style="margin-top:8px;"><a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : SAUVAGE DIOR - 15ml - Code 094" target="_blank" class="btn-order-wa" style="margin:2px;">💬 15ml — 1,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : SAUVAGE DIOR - 30ml - Code 094" target="_blank" class="btn-order-wa" style="margin:2px;">💬 30ml — 2,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : SAUVAGE DIOR - 70ml - Code 094" target="_blank" class="btn-order-wa" style="margin:2px;">💬 70ml — 4,500 FCFA</a> </div>
-      </div>
-    </div>
-    <div class="product-card">
-      <div class="img-wrap"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjgwIj4KICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjI4MCIgZmlsbD0iI0M5QTk2RSIvPgogIDxyZWN0IHg9IjYwIiB5PSI0MCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjIwIiByeD0iMiIgZmlsbD0iIzFBMUExQSIvPgogIDxyZWN0IHg9IjcwIiB5PSI2MCIgd2lkdGg9IjYwIiBoZWlnaHQ9IjE1IiBmaWxsPSIjMUExQTFBIiBvcGFjaXR5PSIwLjciLz4KICA8cmVjdCB4PSI1MCIgeT0iNzUiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTQwIiByeD0iNCIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4yNSIvPgogIDxyZWN0IHg9IjU1IiB5PSI4MCIgd2lkdGg9IjkwIiBoZWlnaHQ9IjEzMCIgcng9IjIiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjkiLz4KICA8cmVjdCB4PSI2NSIgeT0iOTAiIHdpZHRoPSI3MCIgaGVpZ2h0PSI0MCIgcng9IjIiIGZpbGw9IiNDOUE5NkUiIG9wYWNpdHk9IjAuNiIvPgogIDx0ZXh0IHg9IjEwMCIgeT0iMTE1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2VyaWYiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IndoaXRlIiBmb250LXdlaWdodD0iYm9sZCI+U0hPR1VOPC90ZXh0PgogIDx0ZXh0IHg9IjEwMCIgeT0iMTMwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSI3IiBmaWxsPSIjMUExQTFBIj5QQVJGVU08L3RleHQ+CiAgPHJlY3QgeD0iODAiIHk9IjIzMCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjI1IiByeD0iMiIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4zIi8+Cjwvc3ZnPg==" alt="MR. BURBERRY" loading="lazy"></div>
-      <div class="info">
-        <span class="category-label">#292</span>
-        <h3>MR. BURBERRY</h3>
-        <div class="brand">BURBERRY</div>
-        <div class="desc">Copy certifiée Shogun — Reproduction fidèle.</div>
-        <div style="margin-top:8px;"><a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : MR. BURBERRY BURBERRY - 15ml - Code 292" target="_blank" class="btn-order-wa" style="margin:2px;">💬 15ml — 1,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : MR. BURBERRY BURBERRY - 30ml - Code 292" target="_blank" class="btn-order-wa" style="margin:2px;">💬 30ml — 2,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : MR. BURBERRY BURBERRY - 70ml - Code 292" target="_blank" class="btn-order-wa" style="margin:2px;">💬 70ml — 4,500 FCFA</a> </div>
-      </div>
-    </div>
-    <div class="product-card">
-      <div class="img-wrap"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjgwIj4KICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjI4MCIgZmlsbD0iI0M5QTk2RSIvPgogIDxyZWN0IHg9IjYwIiB5PSI0MCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjIwIiByeD0iMiIgZmlsbD0iIzFBMUExQSIvPgogIDxyZWN0IHg9IjcwIiB5PSI2MCIgd2lkdGg9IjYwIiBoZWlnaHQ9IjE1IiBmaWxsPSIjMUExQTFBIiBvcGFjaXR5PSIwLjciLz4KICA8cmVjdCB4PSI1MCIgeT0iNzUiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTQwIiByeD0iNCIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4yNSIvPgogIDxyZWN0IHg9IjU1IiB5PSI4MCIgd2lkdGg9IjkwIiBoZWlnaHQ9IjEzMCIgcng9IjIiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjkiLz4KICA8cmVjdCB4PSI2NSIgeT0iOTAiIHdpZHRoPSI3MCIgaGVpZ2h0PSI0MCIgcng9IjIiIGZpbGw9IiNDOUE5NkUiIG9wYWNpdHk9IjAuNiIvPgogIDx0ZXh0IHg9IjEwMCIgeT0iMTE1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2VyaWYiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IndoaXRlIiBmb250LXdlaWdodD0iYm9sZCI+U0hPR1VOPC90ZXh0PgogIDx0ZXh0IHg9IjEwMCIgeT0iMTMwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSI3IiBmaWxsPSIjMUExQTFBIj5QQVJGVU08L3RleHQ+CiAgPHJlY3QgeD0iODAiIHk9IjIzMCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjI1IiByeD0iMiIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4zIi8+Cjwvc3ZnPg==" alt="ÉROS" loading="lazy"></div>
-      <div class="info">
-        <span class="category-label">#140</span>
-        <h3>ÉROS</h3>
-        <div class="brand">VERSACE</div>
-        <div class="desc">Copy certifiée Shogun — Reproduction fidèle.</div>
-        <div style="margin-top:8px;"><a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : ÉROS VERSACE - 15ml - Code 140" target="_blank" class="btn-order-wa" style="margin:2px;">💬 15ml — 1,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : ÉROS VERSACE - 30ml - Code 140" target="_blank" class="btn-order-wa" style="margin:2px;">💬 30ml — 2,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : ÉROS VERSACE - 70ml - Code 140" target="_blank" class="btn-order-wa" style="margin:2px;">💬 70ml — 4,500 FCFA</a> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section id="shogun-mixte">
-  <div class="section-title">
-    <h2>Shogun Mixte</h2>
-    <div class="divider"></div>
-    <p>Codes 054-105 — Unisex reproductions certifiées Shogun</p>
-  </div>
-  <div class="products">
-    <div class="product-card">
-      <div class="img-wrap"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjgwIj4KICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjI4MCIgZmlsbD0iI0M5QTk2RSIvPgogIDxyZWN0IHg9IjYwIiB5PSI0MCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjIwIiByeD0iMiIgZmlsbD0iIzFBMUExQSIvPgogIDxyZWN0IHg9IjcwIiB5PSI2MCIgd2lkdGg9IjYwIiBoZWlnaHQ9IjE1IiBmaWxsPSIjMUExQTFBIiBvcGFjaXR5PSIwLjciLz4KICA8cmVjdCB4PSI1MCIgeT0iNzUiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTQwIiByeD0iNCIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4yNSIvPgogIDxyZWN0IHg9IjU1IiB5PSI4MCIgd2lkdGg9IjkwIiBoZWlnaHQ9IjEzMCIgcng9IjIiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjkiLz4KICA8cmVjdCB4PSI2NSIgeT0iOTAiIHdpZHRoPSI3MCIgaGVpZ2h0PSI0MCIgcng9IjIiIGZpbGw9IiNDOUE5NkUiIG9wYWNpdHk9IjAuNiIvPgogIDx0ZXh0IHg9IjEwMCIgeT0iMTE1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2VyaWYiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IndoaXRlIiBmb250LXdlaWdodD0iYm9sZCI+U0hPR1VOPC90ZXh0PgogIDx0ZXh0IHg9IjEwMCIgeT0iMTMwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSI3IiBmaWxsPSIjMUExQTFBIj5QQVJGVU08L3RleHQ+CiAgPHJlY3QgeD0iODAiIHk9IjIzMCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjI1IiByeD0iMiIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4zIi8+Cjwvc3ZnPg==" alt="CK ONE" loading="lazy"></div>
-      <div class="info">
-        <span class="category-label">#246</span>
-        <h3>CK ONE</h3>
-        <div class="brand">CALVIN KLEIN</div>
-        <div class="desc">Copy certifiée Shogun — Reproduction fidèle.</div>
-        <div style="margin-top:8px;"><a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : CK ONE CALVIN KLEIN - 15ml - Code 246" target="_blank" class="btn-order-wa" style="margin:2px;">💬 15ml — 1,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : CK ONE CALVIN KLEIN - 30ml - Code 246" target="_blank" class="btn-order-wa" style="margin:2px;">💬 30ml — 2,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : CK ONE CALVIN KLEIN - 70ml - Code 246" target="_blank" class="btn-order-wa" style="margin:2px;">💬 70ml — 4,500 FCFA</a> </div>
-      </div>
-    </div>
-    <div class="product-card">
-      <div class="img-wrap"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjgwIj4KICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjI4MCIgZmlsbD0iI0M5QTk2RSIvPgogIDxyZWN0IHg9IjYwIiB5PSI0MCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjIwIiByeD0iMiIgZmlsbD0iIzFBMUExQSIvPgogIDxyZWN0IHg9IjcwIiB5PSI2MCIgd2lkdGg9IjYwIiBoZWlnaHQ9IjE1IiBmaWxsPSIjMUExQTFBIiBvcGFjaXR5PSIwLjciLz4KICA8cmVjdCB4PSI1MCIgeT0iNzUiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTQwIiByeD0iNCIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4yNSIvPgogIDxyZWN0IHg9IjU1IiB5PSI4MCIgd2lkdGg9IjkwIiBoZWlnaHQ9IjEzMCIgcng9IjIiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjkiLz4KICA8cmVjdCB4PSI2NSIgeT0iOTAiIHdpZHRoPSI3MCIgaGVpZ2h0PSI0MCIgcng9IjIiIGZpbGw9IiNDOUE5NkUiIG9wYWNpdHk9IjAuNiIvPgogIDx0ZXh0IHg9IjEwMCIgeT0iMTE1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2VyaWYiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IndoaXRlIiBmb250LXdlaWdodD0iYm9sZCI+U0hPR1VOPC90ZXh0PgogIDx0ZXh0IHg9IjEwMCIgeT0iMTMwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSI3IiBmaWxsPSIjMUExQTFBIj5QQVJGVU08L3RleHQ+CiAgPHJlY3QgeD0iODAiIHk9IjIzMCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjI1IiByeD0iMiIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4zIi8+Cjwvc3ZnPg==" alt="BLACK ORCHID" loading="lazy"></div>
-      <div class="info">
-        <span class="category-label">#054</span>
-        <h3>BLACK ORCHID</h3>
-        <div class="brand">TOM FORD</div>
-        <div class="desc">Copy certifiée Shogun — Reproduction fidèle.</div>
-        <div style="margin-top:8px;"><a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : BLACK ORCHID TOM FORD - 15ml - Code 054" target="_blank" class="btn-order-wa" style="margin:2px;">💬 15ml — 1,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : BLACK ORCHID TOM FORD - 30ml - Code 054" target="_blank" class="btn-order-wa" style="margin:2px;">💬 30ml — 2,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : BLACK ORCHID TOM FORD - 70ml - Code 054" target="_blank" class="btn-order-wa" style="margin:2px;">💬 70ml — 4,500 FCFA</a> </div>
-      </div>
-    </div>
-    <div class="product-card">
-      <div class="img-wrap"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjgwIj4KICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjI4MCIgZmlsbD0iI0M5QTk2RSIvPgogIDxyZWN0IHg9IjYwIiB5PSI0MCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjIwIiByeD0iMiIgZmlsbD0iIzFBMUExQSIvPgogIDxyZWN0IHg9IjcwIiB5PSI2MCIgd2lkdGg9IjYwIiBoZWlnaHQ9IjE1IiBmaWxsPSIjMUExQTFBIiBvcGFjaXR5PSIwLjciLz4KICA8cmVjdCB4PSI1MCIgeT0iNzUiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTQwIiByeD0iNCIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4yNSIvPgogIDxyZWN0IHg9IjU1IiB5PSI4MCIgd2lkdGg9IjkwIiBoZWlnaHQ9IjEzMCIgcng9IjIiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjkiLz4KICA8cmVjdCB4PSI2NSIgeT0iOTAiIHdpZHRoPSI3MCIgaGVpZ2h0PSI0MCIgcng9IjIiIGZpbGw9IiNDOUE5NkUiIG9wYWNpdHk9IjAuNiIvPgogIDx0ZXh0IHg9IjEwMCIgeT0iMTE1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2VyaWYiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IndoaXRlIiBmb250LXdlaWdodD0iYm9sZCI+U0hPR1VOPC90ZXh0PgogIDx0ZXh0IHg9IjEwMCIgeT0iMTMwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSI3IiBmaWxsPSIjMUExQTFBIj5QQVJGVU08L3RleHQ+CiAgPHJlY3QgeD0iODAiIHk9IjIzMCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjI1IiByeD0iMiIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4zIi8+Cjwvc3ZnPg==" alt="PATCHOULI" loading="lazy"></div>
-      <div class="info">
-        <span class="category-label">#072</span>
-        <h3>PATCHOULI</h3>
-        <div class="brand">REMINISCENCE</div>
-        <div class="desc">Copy certifiée Shogun — Reproduction fidèle.</div>
-        <div style="margin-top:8px;"><a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : PATCHOULI REMINISCENCE - 15ml - Code 072" target="_blank" class="btn-order-wa" style="margin:2px;">💬 15ml — 1,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : PATCHOULI REMINISCENCE - 30ml - Code 072" target="_blank" class="btn-order-wa" style="margin:2px;">💬 30ml — 2,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : PATCHOULI REMINISCENCE - 70ml - Code 072" target="_blank" class="btn-order-wa" style="margin:2px;">💬 70ml — 4,500 FCFA</a> </div>
-      </div>
-    </div>
-    <div class="product-card">
-      <div class="img-wrap"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjgwIj4KICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjI4MCIgZmlsbD0iI0M5QTk2RSIvPgogIDxyZWN0IHg9IjYwIiB5PSI0MCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjIwIiByeD0iMiIgZmlsbD0iIzFBMUExQSIvPgogIDxyZWN0IHg9IjcwIiB5PSI2MCIgd2lkdGg9IjYwIiBoZWlnaHQ9IjE1IiBmaWxsPSIjMUExQTFBIiBvcGFjaXR5PSIwLjciLz4KICA8cmVjdCB4PSI1MCIgeT0iNzUiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTQwIiByeD0iNCIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4yNSIvPgogIDxyZWN0IHg9IjU1IiB5PSI4MCIgd2lkdGg9IjkwIiBoZWlnaHQ9IjEzMCIgcng9IjIiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjkiLz4KICA8cmVjdCB4PSI2NSIgeT0iOTAiIHdpZHRoPSI3MCIgaGVpZ2h0PSI0MCIgcng9IjIiIGZpbGw9IiNDOUE5NkUiIG9wYWNpdHk9IjAuNiIvPgogIDx0ZXh0IHg9IjEwMCIgeT0iMTE1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2VyaWYiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IndoaXRlIiBmb250LXdlaWdodD0iYm9sZCI+U0hPR1VOPC90ZXh0PgogIDx0ZXh0IHg9IjEwMCIgeT0iMTMwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSI3IiBmaWxsPSIjMUExQTFBIj5QQVJGVU08L3RleHQ+CiAgPHJlY3QgeD0iODAiIHk9IjIzMCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjI1IiByeD0iMiIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4zIi8+Cjwvc3ZnPg==" alt="WHITE AOUD" loading="lazy"></div>
-      <div class="info">
-        <span class="category-label">#100</span>
-        <h3>WHITE AOUD</h3>
-        <div class="brand">MONTALE</div>
-        <div class="desc">Copy certifiée Shogun — Reproduction fidèle.</div>
-        <div style="margin-top:8px;"><a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : WHITE AOUD MONTALE - 15ml - Code 100" target="_blank" class="btn-order-wa" style="margin:2px;">💬 15ml — 1,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : WHITE AOUD MONTALE - 30ml - Code 100" target="_blank" class="btn-order-wa" style="margin:2px;">💬 30ml — 2,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : WHITE AOUD MONTALE - 70ml - Code 100" target="_blank" class="btn-order-wa" style="margin:2px;">💬 70ml — 4,500 FCFA</a> </div>
-      </div>
-    </div>
-    <div class="product-card">
-      <div class="img-wrap"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjgwIj4KICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjI4MCIgZmlsbD0iI0M5QTk2RSIvPgogIDxyZWN0IHg9IjYwIiB5PSI0MCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjIwIiByeD0iMiIgZmlsbD0iIzFBMUExQSIvPgogIDxyZWN0IHg9IjcwIiB5PSI2MCIgd2lkdGg9IjYwIiBoZWlnaHQ9IjE1IiBmaWxsPSIjMUExQTFBIiBvcGFjaXR5PSIwLjciLz4KICA8cmVjdCB4PSI1MCIgeT0iNzUiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTQwIiByeD0iNCIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4yNSIvPgogIDxyZWN0IHg9IjU1IiB5PSI4MCIgd2lkdGg9IjkwIiBoZWlnaHQ9IjEzMCIgcng9IjIiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjkiLz4KICA8cmVjdCB4PSI2NSIgeT0iOTAiIHdpZHRoPSI3MCIgaGVpZ2h0PSI0MCIgcng9IjIiIGZpbGw9IiNDOUE5NkUiIG9wYWNpdHk9IjAuNiIvPgogIDx0ZXh0IHg9IjEwMCIgeT0iMTE1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2VyaWYiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IndoaXRlIiBmb250LXdlaWdodD0iYm9sZCI+U0hPR1VOPC90ZXh0PgogIDx0ZXh0IHg9IjEwMCIgeT0iMTMwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSI3IiBmaWxsPSIjMUExQTFBIj5QQVJGVU08L3RleHQ+CiAgPHJlY3QgeD0iODAiIHk9IjIzMCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjI1IiByeD0iMiIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4zIi8+Cjwvc3ZnPg==" alt="INTENSE CAFÉ" loading="lazy"></div>
-      <div class="info">
-        <span class="category-label">#105</span><span class="category-label" style="background:#e74c3c;margin-left:6px;">Gel douche</span>
-        <h3>INTENSE CAFÉ</h3>
-        <div class="brand">MONTALE</div>
-        <div class="desc">Copy certifiée Shogun — Reproduction fidèle.</div>
-        <div style="margin-top:8px;"><a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : INTENSE CAFÉ MONTALE - 15ml - Code 105" target="_blank" class="btn-order-wa" style="margin:2px;">💬 15ml — 1,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : INTENSE CAFÉ MONTALE - 30ml - Code 105" target="_blank" class="btn-order-wa" style="margin:2px;">💬 30ml — 2,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : INTENSE CAFÉ MONTALE - 70ml - Code 105" target="_blank" class="btn-order-wa" style="margin:2px;">💬 70ml — 4,500 FCFA</a> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section id="luxury-olfazeta">
-  <div class="section-title">
-    <h2>Luxury Olfazeta</h2>
-    <div class="divider"></div>
-    <p>Extraits de parfum 50ml — Collection Luxury</p>
-  </div>
-  <div class="products">
-    <div class="product-card">
-      <div class="img-wrap"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjgwIj4KICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjI4MCIgZmlsbD0iI0M5QTk2RSIvPgogIDxyZWN0IHg9IjYwIiB5PSI0MCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjIwIiByeD0iMiIgZmlsbD0iIzFBMUExQSIvPgogIDxyZWN0IHg9IjcwIiB5PSI2MCIgd2lkdGg9IjYwIiBoZWlnaHQ9IjE1IiBmaWxsPSIjMUExQTFBIiBvcGFjaXR5PSIwLjciLz4KICA8cmVjdCB4PSI1MCIgeT0iNzUiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTQwIiByeD0iNCIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4yNSIvPgogIDxyZWN0IHg9IjU1IiB5PSI4MCIgd2lkdGg9IjkwIiBoZWlnaHQ9IjEzMCIgcng9IjIiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjkiLz4KICA8cmVjdCB4PSI2NSIgeT0iOTAiIHdpZHRoPSI3MCIgaGVpZ2h0PSI0MCIgcng9IjIiIGZpbGw9IiNDOUE5NkUiIG9wYWNpdHk9IjAuNiIvPgogIDx0ZXh0IHg9IjEwMCIgeT0iMTE1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2VyaWYiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IndoaXRlIiBmb250LXdlaWdodD0iYm9sZCI+U0hPR1VOPC90ZXh0PgogIDx0ZXh0IHg9IjEwMCIgeT0iMTMwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSI3IiBmaWxsPSIjMUExQTFBIj5QQVJGVU08L3RleHQ+CiAgPHJlY3QgeD0iODAiIHk9IjIzMCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjI1IiByeD0iMiIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4zIi8+Cjwvc3ZnPg==" alt="Olfazeta Luxury Noir" loading="lazy"></div>
-      <div class="info">
-        <span class="category-label">#OLN01</span>
-        <h3>Olfazeta Luxury Noir</h3>
-        <div class="brand">Olfazeta</div>
-        <div class="desc">Copy certifiée Shogun — Reproduction fidèle.</div>
-        <div style="margin-top:8px;"><a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : Olfazeta Luxury Noir Olfazeta - 50ml - Code OLN01" target="_blank" class="btn-order-wa" style="margin:2px;">💬 50ml — 7,500 FCFA</a> </div>
-      </div>
-    </div>
-    <div class="product-card">
-      <div class="img-wrap"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjgwIj4KICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjI4MCIgZmlsbD0iI0M5QTk2RSIvPgogIDxyZWN0IHg9IjYwIiB5PSI0MCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjIwIiByeD0iMiIgZmlsbD0iIzFBMUExQSIvPgogIDxyZWN0IHg9IjcwIiB5PSI2MCIgd2lkdGg9IjYwIiBoZWlnaHQ9IjE1IiBmaWxsPSIjMUExQTFBIiBvcGFjaXR5PSIwLjciLz4KICA8cmVjdCB4PSI1MCIgeT0iNzUiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTQwIiByeD0iNCIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4yNSIvPgogIDxyZWN0IHg9IjU1IiB5PSI4MCIgd2lkdGg9IjkwIiBoZWlnaHQ9IjEzMCIgcng9IjIiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjkiLz4KICA8cmVjdCB4PSI2NSIgeT0iOTAiIHdpZHRoPSI3MCIgaGVpZ2h0PSI0MCIgcng9IjIiIGZpbGw9IiNDOUE5NkUiIG9wYWNpdHk9IjAuNiIvPgogIDx0ZXh0IHg9IjEwMCIgeT0iMTE1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2VyaWYiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IndoaXRlIiBmb250LXdlaWdodD0iYm9sZCI+U0hPR1VOPC90ZXh0PgogIDx0ZXh0IHg9IjEwMCIgeT0iMTMwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSI3IiBmaWxsPSIjMUExQTFBIj5QQVJGVU08L3RleHQ+CiAgPHJlY3QgeD0iODAiIHk9IjIzMCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjI1IiByeD0iMiIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4zIi8+Cjwvc3ZnPg==" alt="Olfazeta Luxury Blanc" loading="lazy"></div>
-      <div class="info">
-        <span class="category-label">#OLB01</span>
-        <h3>Olfazeta Luxury Blanc</h3>
-        <div class="brand">Olfazeta</div>
-        <div class="desc">Copy certifiée Shogun — Reproduction fidèle.</div>
-        <div style="margin-top:8px;"><a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : Olfazeta Luxury Blanc Olfazeta - 50ml - Code OLB01" target="_blank" class="btn-order-wa" style="margin:2px;">💬 50ml — 7,500 FCFA</a> </div>
-      </div>
-    </div>
-    <div class="product-card">
-      <div class="img-wrap"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjgwIj4KICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjI4MCIgZmlsbD0iI0M5QTk2RSIvPgogIDxyZWN0IHg9IjYwIiB5PSI0MCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjIwIiByeD0iMiIgZmlsbD0iIzFBMUExQSIvPgogIDxyZWN0IHg9IjcwIiB5PSI2MCIgd2lkdGg9IjYwIiBoZWlnaHQ9IjE1IiBmaWxsPSIjMUExQTFBIiBvcGFjaXR5PSIwLjciLz4KICA8cmVjdCB4PSI1MCIgeT0iNzUiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTQwIiByeD0iNCIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4yNSIvPgogIDxyZWN0IHg9IjU1IiB5PSI4MCIgd2lkdGg9IjkwIiBoZWlnaHQ9IjEzMCIgcng9IjIiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjkiLz4KICA8cmVjdCB4PSI2NSIgeT0iOTAiIHdpZHRoPSI3MCIgaGVpZ2h0PSI0MCIgcng9IjIiIGZpbGw9IiNDOUE5NkUiIG9wYWNpdHk9IjAuNiIvPgogIDx0ZXh0IHg9IjEwMCIgeT0iMTE1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2VyaWYiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IndoaXRlIiBmb250LXdlaWdodD0iYm9sZCI+U0hPR1VOPC90ZXh0PgogIDx0ZXh0IHg9IjEwMCIgeT0iMTMwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSI3IiBmaWxsPSIjMUExQTFBIj5QQVJGVU08L3RleHQ+CiAgPHJlY3QgeD0iODAiIHk9IjIzMCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjI1IiByeD0iMiIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4zIi8+Cjwvc3ZnPg==" alt="Olfazeta Milky Musk" loading="lazy"></div>
-      <div class="info">
-        <span class="category-label">#OLM01</span>
-        <h3>Olfazeta Milky Musk</h3>
-        <div class="brand">Olfazeta</div>
-        <div class="desc">Copy certifiée Shogun — Reproduction fidèle.</div>
-        <div style="margin-top:8px;"><a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : Olfazeta Milky Musk Olfazeta - 50ml - Code OLM01" target="_blank" class="btn-order-wa" style="margin:2px;">💬 50ml — 7,500 FCFA</a> </div>
-      </div>
-    </div>
-    <div class="product-card">
-      <div class="img-wrap"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjgwIj4KICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjI4MCIgZmlsbD0iI0M5QTk2RSIvPgogIDxyZWN0IHg9IjYwIiB5PSI0MCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjIwIiByeD0iMiIgZmlsbD0iIzFBMUExQSIvPgogIDxyZWN0IHg9IjcwIiB5PSI2MCIgd2lkdGg9IjYwIiBoZWlnaHQ9IjE1IiBmaWxsPSIjMUExQTFBIiBvcGFjaXR5PSIwLjciLz4KICA8cmVjdCB4PSI1MCIgeT0iNzUiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTQwIiByeD0iNCIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4yNSIvPgogIDxyZWN0IHg9IjU1IiB5PSI4MCIgd2lkdGg9IjkwIiBoZWlnaHQ9IjEzMCIgcng9IjIiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjkiLz4KICA8cmVjdCB4PSI2NSIgeT0iOTAiIHdpZHRoPSI3MCIgaGVpZ2h0PSI0MCIgcng9IjIiIGZpbGw9IiNDOUE5NkUiIG9wYWNpdHk9IjAuNiIvPgogIDx0ZXh0IHg9IjEwMCIgeT0iMTE1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2VyaWYiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IndoaXRlIiBmb250LXdlaWdodD0iYm9sZCI+U0hPR1VOPC90ZXh0PgogIDx0ZXh0IHg9IjEwMCIgeT0iMTMwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSI3IiBmaWxsPSIjMUExQTFBIj5QQVJGVU08L3RleHQ+CiAgPHJlY3QgeD0iODAiIHk9IjIzMCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjI1IiByeD0iMiIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4zIi8+Cjwvc3ZnPg==" alt="Olfazeta Millésime" loading="lazy"></div>
-      <div class="info">
-        <span class="category-label">#OLM02</span>
-        <h3>Olfazeta Millésime</h3>
-        <div class="brand">Olfazeta</div>
-        <div class="desc">Copy certifiée Shogun — Reproduction fidèle.</div>
-        <div style="margin-top:8px;"><a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : Olfazeta Millésime Olfazeta - 50ml - Code OLM02" target="_blank" class="btn-order-wa" style="margin:2px;">💬 50ml — 7,500 FCFA</a> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section id="parfums-d&#x27;ambiance">
-  <div class="section-title">
-    <h2>Parfums d'Ambiance</h2>
-    <div class="divider"></div>
-    <p>Format 100ml / 200ml / 500ml</p>
-  </div>
-  <div class="products">
-    <div class="product-card">
-      <div class="img-wrap"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjgwIj4KICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjI4MCIgZmlsbD0iI0M5QTk2RSIvPgogIDxyZWN0IHg9IjYwIiB5PSI0MCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjIwIiByeD0iMiIgZmlsbD0iIzFBMUExQSIvPgogIDxyZWN0IHg9IjcwIiB5PSI2MCIgd2lkdGg9IjYwIiBoZWlnaHQ9IjE1IiBmaWxsPSIjMUExQTFBIiBvcGFjaXR5PSIwLjciLz4KICA8cmVjdCB4PSI1MCIgeT0iNzUiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTQwIiByeD0iNCIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4yNSIvPgogIDxyZWN0IHg9IjU1IiB5PSI4MCIgd2lkdGg9IjkwIiBoZWlnaHQ9IjEzMCIgcng9IjIiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjkiLz4KICA8cmVjdCB4PSI2NSIgeT0iOTAiIHdpZHRoPSI3MCIgaGVpZ2h0PSI0MCIgcng9IjIiIGZpbGw9IiNDOUE5NkUiIG9wYWNpdHk9IjAuNiIvPgogIDx0ZXh0IHg9IjEwMCIgeT0iMTE1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2VyaWYiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IndoaXRlIiBmb250LXdlaWdodD0iYm9sZCI+U0hPR1VOPC90ZXh0PgogIDx0ZXh0IHg9IjEwMCIgeT0iMTMwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSI3IiBmaWxsPSIjMUExQTFBIj5QQVJGVU08L3RleHQ+CiAgPHJlY3QgeD0iODAiIHk9IjIzMCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjI1IiByeD0iMiIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4zIi8+Cjwvc3ZnPg==" alt="Parfum d&#x27;Ambiance" loading="lazy"></div>
-      <div class="info">
-        <span class="category-label">#PA100</span><span class="category-label" style="background:#e74c3c;margin-left:6px;">100ml</span>
-        <h3>Parfum d&#x27;Ambiance</h3>
-        <div class="brand">Cooperativa Profumieri</div>
-        <div class="desc">Copy certifiée Shogun — Reproduction fidèle.</div>
-        <div style="margin-top:8px;"><a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : Parfum d&#x27;Ambiance Cooperativa Profumieri - 100ml - Code PA100" target="_blank" class="btn-order-wa" style="margin:2px;">💬 100ml — 4,000 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : Parfum d&#x27;Ambiance Cooperativa Profumieri - 200ml - Code PA100" target="_blank" class="btn-order-wa" style="margin:2px;">💬 200ml — 6,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : Parfum d&#x27;Ambiance Cooperativa Profumieri - 500ml - Code PA100" target="_blank" class="btn-order-wa" style="margin:2px;">💬 500ml — 12,000 FCFA</a> </div>
-      </div>
-    </div>
-    <div class="product-card">
-      <div class="img-wrap"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjgwIj4KICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjI4MCIgZmlsbD0iI0M5QTk2RSIvPgogIDxyZWN0IHg9IjYwIiB5PSI0MCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjIwIiByeD0iMiIgZmlsbD0iIzFBMUExQSIvPgogIDxyZWN0IHg9IjcwIiB5PSI2MCIgd2lkdGg9IjYwIiBoZWlnaHQ9IjE1IiBmaWxsPSIjMUExQTFBIiBvcGFjaXR5PSIwLjciLz4KICA8cmVjdCB4PSI1MCIgeT0iNzUiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTQwIiByeD0iNCIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4yNSIvPgogIDxyZWN0IHg9IjU1IiB5PSI4MCIgd2lkdGg9IjkwIiBoZWlnaHQ9IjEzMCIgcng9IjIiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjkiLz4KICA8cmVjdCB4PSI2NSIgeT0iOTAiIHdpZHRoPSI3MCIgaGVpZ2h0PSI0MCIgcng9IjIiIGZpbGw9IiNDOUE5NkUiIG9wYWNpdHk9IjAuNiIvPgogIDx0ZXh0IHg9IjEwMCIgeT0iMTE1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2VyaWYiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IndoaXRlIiBmb250LXdlaWdodD0iYm9sZCI+U0hPR1VOPC90ZXh0PgogIDx0ZXh0IHg9IjEwMCIgeT0iMTMwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSI3IiBmaWxsPSIjMUExQTFBIj5QQVJGVU08L3RleHQ+CiAgPHJlY3QgeD0iODAiIHk9IjIzMCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjI1IiByeD0iMiIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4zIi8+Cjwvc3ZnPg==" alt="Parfum d&#x27;Ambiance" loading="lazy"></div>
-      <div class="info">
-        <span class="category-label">#PA200</span><span class="category-label" style="background:#e74c3c;margin-left:6px;">200ml</span>
-        <h3>Parfum d&#x27;Ambiance</h3>
-        <div class="brand">Cooperativa Profumieri</div>
-        <div class="desc">Copy certifiée Shogun — Reproduction fidèle.</div>
-        <div style="margin-top:8px;"><a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : Parfum d&#x27;Ambiance Cooperativa Profumieri - 100ml - Code PA200" target="_blank" class="btn-order-wa" style="margin:2px;">💬 100ml — 4,000 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : Parfum d&#x27;Ambiance Cooperativa Profumieri - 200ml - Code PA200" target="_blank" class="btn-order-wa" style="margin:2px;">💬 200ml — 6,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : Parfum d&#x27;Ambiance Cooperativa Profumieri - 500ml - Code PA200" target="_blank" class="btn-order-wa" style="margin:2px;">💬 500ml — 12,000 FCFA</a> </div>
-      </div>
-    </div>
-    <div class="product-card">
-      <div class="img-wrap"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjgwIj4KICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjI4MCIgZmlsbD0iI0M5QTk2RSIvPgogIDxyZWN0IHg9IjYwIiB5PSI0MCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjIwIiByeD0iMiIgZmlsbD0iIzFBMUExQSIvPgogIDxyZWN0IHg9IjcwIiB5PSI2MCIgd2lkdGg9IjYwIiBoZWlnaHQ9IjE1IiBmaWxsPSIjMUExQTFBIiBvcGFjaXR5PSIwLjciLz4KICA8cmVjdCB4PSI1MCIgeT0iNzUiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTQwIiByeD0iNCIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4yNSIvPgogIDxyZWN0IHg9IjU1IiB5PSI4MCIgd2lkdGg9IjkwIiBoZWlnaHQ9IjEzMCIgcng9IjIiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjkiLz4KICA8cmVjdCB4PSI2NSIgeT0iOTAiIHdpZHRoPSI3MCIgaGVpZ2h0PSI0MCIgcng9IjIiIGZpbGw9IiNDOUE5NkUiIG9wYWNpdHk9IjAuNiIvPgogIDx0ZXh0IHg9IjEwMCIgeT0iMTE1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2VyaWYiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IndoaXRlIiBmb250LXdlaWdodD0iYm9sZCI+U0hPR1VOPC90ZXh0PgogIDx0ZXh0IHg9IjEwMCIgeT0iMTMwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSI3IiBmaWxsPSIjMUExQTFBIj5QQVJGVU08L3RleHQ+CiAgPHJlY3QgeD0iODAiIHk9IjIzMCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjI1IiByeD0iMiIgZmlsbD0iIzFBMUExQSIgb3BhY2l0eT0iMC4zIi8+Cjwvc3ZnPg==" alt="Parfum d&#x27;Ambiance" loading="lazy"></div>
-      <div class="info">
-        <span class="category-label">#PA500</span><span class="category-label" style="background:#e74c3c;margin-left:6px;">500ml</span>
-        <h3>Parfum d&#x27;Ambiance</h3>
-        <div class="brand">Cooperativa Profumieri</div>
-        <div class="desc">Copy certifiée Shogun — Reproduction fidèle.</div>
-        <div style="margin-top:8px;"><a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : Parfum d&#x27;Ambiance Cooperativa Profumieri - 100ml - Code PA500" target="_blank" class="btn-order-wa" style="margin:2px;">💬 100ml — 4,000 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : Parfum d&#x27;Ambiance Cooperativa Profumieri - 200ml - Code PA500" target="_blank" class="btn-order-wa" style="margin:2px;">💬 200ml — 6,500 FCFA</a> <a href="https://wa.me/237691719393?text=Bonjour ! Je souhaite commander : Parfum d&#x27;Ambiance Cooperativa Profumieri - 500ml - Code PA500" target="_blank" class="btn-order-wa" style="margin:2px;">💬 500ml — 12,000 FCFA</a> </div>
-      </div>
-    </div>
-  </div>
-</section>
+
+
+
 
 
   <h3>Chez Virginie</h3>
@@ -946,5 +524,491 @@
   <span class="badge">Commander</span>
 </a>
 
+
+
+
+
+
+
+
+
+
+
+<section id="shogun-homme">
+  <div class="section-header">
+    <h2>Shogun Homme</h2><div class="divider"></div>
+    <p>Codes 001-292 — Reproduction certifiée Shogun</p>
+  </div>
+  <div class="products-grid"><div class="product-card">
+      <div class="product-img"><div class="img-fallback"><div class="fallback-icon">🌸</div><div class="fallback-code">#001</div></div></div>
+      <div class="product-body">
+        <div class="product-meta"><span class="product-code">#001</span><span class="badge badge-rem">Gel douche</span><span class="badge badge-sexe" style="background:#4a90d9">Homme</span></div>
+        <h3>ONE MILLION</h3><p class="product-brand">PACO RABANNE</p>
+        <p class="product-desc">Flacon doré iconique. Notes épicées et cuirées.</p>
+        <div class="product-buttons"><a href="https://wa.me/237691719393?text=Bonjour! Je commande: ONE MILLION PACO RABANNE — 15ml — Code 001" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 15ml <strong>1,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: ONE MILLION PACO RABANNE — 30ml — Code 001" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 30ml <strong>2,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: ONE MILLION PACO RABANNE — 70ml — Code 001" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 70ml <strong>4,500 FCFA</strong></a></div>
+      </div>
+    </div><div class="product-card">
+      <div class="product-img"><div class="img-fallback"><div class="fallback-icon">🌸</div><div class="fallback-code">#002</div></div></div>
+      <div class="product-body">
+        <div class="product-meta"><span class="product-code">#002</span><span class="badge badge-rem">Gel douche</span><span class="badge badge-sexe" style="background:#4a90d9">Homme</span></div>
+        <h3>ACQUA DI GIO</h3><p class="product-brand">ARMANI</p>
+        <p class="product-desc">Fraîcheur marine et notes boisées.</p>
+        <div class="product-buttons"><a href="https://wa.me/237691719393?text=Bonjour! Je commande: ACQUA DI GIO ARMANI — 15ml — Code 002" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 15ml <strong>1,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: ACQUA DI GIO ARMANI — 30ml — Code 002" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 30ml <strong>2,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: ACQUA DI GIO ARMANI — 70ml — Code 002" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 70ml <strong>4,500 FCFA</strong></a></div>
+      </div>
+    </div><div class="product-card">
+      <div class="product-img"><div class="img-fallback"><div class="fallback-icon">🌸</div><div class="fallback-code">#003</div></div></div>
+      <div class="product-body">
+        <div class="product-meta"><span class="product-code">#003</span><span class="badge badge-rem">Gel douche</span><span class="badge badge-sexe" style="background:#4a90d9">Homme</span></div>
+        <h3>FAHRENHEIT</h3><p class="product-brand">DIOR</p>
+        <p class="product-desc">Bouquet chaud : violette, cuir, bois.</p>
+        <div class="product-buttons"><a href="https://wa.me/237691719393?text=Bonjour! Je commande: FAHRENHEIT DIOR — 15ml — Code 003" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 15ml <strong>1,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: FAHRENHEIT DIOR — 30ml — Code 003" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 30ml <strong>2,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: FAHRENHEIT DIOR — 70ml — Code 003" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 70ml <strong>4,500 FCFA</strong></a></div>
+      </div>
+    </div><div class="product-card">
+      <div class="product-img"><div class="img-fallback"><div class="fallback-icon">🌸</div><div class="fallback-code">#004</div></div></div>
+      <div class="product-body">
+        <div class="product-meta"><span class="product-code">#004</span><span class="badge badge-sexe" style="background:#4a90d9">Homme</span></div>
+        <h3>THE ONE</h3><p class="product-brand">DOLCE &amp; GABBANA</p>
+        <p class="product-desc">Oriental-fleuri puissant. Luxe italien.</p>
+        <div class="product-buttons"><a href="https://wa.me/237691719393?text=Bonjour! Je commande: THE ONE DOLCE &amp; GABBANA — 15ml — Code 004" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 15ml <strong>1,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: THE ONE DOLCE &amp; GABBANA — 30ml — Code 004" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 30ml <strong>2,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: THE ONE DOLCE &amp; GABBANA — 70ml — Code 004" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 70ml <strong>4,500 FCFA</strong></a></div>
+      </div>
+    </div><div class="product-card">
+      <div class="product-img"><div class="img-fallback"><div class="fallback-icon">🌸</div><div class="fallback-code">#012</div></div></div>
+      <div class="product-body">
+        <div class="product-meta"><span class="product-code">#012</span><span class="badge badge-sexe" style="background:#4a90d9">Homme</span></div>
+        <h3>EAU SAUVAGE</h3><p class="product-brand">DIOR</p>
+        <p class="product-desc">Fraîcheur intemporelle. Agrumes, menthe.</p>
+        <div class="product-buttons"><a href="https://wa.me/237691719393?text=Bonjour! Je commande: EAU SAUVAGE DIOR — 15ml — Code 012" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 15ml <strong>1,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: EAU SAUVAGE DIOR — 30ml — Code 012" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 30ml <strong>2,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: EAU SAUVAGE DIOR — 70ml — Code 012" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 70ml <strong>4,500 FCFA</strong></a></div>
+      </div>
+    </div><div class="product-card">
+      <div class="product-img"><div class="img-fallback"><div class="fallback-icon">🌸</div><div class="fallback-code">#015</div></div></div>
+      <div class="product-body">
+        <div class="product-meta"><span class="product-code">#015</span><span class="badge badge-sexe" style="background:#4a90d9">Homme</span></div>
+        <h3>ROMA UOMO</h3><p class="product-brand">LAURA BIAGIOTTI</p>
+        <p class="product-desc">Sophistication romaine. Bois précieux.</p>
+        <div class="product-buttons"><a href="https://wa.me/237691719393?text=Bonjour! Je commande: ROMA UOMO LAURA BIAGIOTTI — 15ml — Code 015" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 15ml <strong>1,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: ROMA UOMO LAURA BIAGIOTTI — 30ml — Code 015" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 30ml <strong>2,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: ROMA UOMO LAURA BIAGIOTTI — 70ml — Code 015" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 70ml <strong>4,500 FCFA</strong></a></div>
+      </div>
+    </div><div class="product-card">
+      <div class="product-img"><div class="img-fallback"><div class="fallback-icon">🌸</div><div class="fallback-code">#016</div></div></div>
+      <div class="product-body">
+        <div class="product-meta"><span class="product-code">#016</span><span class="badge badge-sexe" style="background:#4a90d9">Homme</span></div>
+        <h3>LE MÂLE</h3><p class="product-brand">JEAN PAUL GAUTIER</p>
+        <p class="product-desc">Viril et sensuel. Lavande, menthe, orientales.</p>
+        <div class="product-buttons"><a href="https://wa.me/237691719393?text=Bonjour! Je commande: LE MÂLE JEAN PAUL GAUTIER — 15ml — Code 016" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 15ml <strong>1,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: LE MÂLE JEAN PAUL GAUTIER — 30ml — Code 016" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 30ml <strong>2,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: LE MÂLE JEAN PAUL GAUTIER — 70ml — Code 016" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 70ml <strong>4,500 FCFA</strong></a></div>
+      </div>
+    </div><div class="product-card">
+      <div class="product-img"><div class="img-fallback"><div class="fallback-icon">🌸</div><div class="fallback-code">#018</div></div></div>
+      <div class="product-body">
+        <div class="product-meta"><span class="product-code">#018</span><span class="badge badge-sexe" style="background:#4a90d9">Homme</span></div>
+        <h3>DECLARATION</h3><p class="product-brand">CARTIER</p>
+        <p class="product-desc">Élégance intemporelle. Florales et boisées.</p>
+        <div class="product-buttons"><a href="https://wa.me/237691719393?text=Bonjour! Je commande: DECLARATION CARTIER — 15ml — Code 018" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 15ml <strong>1,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: DECLARATION CARTIER — 30ml — Code 018" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 30ml <strong>2,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: DECLARATION CARTIER — 70ml — Code 018" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 70ml <strong>4,500 FCFA</strong></a></div>
+      </div>
+    </div><div class="product-card">
+      <div class="product-img"><div class="img-fallback"><div class="fallback-icon">🌸</div><div class="fallback-code">#020</div></div></div>
+      <div class="product-body">
+        <div class="product-meta"><span class="product-code">#020</span><span class="badge badge-rem">Gel douche</span><span class="badge badge-sexe" style="background:#4a90d9">Homme</span></div>
+        <h3>LA NUIT DE L&#x27;HOMME</h3><p class="product-brand">YVES SAINT LAURENT</p>
+        <p class="product-desc">Envoûtant. Vétiver, cardamome, cèdre.</p>
+        <div class="product-buttons"><a href="https://wa.me/237691719393?text=Bonjour! Je commande: LA NUIT DE L&#x27;HOMME YVES SAINT LAURENT — 15ml — Code 020" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 15ml <strong>1,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: LA NUIT DE L&#x27;HOMME YVES SAINT LAURENT — 30ml — Code 020" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 30ml <strong>2,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: LA NUIT DE L&#x27;HOMME YVES SAINT LAURENT — 70ml — Code 020" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 70ml <strong>4,500 FCFA</strong></a></div>
+      </div>
+    </div><div class="product-card">
+      <div class="product-img"><div class="img-fallback"><div class="fallback-icon">🌸</div><div class="fallback-code">#021</div></div></div>
+      <div class="product-body">
+        <div class="product-meta"><span class="product-code">#021</span><span class="badge badge-sexe" style="background:#4a90d9">Homme</span></div>
+        <h3>LIGHT BLUE</h3><p class="product-brand">DOLCE &amp; GABBANA</p>
+        <p class="product-desc">Fraîcheur méditerranéenne. Citron, bergamote.</p>
+        <div class="product-buttons"><a href="https://wa.me/237691719393?text=Bonjour! Je commande: LIGHT BLUE DOLCE &amp; GABBANA — 15ml — Code 021" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 15ml <strong>1,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: LIGHT BLUE DOLCE &amp; GABBANA — 30ml — Code 021" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 30ml <strong>2,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: LIGHT BLUE DOLCE &amp; GABBANA — 70ml — Code 021" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 70ml <strong>4,500 FCFA</strong></a></div>
+      </div>
+    </div><div class="product-card">
+      <div class="product-img"><div class="img-fallback"><div class="fallback-icon">🌸</div><div class="fallback-code">#022</div></div></div>
+      <div class="product-body">
+        <div class="product-meta"><span class="product-code">#022</span><span class="badge badge-sexe" style="background:#4a90d9">Homme</span></div>
+        <h3>TERRE D&#x27;HERMÈS</h3><p class="product-brand">HERMÈS</p>
+        <p class="product-desc">Minéral et boisé. Esprit de la terre.</p>
+        <div class="product-buttons"><a href="https://wa.me/237691719393?text=Bonjour! Je commande: TERRE D&#x27;HERMÈS HERMÈS — 15ml — Code 022" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 15ml <strong>1,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: TERRE D&#x27;HERMÈS HERMÈS — 30ml — Code 022" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 30ml <strong>2,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: TERRE D&#x27;HERMÈS HERMÈS — 70ml — Code 022" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 70ml <strong>4,500 FCFA</strong></a></div>
+      </div>
+    </div><div class="product-card">
+      <div class="product-img"><div class="img-fallback"><div class="fallback-icon">🌸</div><div class="fallback-code">#030</div></div></div>
+      <div class="product-body">
+        <div class="product-meta"><span class="product-code">#030</span><span class="badge badge-sexe" style="background:#4a90d9">Homme</span></div>
+        <h3>BLACK XS</h3><p class="product-brand">PACO RABANNE</p>
+        <p class="product-desc">L&#x27;excès noir. Vanille, cannelle.</p>
+        <div class="product-buttons"><a href="https://wa.me/237691719393?text=Bonjour! Je commande: BLACK XS PACO RABANNE — 15ml — Code 030" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 15ml <strong>1,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: BLACK XS PACO RABANNE — 30ml — Code 030" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 30ml <strong>2,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: BLACK XS PACO RABANNE — 70ml — Code 030" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 70ml <strong>4,500 FCFA</strong></a></div>
+      </div>
+    </div><div class="product-card">
+      <div class="product-img"><div class="img-fallback"><div class="fallback-icon">🌸</div><div class="fallback-code">#031</div></div></div>
+      <div class="product-body">
+        <div class="product-meta"><span class="product-code">#031</span><span class="badge badge-sexe" style="background:#4a90d9">Homme</span></div>
+        <h3>BLV</h3><p class="product-brand">BVLGARI</p>
+        <p class="product-desc">Boisé-épicé. Gingembre, cardamome, teck.</p>
+        <div class="product-buttons"><a href="https://wa.me/237691719393?text=Bonjour! Je commande: BLV BVLGARI — 15ml — Code 031" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 15ml <strong>1,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: BLV BVLGARI — 30ml — Code 031" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 30ml <strong>2,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: BLV BVLGARI — 70ml — Code 031" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 70ml <strong>4,500 FCFA</strong></a></div>
+      </div>
+    </div><div class="product-card">
+      <div class="product-img"><div class="img-fallback"><div class="fallback-icon">🌸</div><div class="fallback-code">#032</div></div></div>
+      <div class="product-body">
+        <div class="product-meta"><span class="product-code">#032</span><span class="badge badge-sexe" style="background:#4a90d9">Homme</span></div>
+        <h3>SPICE BOMB</h3><p class="product-brand">VIKTOR &amp; ROLF</p>
+        <p class="product-desc">Grenade d&#x27;épices. Cannelle, poivre, safran.</p>
+        <div class="product-buttons"><a href="https://wa.me/237691719393?text=Bonjour! Je commande: SPICE BOMB VIKTOR &amp; ROLF — 15ml — Code 032" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 15ml <strong>1,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: SPICE BOMB VIKTOR &amp; ROLF — 30ml — Code 032" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 30ml <strong>2,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: SPICE BOMB VIKTOR &amp; ROLF — 70ml — Code 032" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 70ml <strong>4,500 FCFA</strong></a></div>
+      </div>
+    </div><div class="product-card">
+      <div class="product-img"><div class="img-fallback"><div class="fallback-icon">🌸</div><div class="fallback-code">#033</div></div></div>
+      <div class="product-body">
+        <div class="product-meta"><span class="product-code">#033</span><span class="badge badge-sexe" style="background:#4a90d9">Homme</span></div>
+        <h3>BLACK CODE</h3><p class="product-brand">ARMANI</p>
+        <p class="product-desc">Boisé-accord ambré. Anis, café, oud.</p>
+        <div class="product-buttons"><a href="https://wa.me/237691719393?text=Bonjour! Je commande: BLACK CODE ARMANI — 15ml — Code 033" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 15ml <strong>1,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: BLACK CODE ARMANI — 30ml — Code 033" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 30ml <strong>2,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: BLACK CODE ARMANI — 70ml — Code 033" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 70ml <strong>4,500 FCFA</strong></a></div>
+      </div>
+    </div><div class="product-card">
+      <div class="product-img"><div class="img-fallback"><div class="fallback-icon">🌸</div><div class="fallback-code">#037</div></div></div>
+      <div class="product-body">
+        <div class="product-meta"><span class="product-code">#037</span><span class="badge badge-sexe" style="background:#4a90d9">Homme</span></div>
+        <h3>MAN</h3><p class="product-brand">BVLGARI</p>
+        <p class="product-desc">Essence masculine. Hêtre, néroli, ambré.</p>
+        <div class="product-buttons"><a href="https://wa.me/237691719393?text=Bonjour! Je commande: MAN BVLGARI — 15ml — Code 037" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 15ml <strong>1,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: MAN BVLGARI — 30ml — Code 037" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 30ml <strong>2,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: MAN BVLGARI — 70ml — Code 037" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 70ml <strong>4,500 FCFA</strong></a></div>
+      </div>
+    </div><div class="product-card">
+      <div class="product-img"><div class="img-fallback"><div class="fallback-icon">🌸</div><div class="fallback-code">#038</div></div></div>
+      <div class="product-body">
+        <div class="product-meta"><span class="product-code">#038</span><span class="badge badge-sexe" style="background:#4a90d9">Homme</span></div>
+        <h3>BLEU</h3><p class="product-brand">CHANEL</p>
+        <p class="product-desc">Esprit de liberté. Boisé, frais, aromatique.</p>
+        <div class="product-buttons"><a href="https://wa.me/237691719393?text=Bonjour! Je commande: BLEU CHANEL — 15ml — Code 038" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 15ml <strong>1,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: BLEU CHANEL — 30ml — Code 038" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 30ml <strong>2,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: BLEU CHANEL — 70ml — Code 038" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 70ml <strong>4,500 FCFA</strong></a></div>
+      </div>
+    </div><div class="product-card">
+      <div class="product-img"><div class="img-fallback"><div class="fallback-icon">🌸</div><div class="fallback-code">#048</div></div></div>
+      <div class="product-body">
+        <div class="product-meta"><span class="product-code">#048</span><span class="badge badge-sexe" style="background:#4a90d9">Homme</span></div>
+        <h3>ALLURE HOMME</h3><p class="product-brand">CHANEL</p>
+        <p class="product-desc">Intemporel Chanel. Boisé, cuiré.</p>
+        <div class="product-buttons"><a href="https://wa.me/237691719393?text=Bonjour! Je commande: ALLURE HOMME CHANEL — 15ml — Code 048" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 15ml <strong>1,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: ALLURE HOMME CHANEL — 30ml — Code 048" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 30ml <strong>2,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: ALLURE HOMME CHANEL — 70ml — Code 048" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 70ml <strong>4,500 FCFA</strong></a></div>
+      </div>
+    </div><div class="product-card">
+      <div class="product-img"><div class="img-fallback"><div class="fallback-icon">🌸</div><div class="fallback-code">#052</div></div></div>
+      <div class="product-body">
+        <div class="product-meta"><span class="product-code">#052</span><span class="badge badge-sexe" style="background:#4a90d9">Homme</span></div>
+        <h3>PASHA 150</h3><p class="product-brand">CARTIER</p>
+        <p class="product-desc">Boisé-ambré. Lavande, cèdre, coumarine.</p>
+        <div class="product-buttons"><a href="https://wa.me/237691719393?text=Bonjour! Je commande: PASHA 150 CARTIER — 15ml — Code 052" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 15ml <strong>1,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: PASHA 150 CARTIER — 30ml — Code 052" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 30ml <strong>2,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: PASHA 150 CARTIER — 70ml — Code 052" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 70ml <strong>4,500 FCFA</strong></a></div>
+      </div>
+    </div><div class="product-card">
+      <div class="product-img"><div class="img-fallback"><div class="fallback-icon">🌸</div><div class="fallback-code">#061</div></div></div>
+      <div class="product-body">
+        <div class="product-meta"><span class="product-code">#061</span><span class="badge badge-rem">Gel douche</span><span class="badge badge-sexe" style="background:#4a90d9">Homme</span></div>
+        <h3>INVICTUS</h3><p class="product-brand">PACO RABANNE</p>
+        <p class="product-desc">Esprit de victoire. Marin, pomelo, ambré.</p>
+        <div class="product-buttons"><a href="https://wa.me/237691719393?text=Bonjour! Je commande: INVICTUS PACO RABANNE — 15ml — Code 061" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 15ml <strong>1,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: INVICTUS PACO RABANNE — 30ml — Code 061" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 30ml <strong>2,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: INVICTUS PACO RABANNE — 70ml — Code 061" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 70ml <strong>4,500 FCFA</strong></a></div>
+      </div>
+    </div><div class="product-card">
+      <div class="product-img"><div class="img-fallback"><div class="fallback-icon">🌸</div><div class="fallback-code">#062</div></div></div>
+      <div class="product-body">
+        <div class="product-meta"><span class="product-code">#062</span><span class="badge badge-sexe" style="background:#4a90d9">Homme</span></div>
+        <h3>INTENSO</h3><p class="product-brand">DOLCE &amp; GABBANA</p>
+        <p class="product-desc">Force du caractère. Boisé, cuiré, ambré.</p>
+        <div class="product-buttons"><a href="https://wa.me/237691719393?text=Bonjour! Je commande: INTENSO DOLCE &amp; GABBANA — 15ml — Code 062" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 15ml <strong>1,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: INTENSO DOLCE &amp; GABBANA — 30ml — Code 062" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 30ml <strong>2,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: INTENSO DOLCE &amp; GABBANA — 70ml — Code 062" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 70ml <strong>4,500 FCFA</strong></a></div>
+      </div>
+    </div><div class="product-card">
+      <div class="product-img"><div class="img-fallback"><div class="fallback-icon">🌸</div><div class="fallback-code">#065</div></div></div>
+      <div class="product-body">
+        <div class="product-meta"><span class="product-code">#065</span><span class="badge badge-sexe" style="background:#4a90d9">Homme</span></div>
+        <h3>THE SCENT</h3><p class="product-brand">HUGO BOSS</p>
+        <p class="product-desc">Attraction masculine. Aromatique, cuiré.</p>
+        <div class="product-buttons"><a href="https://wa.me/237691719393?text=Bonjour! Je commande: THE SCENT HUGO BOSS — 15ml — Code 065" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 15ml <strong>1,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: THE SCENT HUGO BOSS — 30ml — Code 065" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 30ml <strong>2,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: THE SCENT HUGO BOSS — 70ml — Code 065" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 70ml <strong>4,500 FCFA</strong></a></div>
+      </div>
+    </div><div class="product-card">
+      <div class="product-img"><div class="img-fallback"><div class="fallback-icon">🌸</div><div class="fallback-code">#066</div></div></div>
+      <div class="product-body">
+        <div class="product-meta"><span class="product-code">#066</span><span class="badge badge-sexe" style="background:#4a90d9">Homme</span></div>
+        <h3>SCENT INTENSE</h3><p class="product-brand">COSTUME NATIONAL</p>
+        <p class="product-desc">Boisé-oriental. Épices rares.</p>
+        <div class="product-buttons"><a href="https://wa.me/237691719393?text=Bonjour! Je commande: SCENT INTENSE COSTUME NATIONAL — 15ml — Code 066" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 15ml <strong>1,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: SCENT INTENSE COSTUME NATIONAL — 30ml — Code 066" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 30ml <strong>2,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: SCENT INTENSE COSTUME NATIONAL — 70ml — Code 066" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 70ml <strong>4,500 FCFA</strong></a></div>
+      </div>
+    </div><div class="product-card">
+      <div class="product-img"><div class="img-fallback"><div class="fallback-icon">🌸</div><div class="fallback-code">#069</div></div></div>
+      <div class="product-body">
+        <div class="product-meta"><span class="product-code">#069</span><span class="badge badge-sexe" style="background:#4a90d9">Homme</span></div>
+        <h3>ACQUA DI SALE</h3><p class="product-brand">PROFUMUM ROMA</p>
+        <p class="product-desc">Essence de la mer. Salé, marin, boisé.</p>
+        <div class="product-buttons"><a href="https://wa.me/237691719393?text=Bonjour! Je commande: ACQUA DI SALE PROFUMUM ROMA — 15ml — Code 069" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 15ml <strong>1,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: ACQUA DI SALE PROFUMUM ROMA — 30ml — Code 069" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 30ml <strong>2,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: ACQUA DI SALE PROFUMUM ROMA — 70ml — Code 069" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 70ml <strong>4,500 FCFA</strong></a></div>
+      </div>
+    </div><div class="product-card">
+      <div class="product-img"><div class="img-fallback"><div class="fallback-icon">🌸</div><div class="fallback-code">#074</div></div></div>
+      <div class="product-body">
+        <div class="product-meta"><span class="product-code">#074</span><span class="badge badge-sexe" style="background:#4a90d9">Homme</span></div>
+        <h3>Black Afgano</h3><p class="product-brand">NASOMATTO</p>
+        <p class="product-desc">50ml. Cannabis, résine, bois.</p>
+        <div class="product-buttons"><a href="https://wa.me/237691719393?text=Bonjour! Je commande: Black Afgano NASOMATTO — 50ml — Code 074" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 50ml <strong>7,500 FCFA</strong></a></div>
+      </div>
+    </div><div class="product-card">
+      <div class="product-img"><div class="img-fallback"><div class="fallback-icon">🌸</div><div class="fallback-code">#075</div></div></div>
+      <div class="product-body">
+        <div class="product-meta"><span class="product-code">#075</span><span class="badge badge-sexe" style="background:#4a90d9">Homme</span></div>
+        <h3>X for Men</h3><p class="product-brand">CLIVE CHRISTIAN</p>
+        <p class="product-desc">50ml. Luxe intemporel.</p>
+        <div class="product-buttons"><a href="https://wa.me/237691719393?text=Bonjour! Je commande: X for Men CLIVE CHRISTIAN — 50ml — Code 075" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 50ml <strong>7,500 FCFA</strong></a></div>
+      </div>
+    </div><div class="product-card">
+      <div class="product-img"><div class="img-fallback"><div class="fallback-icon">🌸</div><div class="fallback-code">#078</div></div></div>
+      <div class="product-body">
+        <div class="product-meta"><span class="product-code">#078</span><span class="badge badge-sexe" style="background:#4a90d9">Homme</span></div>
+        <h3>ULTRAVIOLET</h3><p class="product-brand">PACO RABANNE</p>
+        <p class="product-desc">Floral-boiteux. Jasmin, rose, boisé.</p>
+        <div class="product-buttons"><a href="https://wa.me/237691719393?text=Bonjour! Je commande: ULTRAVIOLET PACO RABANNE — 15ml — Code 078" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 15ml <strong>1,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: ULTRAVIOLET PACO RABANNE — 30ml — Code 078" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 30ml <strong>2,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: ULTRAVIOLET PACO RABANNE — 70ml — Code 078" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 70ml <strong>4,500 FCFA</strong></a></div>
+      </div>
+    </div><div class="product-card">
+      <div class="product-img"><div class="img-fallback"><div class="fallback-icon">🌸</div><div class="fallback-code">#084</div></div></div>
+      <div class="product-body">
+        <div class="product-meta"><span class="product-code">#084</span><span class="badge badge-sexe" style="background:#4a90d9">Homme</span></div>
+        <h3>DYLAN BLUE</h3><p class="product-brand">VERSACE</p>
+        <p class="product-desc">Puissance méditerranéenne. Bergamote, bois.</p>
+        <div class="product-buttons"><a href="https://wa.me/237691719393?text=Bonjour! Je commande: DYLAN BLUE VERSACE — 15ml — Code 084" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 15ml <strong>1,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: DYLAN BLUE VERSACE — 30ml — Code 084" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 30ml <strong>2,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: DYLAN BLUE VERSACE — 70ml — Code 084" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 70ml <strong>4,500 FCFA</strong></a></div>
+      </div>
+    </div><div class="product-card">
+      <div class="product-img"><div class="img-fallback"><div class="fallback-icon">🌸</div><div class="fallback-code">#086</div></div></div>
+      <div class="product-body">
+        <div class="product-meta"><span class="product-code">#086</span><span class="badge badge-sexe" style="background:#4a90d9">Homme</span></div>
+        <h3>LEGEND</h3><p class="product-brand">MONT BLANC</p>
+        <p class="product-desc">Essence masculine. Lavande, boisé, musc.</p>
+        <div class="product-buttons"><a href="https://wa.me/237691719393?text=Bonjour! Je commande: LEGEND MONT BLANC — 15ml — Code 086" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 15ml <strong>1,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: LEGEND MONT BLANC — 30ml — Code 086" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 30ml <strong>2,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: LEGEND MONT BLANC — 70ml — Code 086" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 70ml <strong>4,500 FCFA</strong></a></div>
+      </div>
+    </div><div class="product-card">
+      <div class="product-img"><div class="img-fallback"><div class="fallback-icon">🌸</div><div class="fallback-code">#087</div></div></div>
+      <div class="product-body">
+        <div class="product-meta"><span class="product-code">#087</span><span class="badge badge-sexe" style="background:#4a90d9">Homme</span></div>
+        <h3>WANTED</h3><p class="product-brand">AZZARO</p>
+        <p class="product-desc">Boisé-fruité. Citron, oud, vanille.</p>
+        <div class="product-buttons"><a href="https://wa.me/237691719393?text=Bonjour! Je commande: WANTED AZZARO — 15ml — Code 087" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 15ml <strong>1,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: WANTED AZZARO — 30ml — Code 087" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 30ml <strong>2,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: WANTED AZZARO — 70ml — Code 087" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 70ml <strong>4,500 FCFA</strong></a></div>
+      </div>
+    </div><div class="product-card">
+      <div class="product-img"><div class="img-fallback"><div class="fallback-icon">🌸</div><div class="fallback-code">#088</div></div></div>
+      <div class="product-body">
+        <div class="product-meta"><span class="product-code">#088</span><span class="badge badge-sexe" style="background:#4a90d9">Homme</span></div>
+        <h3>MAN IN BLACK</h3><p class="product-brand">BVLGARI</p>
+        <p class="product-desc">Essence de la virilité. Floral-oriental.</p>
+        <div class="product-buttons"><a href="https://wa.me/237691719393?text=Bonjour! Je commande: MAN IN BLACK BVLGARI — 15ml — Code 088" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 15ml <strong>1,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: MAN IN BLACK BVLGARI — 30ml — Code 088" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 30ml <strong>2,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: MAN IN BLACK BVLGARI — 70ml — Code 088" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 70ml <strong>4,500 FCFA</strong></a></div>
+      </div>
+    </div><div class="product-card">
+      <div class="product-img"><div class="img-fallback"><div class="fallback-icon">🌸</div><div class="fallback-code">#091</div></div></div>
+      <div class="product-body">
+        <div class="product-meta"><span class="product-code">#091</span><span class="badge badge-sexe" style="background:#4a90d9">Homme</span></div>
+        <h3>CHROME AZZARO</h3><p class="product-brand">AZZARO</p>
+        <p class="product-desc">Frais et dynamique. Aquatique et boisé.</p>
+        <div class="product-buttons"><a href="https://wa.me/237691719393?text=Bonjour! Je commande: CHROME AZZARO AZZARO — 15ml — Code 091" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 15ml <strong>1,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: CHROME AZZARO AZZARO — 30ml — Code 091" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 30ml <strong>2,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: CHROME AZZARO AZZARO — 70ml — Code 091" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 70ml <strong>4,500 FCFA</strong></a></div>
+      </div>
+    </div><div class="product-card">
+      <div class="product-img"><div class="img-fallback"><div class="fallback-icon">🌸</div><div class="fallback-code">#094</div></div></div>
+      <div class="product-body">
+        <div class="product-meta"><span class="product-code">#094</span><span class="badge badge-sexe" style="background:#4a90d9">Homme</span></div>
+        <h3>SAUVAGE</h3><p class="product-brand">DIOR</p>
+        <p class="product-desc">Nature sauvage. Bergamote, poivre, Ambroxan.</p>
+        <div class="product-buttons"><a href="https://wa.me/237691719393?text=Bonjour! Je commande: SAUVAGE DIOR — 15ml — Code 094" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 15ml <strong>1,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: SAUVAGE DIOR — 30ml — Code 094" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 30ml <strong>2,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: SAUVAGE DIOR — 70ml — Code 094" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 70ml <strong>4,500 FCFA</strong></a></div>
+      </div>
+    </div><div class="product-card">
+      <div class="product-img"><div class="img-fallback"><div class="fallback-icon">🌸</div><div class="fallback-code">#136</div></div></div>
+      <div class="product-body">
+        <div class="product-meta"><span class="product-code">#136</span><span class="badge badge-sexe" style="background:#4a90d9">Homme</span></div>
+        <h3>Dior Homme Intense</h3><p class="product-brand">DIOR</p>
+        <p class="product-desc">50ml. Iris et cèdre. Puissance et subtilité.</p>
+        <div class="product-buttons"><a href="https://wa.me/237691719393?text=Bonjour! Je commande: Dior Homme Intense DIOR — 50ml — Code 136" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 50ml <strong>7,500 FCFA</strong></a></div>
+      </div>
+    </div><div class="product-card">
+      <div class="product-img"><div class="img-fallback"><div class="fallback-icon">🌸</div><div class="fallback-code">#140</div></div></div>
+      <div class="product-body">
+        <div class="product-meta"><span class="product-code">#140</span><span class="badge badge-sexe" style="background:#4a90d9">Homme</span></div>
+        <h3>Éros</h3><p class="product-brand">VERSACE</p>
+        <p class="product-desc">50ml. Fraîcheur mentholée et orientale.</p>
+        <div class="product-buttons"><a href="https://wa.me/237691719393?text=Bonjour! Je commande: Éros VERSACE — 50ml — Code 140" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 50ml <strong>7,500 FCFA</strong></a></div>
+      </div>
+    </div><div class="product-card">
+      <div class="product-img"><div class="img-fallback"><div class="fallback-icon">🌸</div><div class="fallback-code">#142</div></div></div>
+      <div class="product-body">
+        <div class="product-meta"><span class="product-code">#142</span><span class="badge badge-sexe" style="background:#4a90d9">Homme</span></div>
+        <h3>Ombré Leather</h3><p class="product-brand">TOM FORD</p>
+        <p class="product-desc">50ml. Cuir noir, jasmin. Puissance.</p>
+        <div class="product-buttons"><a href="https://wa.me/237691719393?text=Bonjour! Je commande: Ombré Leather TOM FORD — 50ml — Code 142" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 50ml <strong>7,500 FCFA</strong></a></div>
+      </div>
+    </div><div class="product-card">
+      <div class="product-img"><div class="img-fallback"><div class="fallback-icon">🌸</div><div class="fallback-code">#205</div></div></div>
+      <div class="product-body">
+        <div class="product-meta"><span class="product-code">#205</span><span class="badge badge-sexe" style="background:#4a90d9">Homme</span></div>
+        <h3>HUGO</h3><p class="product-brand">HUGO BOSS</p>
+        <p class="product-desc">Esprit de jeunesse. Fruité, aromatique.</p>
+        <div class="product-buttons"><a href="https://wa.me/237691719393?text=Bonjour! Je commande: HUGO HUGO BOSS — 15ml — Code 205" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 15ml <strong>1,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: HUGO HUGO BOSS — 30ml — Code 205" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 30ml <strong>2,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: HUGO HUGO BOSS — 70ml — Code 205" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 70ml <strong>4,500 FCFA</strong></a></div>
+      </div>
+    </div><div class="product-card">
+      <div class="product-img"><div class="img-fallback"><div class="fallback-icon">🌸</div><div class="fallback-code">#217</div></div></div>
+      <div class="product-body">
+        <div class="product-meta"><span class="product-code">#217</span><span class="badge badge-sexe" style="background:#4a90d9">Homme</span></div>
+        <h3>GUILTY</h3><p class="product-brand">GUCCI</p>
+        <p class="product-desc">Audace moderne. Floral et oriental.</p>
+        <div class="product-buttons"><a href="https://wa.me/237691719393?text=Bonjour! Je commande: GUILTY GUCCI — 15ml — Code 217" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 15ml <strong>1,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: GUILTY GUCCI — 30ml — Code 217" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 30ml <strong>2,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: GUILTY GUCCI — 70ml — Code 217" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 70ml <strong>4,500 FCFA</strong></a></div>
+      </div>
+    </div><div class="product-card">
+      <div class="product-img"><div class="img-fallback"><div class="fallback-icon">🌸</div><div class="fallback-code">#250</div></div></div>
+      <div class="product-body">
+        <div class="product-meta"><span class="product-code">#250</span><span class="badge badge-sexe" style="background:#4a90d9">Homme</span></div>
+        <h3>BURBERRY FOR MEN</h3><p class="product-brand">BURBERRY</p>
+        <p class="product-desc">Élégance britannique. Aromatique et boisé.</p>
+        <div class="product-buttons"><a href="https://wa.me/237691719393?text=Bonjour! Je commande: BURBERRY FOR MEN BURBERRY — 15ml — Code 250" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 15ml <strong>1,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: BURBERRY FOR MEN BURBERRY — 30ml — Code 250" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 30ml <strong>2,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: BURBERRY FOR MEN BURBERRY — 70ml — Code 250" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 70ml <strong>4,500 FCFA</strong></a></div>
+      </div>
+    </div><div class="product-card">
+      <div class="product-img"><div class="img-fallback"><div class="fallback-icon">🌸</div><div class="fallback-code">#265</div></div></div>
+      <div class="product-body">
+        <div class="product-meta"><span class="product-code">#265</span><span class="badge badge-sexe" style="background:#4a90d9">Homme</span></div>
+        <h3>THE SCENT INTENSE</h3><p class="product-brand">HUGO BOSS</p>
+        <p class="product-desc">Intensité du caractère. Épicé et boisé.</p>
+        <div class="product-buttons"><a href="https://wa.me/237691719393?text=Bonjour! Je commande: THE SCENT INTENSE HUGO BOSS — 15ml — Code 265" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 15ml <strong>1,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: THE SCENT INTENSE HUGO BOSS — 30ml — Code 265" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 30ml <strong>2,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: THE SCENT INTENSE HUGO BOSS — 70ml — Code 265" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 70ml <strong>4,500 FCFA</strong></a></div>
+      </div>
+    </div><div class="product-card">
+      <div class="product-img"><div class="img-fallback"><div class="fallback-icon">🌸</div><div class="fallback-code">#283</div></div></div>
+      <div class="product-body">
+        <div class="product-meta"><span class="product-code">#283</span><span class="badge badge-sexe" style="background:#4a90d9">Homme</span></div>
+        <h3>UOMO</h3><p class="product-brand">ROBERTO CAVALLI</p>
+        <p class="product-desc">Audace italienne. Boisé et oriental.</p>
+        <div class="product-buttons"><a href="https://wa.me/237691719393?text=Bonjour! Je commande: UOMO ROBERTO CAVALLI — 15ml — Code 283" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 15ml <strong>1,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: UOMO ROBERTO CAVALLI — 30ml — Code 283" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 30ml <strong>2,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: UOMO ROBERTO CAVALLI — 70ml — Code 283" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 70ml <strong>4,500 FCFA</strong></a></div>
+      </div>
+    </div><div class="product-card">
+      <div class="product-img"><div class="img-fallback"><div class="fallback-icon">🌸</div><div class="fallback-code">#292</div></div></div>
+      <div class="product-body">
+        <div class="product-meta"><span class="product-code">#292</span><span class="badge badge-sexe" style="background:#4a90d9">Homme</span></div>
+        <h3>MR. BURBERRY</h3><p class="product-brand">BURBERRY</p>
+        <p class="product-desc">Sophistication moderne.</p>
+        <div class="product-buttons"><a href="https://wa.me/237691719393?text=Bonjour! Je commande: MR. BURBERRY BURBERRY — 15ml — Code 292" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 15ml <strong>1,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: MR. BURBERRY BURBERRY — 30ml — Code 292" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 30ml <strong>2,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: MR. BURBERRY BURBERRY — 70ml — Code 292" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 70ml <strong>4,500 FCFA</strong></a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="shogun-mixte">
+  <div class="section-header">
+    <h2>Shogun Mixte</h2><div class="divider"></div>
+    <p>Codes 054-105 — Unisex reproductions certifiées Shogun</p>
+  </div>
+  <div class="products-grid"><div class="product-card">
+      <div class="product-img"><div class="img-fallback"><div class="fallback-icon">🌸</div><div class="fallback-code">#010</div></div></div>
+      <div class="product-body">
+        <div class="product-meta"><span class="product-code">#010</span><span class="badge badge-sexe" style="background:#9b59b6">Mixte</span></div>
+        <h3>Parfum d&#x27;Ambiance</h3><p class="product-brand">SHOGUN</p>
+        <p class="product-desc">Certifié Shogun — Diffusez l&#x27;élégance.</p>
+        <div class="product-buttons"><a href="https://wa.me/237691719393?text=Bonjour! Je commande: Parfum d&#x27;Ambiance SHOGUN — 100ml — Code 010" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 100ml <strong>9,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: Parfum d&#x27;Ambiance SHOGUN — 200ml — Code 010" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 200ml <strong>6,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: Parfum d&#x27;Ambiance SHOGUN — 500ml — Code 010" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 500ml <strong>12,000 FCFA</strong></a></div>
+      </div>
+    </div><div class="product-card">
+      <div class="product-img"><div class="img-fallback"><div class="fallback-icon">🌸</div><div class="fallback-code">#054</div></div></div>
+      <div class="product-body">
+        <div class="product-meta"><span class="product-code">#054</span><span class="badge badge-sexe" style="background:#9b59b6">Mixte</span></div>
+        <h3>BLACK ORCHID</h3><p class="product-brand">TOM FORD</p>
+        <p class="product-desc">Orchidée noire. Truffe, vanille, sandal.</p>
+        <div class="product-buttons"><a href="https://wa.me/237691719393?text=Bonjour! Je commande: BLACK ORCHID TOM FORD — 15ml — Code 054" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 15ml <strong>1,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: BLACK ORCHID TOM FORD — 30ml — Code 054" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 30ml <strong>2,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: BLACK ORCHID TOM FORD — 70ml — Code 054" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 70ml <strong>4,500 FCFA</strong></a></div>
+      </div>
+    </div><div class="product-card">
+      <div class="product-img"><div class="img-fallback"><div class="fallback-icon">🌸</div><div class="fallback-code">#072</div></div></div>
+      <div class="product-body">
+        <div class="product-meta"><span class="product-code">#072</span><span class="badge badge-sexe" style="background:#9b59b6">Mixte</span></div>
+        <h3>PATCHOULI</h3><p class="product-brand">REMINISCENCE</p>
+        <p class="product-desc">Authentique et sensuel. Patchouli boho-chic.</p>
+        <div class="product-buttons"><a href="https://wa.me/237691719393?text=Bonjour! Je commande: PATCHOULI REMINISCENCE — 15ml — Code 072" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 15ml <strong>1,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: PATCHOULI REMINISCENCE — 30ml — Code 072" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 30ml <strong>2,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: PATCHOULI REMINISCENCE — 70ml — Code 072" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 70ml <strong>4,500 FCFA</strong></a></div>
+      </div>
+    </div><div class="product-card">
+      <div class="product-img"><div class="img-fallback"><div class="fallback-icon">🌸</div><div class="fallback-code">#100</div></div></div>
+      <div class="product-body">
+        <div class="product-meta"><span class="product-code">#100</span><span class="badge badge-sexe" style="background:#9b59b6">Mixte</span></div>
+        <h3>WHITE AOUD</h3><p class="product-brand">MONTALE</p>
+        <p class="product-desc">Boisé-oriental. Bois de oud, rose.</p>
+        <div class="product-buttons"><a href="https://wa.me/237691719393?text=Bonjour! Je commande: WHITE AOUD MONTALE — 15ml — Code 100" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 15ml <strong>1,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: WHITE AOUD MONTALE — 30ml — Code 100" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 30ml <strong>2,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: WHITE AOUD MONTALE — 70ml — Code 100" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 70ml <strong>4,500 FCFA</strong></a></div>
+      </div>
+    </div><div class="product-card">
+      <div class="product-img"><div class="img-fallback"><div class="fallback-icon">🌸</div><div class="fallback-code">#105</div></div></div>
+      <div class="product-body">
+        <div class="product-meta"><span class="product-code">#105</span><span class="badge badge-rem">Gel douche</span><span class="badge badge-sexe" style="background:#9b59b6">Mixte</span></div>
+        <h3>INTENSE CAFÉ</h3><p class="product-brand">MONTALE</p>
+        <p class="product-desc">Gourmand et boisé. Café, vanille, oriental.</p>
+        <div class="product-buttons"><a href="https://wa.me/237691719393?text=Bonjour! Je commande: INTENSE CAFÉ MONTALE — 15ml — Code 105" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 15ml <strong>1,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: INTENSE CAFÉ MONTALE — 30ml — Code 105" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 30ml <strong>2,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: INTENSE CAFÉ MONTALE — 70ml — Code 105" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 70ml <strong>4,500 FCFA</strong></a></div>
+      </div>
+    </div><div class="product-card">
+      <div class="product-img"><div class="img-fallback"><div class="fallback-icon">🌸</div><div class="fallback-code">#246</div></div></div>
+      <div class="product-body">
+        <div class="product-meta"><span class="product-code">#246</span><span class="badge badge-sexe" style="background:#9b59b6">Mixte</span></div>
+        <h3>CK ONE</h3><p class="product-brand">CALVIN KLEIN</p>
+        <p class="product-desc">Unisexe iconique. Agrumes, thé vert, musc blanc.</p>
+        <div class="product-buttons"><a href="https://wa.me/237691719393?text=Bonjour! Je commande: CK ONE CALVIN KLEIN — 15ml — Code 246" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 15ml <strong>1,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: CK ONE CALVIN KLEIN — 30ml — Code 246" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 30ml <strong>2,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: CK ONE CALVIN KLEIN — 70ml — Code 246" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 70ml <strong>4,500 FCFA</strong></a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="luxury-olfazeta">
+  <div class="section-header">
+    <h2>Luxury Olfazeta</h2><div class="divider"></div>
+    <p>Extraits de Parfum 50ml — Collection Luxury</p>
+  </div>
+  <div class="products-grid"><div class="product-card">
+      <div class="product-img"><div class="img-fallback"><div class="fallback-icon">🌸</div><div class="fallback-code">#OLN01</div></div></div>
+      <div class="product-body">
+        <div class="product-meta"><span class="product-code">#OLN01</span><span class="badge badge-sexe" style="background:#9b59b6">Unisex</span></div>
+        <h3>Olfazeta Luxury Noir</h3><p class="product-brand">OLFAZETA</p>
+        <p class="product-desc">Extrait 50ml. Sillage sombre et boisé.</p>
+        <div class="product-buttons"><a href="https://wa.me/237691719393?text=Bonjour! Je commande: Olfazeta Luxury Noir OLFAZETA — 50ml — Code OLN01" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 50ml <strong>7,500 FCFA</strong></a></div>
+      </div>
+    </div><div class="product-card">
+      <div class="product-img"><div class="img-fallback"><div class="fallback-icon">🌸</div><div class="fallback-code">#OLB01</div></div></div>
+      <div class="product-body">
+        <div class="product-meta"><span class="product-code">#OLB01</span><span class="badge badge-sexe" style="background:#9b59b6">Unisex</span></div>
+        <h3>Olfazeta Luxury Blanc</h3><p class="product-brand">OLFAZETA</p>
+        <p class="product-desc">Extrait 50ml. Pureté et élégance.</p>
+        <div class="product-buttons"><a href="https://wa.me/237691719393?text=Bonjour! Je commande: Olfazeta Luxury Blanc OLFAZETA — 50ml — Code OLB01" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 50ml <strong>7,500 FCFA</strong></a></div>
+      </div>
+    </div><div class="product-card">
+      <div class="product-img"><div class="img-fallback"><div class="fallback-icon">🌸</div><div class="fallback-code">#OLM01</div></div></div>
+      <div class="product-body">
+        <div class="product-meta"><span class="product-code">#OLM01</span><span class="badge badge-sexe" style="background:#d94a7f">Femme</span></div>
+        <h3>Olfazeta Milky Musk</h3><p class="product-brand">OLFAZETA</p>
+        <p class="product-desc">Extrait 50ml. Musc lacté. Enveloppant.</p>
+        <div class="product-buttons"><a href="https://wa.me/237691719393?text=Bonjour! Je commande: Olfazeta Milky Musk OLFAZETA — 50ml — Code OLM01" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 50ml <strong>7,500 FCFA</strong></a></div>
+      </div>
+    </div><div class="product-card">
+      <div class="product-img"><div class="img-fallback"><div class="fallback-icon">🌸</div><div class="fallback-code">#OLM02</div></div></div>
+      <div class="product-body">
+        <div class="product-meta"><span class="product-code">#OLM02</span><span class="badge badge-sexe" style="background:#9b59b6">Unisex</span></div>
+        <h3>Olfazeta Millésime</h3><p class="product-brand">OLFAZETA</p>
+        <p class="product-desc">Extrait 50ml. Assemblage vintage.</p>
+        <div class="product-buttons"><a href="https://wa.me/237691719393?text=Bonjour! Je commande: Olfazeta Millésime OLFAZETA — 50ml — Code OLM02" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 50ml <strong>7,500 FCFA</strong></a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="tom-ford-luxury">
+  <div class="section-header">
+    <h2>Tom Ford Luxury</h2><div class="divider"></div>
+    <p>Essences rares 50ml/100ml — Collection Exclusive</p>
+  </div>
+  <div class="products-grid"><div class="product-card">
+      <div class="product-img"><div class="img-fallback"><div class="fallback-icon">🌸</div><div class="fallback-code">#147M</div></div></div>
+      <div class="product-body">
+        <div class="product-meta"><span class="product-code">#147M</span><span class="badge badge-sexe" style="background:#4a90d9">Homme</span></div>
+        <h3>BOSS Bottled Absolu</h3><p class="product-brand">HUGO BOSS</p>
+        <p class="product-desc">50ml. Oud, pomme, safran. Caractère.</p>
+        <div class="product-buttons"><a href="https://wa.me/237691719393?text=Bonjour! Je commande: BOSS Bottled Absolu HUGO BOSS — 50ml — Code 147M" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 50ml <strong>7,500 FCFA</strong></a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="parfums-d'ambiance">
+  <div class="section-header">
+    <h2>Parfums d'Ambiance</h2><div class="divider"></div>
+    <p>Format 100ml / 200ml / 500ml — Diffusion intérieure</p>
+  </div>
+  <div class="products-grid"><div class="product-card">
+      <div class="product-img"><div class="img-fallback"><div class="fallback-icon">🌸</div><div class="fallback-code">#010</div></div></div>
+      <div class="product-body">
+        <div class="product-meta"><span class="product-code">#010</span><span class="badge badge-sexe" style="background:#9b59b6">Mixte</span></div>
+        <h3>Parfum d&#x27;Ambiance</h3><p class="product-brand">SHOGUN</p>
+        <p class="product-desc">Certifié Shogun — Diffusez l&#x27;élégance.</p>
+        <div class="product-buttons"><a href="https://wa.me/237691719393?text=Bonjour! Je commande: Parfum d&#x27;Ambiance SHOGUN — 100ml — Code 010" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 100ml <strong>9,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: Parfum d&#x27;Ambiance SHOGUN — 200ml — Code 010" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 200ml <strong>6,500 FCFA</strong></a><a href="https://wa.me/237691719393?text=Bonjour! Je commande: Parfum d&#x27;Ambiance SHOGUN — 500ml — Code 010" target="_blank" rel="noopener" class="btn-wa"><span>💬</span> 500ml <strong>12,000 FCFA</strong></a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 </body>
-</html>
