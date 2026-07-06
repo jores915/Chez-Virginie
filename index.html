@@ -241,6 +241,109 @@
     }
     footer .contact a:hover { color: var(--gold); }
 
+    /* Floating WhatsApp Button */
+    .wa-float {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 999;
+      background: #25D366;
+      color: white;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      box-shadow: 0 6px 24px rgba(37,211,102,0.4);
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-decoration: none;
+      animation: pulse-wa 2s infinite;
+    }
+    .wa-float:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 32px rgba(37,211,102,0.55);
+    }
+    @keyframes pulse-wa {
+      0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.5); }
+      70% { box-shadow: 0 0 0 16px rgba(37,211,102,0); }
+      100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+    }
+    .wa-float .badge {
+      position: absolute;
+      top: -4px;
+      right: -4px;
+      background: #e74c3c;
+      color: white;
+      font-size: 0.55rem;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 10px;
+      font-family: 'Inter', sans-serif;
+      animation: pulse-wa 2s infinite 0.5s;
+    }
+
+    /* WhatsApp CTA Banner */
+    .wa-cta {
+      background: linear-gradient(135deg, #1A1A1A 0%, #2D2D2D 100%);
+      text-align: center;
+      padding: 40px 20px;
+      margin: 0 auto;
+    }
+    .wa-cta h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+    .wa-cta p {
+      color: rgba(255,255,255,0.7);
+      font-size: 1rem;
+      max-width: 500px;
+      margin: 0 auto 20px;
+    }
+    .wa-cta .btn-wa {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #25D366;
+      color: white;
+      padding: 16px 36px;
+      border-radius: 50px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 4px 16px rgba(37,211,102,0.35);
+    }
+    .wa-cta .btn-wa:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(37,211,102,0.5);
+    }
+    .wa-cta .btn-wa .icon { font-size: 1.4rem; }
+
+    /* Product WhatsApp button */
+    .btn-order-wa {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 10px;
+      background: #25D366;
+      color: white !important;
+      padding: 8px 18px;
+      border-radius: 25px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+      font-family: 'Inter', sans-serif;
+    }
+    .btn-order-wa:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(37,211,102,0.3);
+    }
+
     /* Responsive */
     @media (max-width: 640px) {
       header h1 { font-size: 2rem; }
@@ -278,6 +381,15 @@
   <p>Découvrez ma sélection de parfums, maquillage et soins — Chogan, Olfazeta, Aurodhea &amp; plus</p>
 </div>
 
+<!-- WhatsApp CTA BANNER -->
+<div class="wa-cta">
+  <h2>🛒 Commander par WhatsApp</h2>
+  <p>Choisissez vos produits et envoyez-moi un message directement. Livraison rapide — conseils personnalisés offerts.</p>
+  <a href="https://wa.me/237691719393?text=Bonjour%20Virginie%20!%20J%27ai%20vu%20vos%20produits%20sur%20le%20site%20et%20je%20souhaite%20passer%20commande." target="_blank" class="btn-wa">
+    <span class="icon">💬</span> Commander maintenant
+  </a>
+</div>
+
 <!-- PARFUMS FEMME -->
 <section id="parfums-femme">
   <div class="section-title">
@@ -293,6 +405,7 @@
         <h3>Chogan Mademoiselle</h3>
         <div class="brand">Eau de Parfum — 100 ml</div>
         <div class="desc">Un parfum floral et féminin, idéal pour le quotidien.</div>
+        <a href="https://wa.me/237691719393?text=Bonjour%20!%20Je%20souhaite%20commander%20le%20parfum%20%3A%20Chogan%20Mademoiselle%20-%20Eau%20de%20Parfum%20100ml" target="_blank" class="btn-order-wa">💬 Commander</a>
       </div>
     </div>
 
@@ -303,6 +416,7 @@
         <h3>Coffret Parfumé Femme</h3>
         <div class="brand">Chogan — 1 parfum 100 ml au choix</div>
         <div class="desc">+ Gel douche parfumé + Crème corps parfumée.</div>
+        <a href="https://wa.me/237691719393?text=Bonjour%20%21%20Je%20souhaite%20commander%20%3A%20Coffret%20Parfum%C3%A9%20Femme%20-%20Chogan" target="_blank" class="btn-order-wa">💬 Commander</a>
       </div>
     </div>
 
@@ -313,6 +427,7 @@
         <h3>Coffret 3 Parfums</h3>
         <div class="brand">Chogan — 3 x 100 ml au choix</div>
         <div class="desc">Sélectionnez vos 3 parfums préférés parmi la collection.</div>
+        <a href="https://wa.me/237691719393?text=Bonjour%20%21%20Je%20souhaite%20commander%20%3A%20Coffret%203%20Parfums%20-%20Chogan" target="_blank" class="btn-order-wa">💬 Commander</a>
       </div>
     </div>
 
@@ -323,6 +438,7 @@
         <h3>Coffret 5 Parfums</h3>
         <div class="brand">Chogan — 5 x 100 ml au choix</div>
         <div class="desc">Le coffret le plus complet pour varier les plaisirs.</div>
+        <a href="https://wa.me/237691719393?text=Bonjour%20%21%20Je%20souhaite%20commander%20%3A%20Coffret%205%20Parfums%20-%20Chogan" target="_blank" class="btn-order-wa">💬 Commander</a>
       </div>
     </div>
   </div>
@@ -343,6 +459,7 @@
         <h3>Chogan Millésime</h3>
         <div class="brand">Extrait de Parfum — 100 ml</div>
         <div class="desc">Une fragrance boisée et épicée, puissante et sophistiquée.</div>
+        <a href="https://wa.me/237691719393?text=Bonjour%20%21%20Je%20souhaite%20commander%20%3A%20Chogan%20Mill%C3%A9sime%20Homme%20-%20Extrait%20de%20Parfum%20100ml" target="_blank" class="btn-order-wa">💬 Commander</a>
       </div>
     </div>
   </div>
@@ -363,6 +480,7 @@
         <h3>Coffret Parfum + Soins</h3>
         <div class="brand">Chogan &amp; Olifazeta</div>
         <div class="desc">Parfum + Gel douche + Crème corps + Huile parfumée.</div>
+        <a href="https://wa.me/237691719393?text=Bonjour%20%21%20Je%20souhaite%20commander%20%3A%20Coffret%20Parfum%20%2B%20Soins" target="_blank" class="btn-order-wa">💬 Commander</a>
       </div>
     </div>
 
@@ -373,6 +491,7 @@
         <h3>Parfum + Gel Douche</h3>
         <div class="brand">Chogan Mademoiselle &amp; Olifazeta</div>
         <div class="desc">L'association parfaite parfum et gel douche assorti.</div>
+        <a href="https://wa.me/237691719393?text=Bonjour%20%21%20Je%20souhaite%20commander%20%3A%20Parfum%20%2B%20Gel%20Douche" target="_blank" class="btn-order-wa">💬 Commander</a>
       </div>
     </div>
 
@@ -383,6 +502,7 @@
         <h3>Coffret Homme</h3>
         <div class="brand">Chogan Millésime &amp; Olifazeta</div>
         <div class="desc">Parfum + Gel douche + Crème corps parfumée.</div>
+        <a href="https://wa.me/237691719393?text=Bonjour%20%21%20Je%20souhaite%20commander%20%3A%20Coffret%20Homme%20-%20Set" target="_blank" class="btn-order-wa">💬 Commander</a>
       </div>
     </div>
 
@@ -393,6 +513,7 @@
         <h3>Coffret Beauté Homme</h3>
         <div class="brand">Chogan &amp; Aurodhea</div>
         <div class="desc">Parfum 35 ml + Crème après-rasage + Crème Velobarba.</div>
+        <a href="https://wa.me/237691719393?text=Bonjour%20%21%20Je%20souhaite%20commander%20%3A%20Coffret%20Beaut%C3%A9%20Homme" target="_blank" class="btn-order-wa">💬 Commander</a>
       </div>
     </div>
   </div>
@@ -413,6 +534,7 @@
         <h3>Coffret Make Up</h3>
         <div class="brand">Chogan — Lip Cream + Mascara + Palette</div>
         <div class="desc">Le coffret complet pour un maquillage parfait — 61,90€.</div>
+        <a href="https://wa.me/237691719393?text=Bonjour%20%21%20Je%20souhaite%20commander%20%3A%20Coffret%20Make%20Up%20Chogan" target="_blank" class="btn-order-wa">💬 Commander</a>
       </div>
     </div>
 
@@ -423,6 +545,7 @@
         <h3>Lip Cream Matte + Mascara</h3>
         <div class="brand">Chogan Make-up</div>
         <div class="desc">Rouge à lèvres liquide mat intense + Mascara extra volume.</div>
+        <a href="https://wa.me/237691719393?text=Bonjour%20%21%20Je%20souhaite%20commander%20%3A%20Lip%20Cream%20Matte%20%2B%20Mascara%20Chogan" target="_blank" class="btn-order-wa">💬 Commander</a>
       </div>
     </div>
 
@@ -433,6 +556,7 @@
         <h3>Collection Complète</h3>
         <div class="brand">Chogan Make-up</div>
         <div class="desc">Lip cream, Mascara, Fard à paupières — tout pour un look glamour.</div>
+        <a href="https://wa.me/237691719393?text=Bonjour%20%21%20Je%20souhaite%20commander%20%3A%20Collection%20Compl%C3%A8te%20Maquillage%20Chogan" target="_blank" class="btn-order-wa">💬 Commander</a>
       </div>
     </div>
   </div>
@@ -453,6 +577,7 @@
         <h3>Crème Visage Collagène &amp; Acide Hyaluronique</h3>
         <div class="brand">Aurodhea</div>
         <div class="desc">+ Sérum gel tenseur anti-âge. Hydrate et repulpe la peau.</div>
+        <a href="https://wa.me/237691719393?text=Bonjour%20%21%20Je%20souhaite%20commander%20%3A%20Cr%C3%A8me%20Visage%20Collag%C3%A8ne%20%26%20Acide%20Hyaluronique%20Aurodhea" target="_blank" class="btn-order-wa">💬 Commander</a>
       </div>
     </div>
 
@@ -463,6 +588,7 @@
         <h3>Coffret Soin Visage Bave d'Escargot</h3>
         <div class="brand">Aurodhea</div>
         <div class="desc">Gel nettoyant + Crème visage anti-âge + Contour des yeux + Masque vitamine C.</div>
+        <a href="https://wa.me/237691719393?text=Bonjour%20%21%20Je%20souhaite%20commander%20%3A%20Coffret%20Soin%20Visage%20Bave%20d%27Escargot%20Aurodhea" target="_blank" class="btn-order-wa">💬 Commander</a>
       </div>
     </div>
 
@@ -473,6 +599,7 @@
         <h3>Masque Anti-Âge + Crème Argan</h3>
         <div class="brand">Aurodhea</div>
         <div class="desc">Masque raffermissant + Crème visage à l'huile d'argan. Réparation intense.</div>
+        <a href="https://wa.me/237691719393?text=Bonjour%20%21%20Je%20souhaite%20commander%20%3A%20Masque%20Anti-%C3%82ge%20%2B%20Cr%C3%A8me%20Argan%20Aurodhea" target="_blank" class="btn-order-wa">💬 Commander</a>
       </div>
     </div>
 
@@ -483,6 +610,7 @@
         <h3>Routine Nettoyante</h3>
         <div class="brand">Aurodhea</div>
         <div class="desc">Lait démaquillant + Lotion tonique + Gel exfoliant. Peau nette et fraîche.</div>
+        <a href="https://wa.me/237691719393?text=Bonjour%20%21%20Je%20souhaite%20commander%20%3A%20Routine%20Nettoyante%20Aurodhea" target="_blank" class="btn-order-wa">💬 Commander</a>
       </div>
     </div>
   </div>
@@ -503,6 +631,7 @@
         <h3>Coffret Soin Barbe</h3>
         <div class="brand">Chogan &amp; Aurodhea Velobarba</div>
         <div class="desc">Crème après-rasage parfumée + Crème à raser Velobarba.</div>
+        <a href="https://wa.me/237691719393?text=Bonjour%20%21%20Je%20souhaite%20commander%20%3A%20Coffret%20Soin%20Barbe%20Chogan%20%26%20Velobarba" target="_blank" class="btn-order-wa">💬 Commander</a>
       </div>
     </div>
   </div>
@@ -523,6 +652,7 @@
         <h3>Olfazeta Luxury Noir</h3>
         <div class="brand">Extrait de Parfum — 50 ml</div>
         <div class="desc">Une fragrance intense et sophistiquée au flacon noir élégant.</div>
+        <a href="https://wa.me/237691719393?text=Bonjour%20%21%20Je%20souhaite%20commander%20%3A%20Olfazeta%20Luxury%20Noir%2050ml" target="_blank" class="btn-order-wa">💬 Commander</a>
       </div>
     </div>
 
@@ -533,6 +663,7 @@
         <h3>Olfazeta Luxury Blanc</h3>
         <div class="brand">Extrait de Parfum — 50 ml</div>
         <div class="desc">Délicat et raffiné, un extrait de parfum d'une élégance pure.</div>
+        <a href="https://wa.me/237691719393?text=Bonjour%20%21%20Je%20souhaite%20commander%20%3A%20Olfazeta%20Luxury%20Blanc%2050ml" target="_blank" class="btn-order-wa">💬 Commander</a>
       </div>
     </div>
 
@@ -543,6 +674,7 @@
         <h3>Olfazeta Milky Musk</h3>
         <div class="brand">Extrait de Parfum — 50 ml</div>
         <div class="desc">Un musc lacté enveloppant, doux et sensuel.</div>
+        <a href="https://wa.me/237691719393?text=Bonjour%20%21%20Je%20souhaite%20commander%20%3A%20Olfazeta%20Milky%20Musk%2050ml" target="_blank" class="btn-order-wa">💬 Commander</a>
       </div>
     </div>
 
@@ -553,6 +685,7 @@
         <h3>Olfazeta Millésime</h3>
         <div class="brand">Extrait de Parfum — 70 ml</div>
         <div class="desc">Un grand cru olfactif, précieux et intemporel.</div>
+        <a href="https://wa.me/237691719393?text=Bonjour%20%21%20Je%20souhaite%20commander%20%3A%20Olfazeta%20Mill%C3%A9sime%2070ml" target="_blank" class="btn-order-wa">💬 Commander</a>
       </div>
     </div>
 
@@ -563,6 +696,7 @@
         <h3>Soins Corps Olfazeta</h3>
         <div class="brand">Luxury Collection</div>
         <div class="desc">Gel douche parfumé + Lait corps + Huile d'amande douce.</div>
+        <a href="https://wa.me/237691719393?text=Bonjour%20%21%20Je%20souhaite%20commander%20%3A%20Soins%20Corps%20Olfazeta" target="_blank" class="btn-order-wa">💬 Commander</a>
       </div>
     </div>
 
@@ -573,6 +707,7 @@
         <h3>Rituel du Bain</h3>
         <div class="brand">Olfazeta</div>
         <div class="desc">Huile d'amande douce + Gel douche + Lait corps — le rituel complet.</div>
+        <a href="https://wa.me/237691719393?text=Bonjour%20%21%20Je%20souhaite%20commander%20%3A%20Rituel%20du%20Bain%20Olfazeta" target="_blank" class="btn-order-wa">💬 Commander</a>
       </div>
     </div>
   </div>
@@ -593,6 +728,7 @@
         <h3>Olfazeta Baby Eau de Parfum</h3>
         <div class="brand">Parfum Naissance</div>
         <div class="desc">Disponible en version petite fille (rose), petit garçon (bleu) &amp; naissance (jaune).</div>
+        <a href="https://wa.me/237691719393?text=Bonjour%20%21%20Je%20souhaite%20commander%20%3A%20Olfazeta%20Baby%20Eau%20de%20Parfum" target="_blank" class="btn-order-wa">💬 Commander</a>
       </div>
     </div>
 
@@ -603,6 +739,7 @@
         <h3>Coffret Bambino</h3>
         <div class="brand">Olfazeta &amp; Aurodhea</div>
         <div class="desc">Parfum naissance au choix + Lait corporel Baby Aurodhea pour peaux sensibles.</div>
+        <a href="https://wa.me/237691719393?text=Bonjour%20%21%20Je%20souhaite%20commander%20%3A%20Coffret%20Bambino" target="_blank" class="btn-order-wa">💬 Commander</a>
       </div>
     </div>
   </div>
@@ -623,6 +760,7 @@
         <h3>Parfum d'Ambiance</h3>
         <div class="brand">Cooperativa Profumieri</div>
         <div class="desc">Disponible en 100 ml, 200 ml, 500 ml, 1,5 L et 3 L. Plusieurs senteurs au choix.</div>
+        <a href="https://wa.me/237691719393?text=Bonjour%20%21%20Je%20souhaite%20commander%20%3A%20Parfum%20d%27Ambiance%20Cooperativa%20Profumieri" target="_blank" class="btn-order-wa">💬 Commander</a>
       </div>
     </div>
 
@@ -633,6 +771,7 @@
         <h3>Hugo Boss</h3>
         <div class="brand">Millésime Extrait de Parfum — 100 ml</div>
         <div class="desc">Une fragrance emblématique, intemporelle et élégante.</div>
+        <a href="https://wa.me/237691719393?text=Bonjour%20%21%20Je%20souhaite%20commander%20%3A%20Hugo%20Boss%20Mill%C3%A9sime%20100ml" target="_blank" class="btn-order-wa">💬 Commander</a>
       </div>
     </div>
   </div>
@@ -642,8 +781,7 @@
   <h3>Chez Virginie</h3>
   <p>Parfums, maquillage &amp; soins de qualité — Chogan, Olfazeta, Aurodhea &amp; plus</p>
   <div class="contact">
-      <a href="https://wa.me/YOUR_NUMBER" target="_blank">📱 WhatsApp</a>
-      <a href="https://t.me/LionelJores" target="_blank">✈️ Telegram</a>
+      <a href="https://wa.me/237691719393" target="_blank">📱 WhatsApp</a>
     </div>
   <p style="margin-top:20px;font-size:0.8rem;color:rgba(255,255,255,0.4)">© 2026 Chez Virginie — Tous droits réservés</p>
 </footer>
@@ -675,6 +813,12 @@
   }, { threshold: 0.3 });
   sections.forEach(s => observer.observe(s));
 </script>
+
+<!-- Floating WhatsApp Button -->
+<a href="https://wa.me/237691719393?text=Bonjour%20Virginie%20!%20J%27ai%20vu%20vos%20produits%20sur%20le%20site%20et%20je%20souhaite%20passer%20commande." target="_blank" class="wa-float" aria-label="WhatsApp">
+  💬
+  <span class="badge">Commander</span>
+</a>
 
 </body>
 </html>
