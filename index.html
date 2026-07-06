@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chez Virginie — Parfums & Beauté</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --gold: #C9A96E;
+      --gold-light: #E8D5A3;
+      --gold-dark: #A68B4E;
+      --cream: #FDF8F0;
+      --white: #FFFFFF;
+      --black: #1A1A1A;
+      --gray: #666;
+      --light-gray: #F5F0E8;
+      --shadow: 0 4px 24px rgba(0,0,0,0.08);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--cream);
+      color: var(--black);
+      line-height: 1.6;
+    }
+    h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
+
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #1A1A1A 0%, #2D2D2D 100%);
+      color: var(--white);
+      text-align: center;
+      padding: 60px 20px 50px;
+      position: relative;
+      overflow: hidden;
+    }
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: radial-gradient(circle at 30% 50%, rgba(201,169,110,0.1) 0%, transparent 50%),
+                  radial-gradient(circle at 70% 50%, rgba(201,169,110,0.08) 0%, transparent 50%);
+    }
+    header h1 {
+      font-size: 3.2rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      position: relative;
+    }
+    header h1 span { color: var(--gold); }
+    header p {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.7);
+      margin-top: 10px;
+      font-weight: 300;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      position: relative;
+    }
+    header .divider {
+      width: 60px;
+      height: 2px;
+      background: var(--gold);
+      margin: 18px auto;
+      position: relative;
+    }
+
+    /* Navigation */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(201,169,110,0.2);
+      padding: 0 20px;
+      overflow-x: auto;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+    }
+    nav a {
+      display: inline-block;
+      padding: 16px 18px;
+      color: var(--gray);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: color 0.2s;
+      border-bottom: 2px solid transparent;
+    }
+    nav a:hover, nav a.active {
+      color: var(--gold-dark);
+      border-bottom-color: var(--gold);
+    }
+
+    /* Section */
+    section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 50px 20px;
+    }
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .section-title h2 {
+      font-size: 2rem;
+      color: var(--black);
+    }
+    .section-title .divider {
+      width: 40px;
+      height: 2px;
+      background: var(--gold);
+      margin: 12px auto;
+    }
+    .section-title p {
+      color: var(--gray);
+      font-size: 0.95rem;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    /* Hero Banner */
+    .hero-banner {
+      background: linear-gradient(135deg, var(--gold-light) 0%, #F5ECD0 100%);
+      text-align: center;
+      padding: 50px 20px;
+    }
+    .hero-banner h2 {
+      font-size: 2rem;
+      color: #3D2C1A;
+      font-style: italic;
+    }
+    .hero-banner p {
+      color: #6B5B3E;
+      margin-top: 8px;
+      font-size: 1.05rem;
+    }
+
+    /* Product Grid */
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 24px;
+    }
+    .product-card {
+      background: var(--white);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .product-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+    }
+    .product-card .img-wrap {
+      width: 100%;
+      aspect-ratio: 1;
+      overflow: hidden;
+      background: var(--light-gray);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .product-card .img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s;
+    }
+    .product-card:hover .img-wrap img {
+      transform: scale(1.05);
+    }
+    .product-card .info {
+      padding: 18px 16px 20px;
+    }
+    .product-card .info h3 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--black);
+      margin-bottom: 4px;
+    }
+    .product-card .info .brand {
+      font-size: 0.8rem;
+      color: var(--gold-dark);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 500;
+    }
+    .product-card .info .desc {
+      font-size: 0.88rem;
+      color: var(--gray);
+      margin-top: 6px;
+      line-height: 1.5;
+    }
+
+    /* Category label */
+    .category-label {
+      display: inline-block;
+      background: var(--gold);
+      color: white;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 3px 10px;
+      border-radius: 20px;
+      margin-bottom: 8px;
+    }
+
+    /* Footer */
+    footer {
+      background: #1A1A1A;
+      color: rgba(255,255,255,0.6);
+      text-align: center;
+      padding: 40px 20px;
+    }
+    footer h3 {
+      font-family: 'Playfair Display', serif;
+      color: var(--gold);
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+    }
+    footer p { font-size: 0.9rem; }
+    footer .contact {
+      margin-top: 16px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    footer .contact a {
+      color: var(--gold-light);
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+    footer .contact a:hover { color: var(--gold); }
+
+    /* Responsive */
+    @media (max-width: 640px) {
+      header h1 { font-size: 2rem; }
+      .products { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+      section { padding: 30px 12px; }
+      nav a { padding: 12px 14px; font-size: 0.78rem; }
+    }
+    @media (max-width: 400px) {
+      .products { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Chez <span>Virginie</span></h1>
+  <div class="divider"></div>
+  <p>Parfums &middot; Maquillage &middot; Soins Visage &middot; Bien-être</p>
+</header>
+
+<nav id="nav">
+  <a href="#parfums-femme" class="active">Parfums Femme</a>
+  <a href="#parfums-homme">Parfums Homme</a>
+  <a href="#coffrets">Coffrets</a>
+  <a href="#makeup">Maquillage</a>
+  <a href="#soins-visage">Soins Visage</a>
+  <a href="#soins-homme">Soins Homme</a>
+  <a href="#olfazeta">Olfazeta</a>
+  <a href="#baby">Bébé</a>
+  <a href="#ambiance">Ambiance</a>
+</nav>
+
+<div class="hero-banner">
+  <h2>« La beauté est dans chaque détail »</h2>
+  <p>Découvrez ma sélection de parfums, maquillage et soins — Chogan, Olfazeta, Aurodhea &amp; plus</p>
+</div>
+
+<!-- PARFUMS FEMME -->
+<section id="parfums-femme">
+  <div class="section-title">
+    <h2>Parfums Femme</h2>
+    <div class="divider"></div>
+    <p>Des senteurs florales et fruitées pour toutes les femmes</p>
+  </div>
+  <div class="products">
+    <div class="product-card">
+      <div class="img-wrap"><img src="photos/retouchees/parfum-chogan-mademoiselle.jpg" alt="Chogan Mademoiselle" loading="lazy"></div>
+      <div class="info">
+        <span class="category-label">Femme</span>
+        <h3>Chogan Mademoiselle</h3>
+        <div class="brand">Eau de Parfum — 100 ml</div>
+        <div class="desc">Un parfum floral et féminin, idéal pour le quotidien.</div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="img-wrap"><img src="photos/retouchees/parfum-chogan-femme-coffret.jpg" alt="Coffret Parfumé Femme" loading="lazy"></div>
+      <div class="info">
+        <span class="category-label">Coffret</span>
+        <h3>Coffret Parfumé Femme</h3>
+        <div class="brand">Chogan — 1 parfum 100 ml au choix</div>
+        <div class="desc">+ Gel douche parfumé + Crème corps parfumée.</div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="img-wrap"><img src="photos/retouchees/parfum-chogan-3-parfums.jpg" alt="3 Parfums au choix" loading="lazy"></div>
+      <div class="info">
+        <span class="category-label">Coffret</span>
+        <h3>Coffret 3 Parfums</h3>
+        <div class="brand">Chogan — 3 x 100 ml au choix</div>
+        <div class="desc">Sélectionnez vos 3 parfums préférés parmi la collection.</div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="img-wrap"><img src="photos/retouchees/parfum-chogan-5-parfums.jpg" alt="5 Parfums au choix" loading="lazy"></div>
+      <div class="info">
+        <span class="category-label">Coffret</span>
+        <h3>Coffret 5 Parfums</h3>
+        <div class="brand">Chogan — 5 x 100 ml au choix</div>
+        <div class="desc">Le coffret le plus complet pour varier les plaisirs.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARFUMS HOMME -->
+<section id="parfums-homme">
+  <div class="section-title">
+    <h2>Parfums Homme</h2>
+    <div class="divider"></div>
+    <p>Pour un homme élégant et raffiné</p>
+  </div>
+  <div class="products">
+    <div class="product-card">
+      <div class="img-wrap"><img src="photos/retouchees/parfum-chogan-homme-millesime.jpg" alt="Chogan Millésime Homme" loading="lazy"></div>
+      <div class="info">
+        <span class="category-label">Homme</span>
+        <h3>Chogan Millésime</h3>
+        <div class="brand">Extrait de Parfum — 100 ml</div>
+        <div class="desc">Une fragrance boisée et épicée, puissante et sophistiquée.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COFFRETS -->
+<section id="coffrets">
+  <div class="section-title">
+    <h2>Coffrets Parfum + Soins</h2>
+    <div class="divider"></div>
+    <p>Le cadeau parfait : un parfum associé à ses soins assortis</p>
+  </div>
+  <div class="products">
+    <div class="product-card">
+      <div class="img-wrap"><img src="photos/retouchees/coffret-chogan-parfum-gel-creme.jpg" alt="Coffret Parfum + Soins" loading="lazy"></div>
+      <div class="info">
+        <span class="category-label">Femme</span>
+        <h3>Coffret Parfum + Soins</h3>
+        <div class="brand">Chogan &amp; Olifazeta</div>
+        <div class="desc">Parfum + Gel douche + Crème corps + Huile parfumée.</div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="img-wrap"><img src="photos/retouchees/coffret-chogan-femme-gel.jpg" alt="Parfum Femme + Gel douche" loading="lazy"></div>
+      <div class="info">
+        <span class="category-label">Femme</span>
+        <h3>Parfum + Gel Douche</h3>
+        <div class="brand">Chogan Mademoiselle &amp; Olifazeta</div>
+        <div class="desc">L'association parfaite parfum et gel douche assorti.</div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="img-wrap"><img src="photos/retouchees/coffret-chogan-homme-set.jpg" alt="Set Homme" loading="lazy"></div>
+      <div class="info">
+        <span class="category-label">Homme</span>
+        <h3>Coffret Homme</h3>
+        <div class="brand">Chogan Millésime &amp; Olifazeta</div>
+        <div class="desc">Parfum + Gel douche + Crème corps parfumée.</div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="img-wrap"><img src="photos/retouchees/coffret-chogan-beaute-homme.jpg" alt="Coffret Beauté Homme" loading="lazy"></div>
+      <div class="info">
+        <span class="category-label">Homme</span>
+        <h3>Coffret Beauté Homme</h3>
+        <div class="brand">Chogan &amp; Aurodhea</div>
+        <div class="desc">Parfum 35 ml + Crème après-rasage + Crème Velobarba.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAKEUP -->
+<section id="makeup">
+  <div class="section-title">
+    <h2>Maquillage</h2>
+    <div class="divider"></div>
+    <p>La collection makeup Chogan pour un regard et des lèvres irrésistibles</p>
+  </div>
+  <div class="products">
+    <div class="product-card">
+      <div class="img-wrap"><img src="photos/retouchees/makeup-chogan-coffret.jpg" alt="Coffret Make Up" loading="lazy"></div>
+      <div class="info">
+        <span class="category-label">Maquillage</span>
+        <h3>Coffret Make Up</h3>
+        <div class="brand">Chogan — Lip Cream + Mascara + Palette</div>
+        <div class="desc">Le coffret complet pour un maquillage parfait — 61,90€.</div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="img-wrap"><img src="photos/retouchees/makeup-chogan-lip-mascara.jpg" alt="Lip Cream + Mascara" loading="lazy"></div>
+      <div class="info">
+        <span class="category-label">Maquillage</span>
+        <h3>Lip Cream Matte + Mascara</h3>
+        <div class="brand">Chogan Make-up</div>
+        <div class="desc">Rouge à lèvres liquide mat intense + Mascara extra volume.</div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="img-wrap"><img src="photos/retouchees/makeup-chogan-collection.jpg" alt="Collection Make Up" loading="lazy"></div>
+      <div class="info">
+        <span class="category-label">Maquillage</span>
+        <h3>Collection Complète</h3>
+        <div class="brand">Chogan Make-up</div>
+        <div class="desc">Lip cream, Mascara, Fard à paupières — tout pour un look glamour.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOINS VISAGE -->
+<section id="soins-visage">
+  <div class="section-title">
+    <h2>Soins Visage</h2>
+    <div class="divider"></div>
+    <p>Une peau douce, lisse et lumineuse — Homme &amp; Femme</p>
+  </div>
+  <div class="products">
+    <div class="product-card">
+      <div class="img-wrap"><img src="photos/retouchees/soin-aurodhea-visage.jpg" alt="Soin Visage Collagène" loading="lazy"></div>
+      <div class="info">
+        <span class="category-label">Visage</span>
+        <h3>Crème Visage Collagène &amp; Acide Hyaluronique</h3>
+        <div class="brand">Aurodhea</div>
+        <div class="desc">+ Sérum gel tenseur anti-âge. Hydrate et repulpe la peau.</div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="img-wrap"><img src="photos/retouchees/soin-aurodhea-snail.jpg" alt="Soin Visage Bave d'Escargot" loading="lazy"></div>
+      <div class="info">
+        <span class="category-label">Visage</span>
+        <h3>Coffret Soin Visage Bave d'Escargot</h3>
+        <div class="brand">Aurodhea</div>
+        <div class="desc">Gel nettoyant + Crème visage anti-âge + Contour des yeux + Masque vitamine C.</div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="img-wrap"><img src="photos/retouchees/soin-aurodhea-masque.jpg" alt="Masque Visage" loading="lazy"></div>
+      <div class="info">
+        <span class="category-label">Visage</span>
+        <h3>Masque Anti-Âge + Crème Argan</h3>
+        <div class="brand">Aurodhea</div>
+        <div class="desc">Masque raffermissant + Crème visage à l'huile d'argan. Réparation intense.</div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="img-wrap"><img src="photos/retouchees/soin-aurodhea-nettoyant.jpg" alt="Nettoyant Visage" loading="lazy"></div>
+      <div class="info">
+        <span class="category-label">Visage</span>
+        <h3>Routine Nettoyante</h3>
+        <div class="brand">Aurodhea</div>
+        <div class="desc">Lait démaquillant + Lotion tonique + Gel exfoliant. Peau nette et fraîche.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOINS HOMME -->
+<section id="soins-homme">
+  <div class="section-title">
+    <h2>Soins Homme</h2>
+    <div class="divider"></div>
+    <p>Le rituel beauté masculin</p>
+  </div>
+  <div class="products">
+    <div class="product-card">
+      <div class="img-wrap"><img src="photos/retouchees/soin-chogan-barbe.jpg" alt="Soin Barbe" loading="lazy"></div>
+      <div class="info">
+        <span class="category-label">Homme</span>
+        <h3>Coffret Soin Barbe</h3>
+        <div class="brand">Chogan &amp; Aurodhea Velobarba</div>
+        <div class="desc">Crème après-rasage parfumée + Crème à raser Velobarba.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OLFAZETA -->
+<section id="olfazeta">
+  <div class="section-title">
+    <h2>Olfazeta</h2>
+    <div class="divider"></div>
+    <p>La collection luxury d'extraits de parfum et soins</p>
+  </div>
+  <div class="products">
+    <div class="product-card">
+      <div class="img-wrap"><img src="photos/retouchees/parfum-olfazeta-luxe-noir.jpg" alt="Olfazeta Noir" loading="lazy"></div>
+      <div class="info">
+        <span class="category-label">Unisexe</span>
+        <h3>Olfazeta Luxury Noir</h3>
+        <div class="brand">Extrait de Parfum — 50 ml</div>
+        <div class="desc">Une fragrance intense et sophistiquée au flacon noir élégant.</div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="img-wrap"><img src="photos/retouchees/parfum-olfazeta-luxe-blanc.jpg" alt="Olfazeta Blanc" loading="lazy"></div>
+      <div class="info">
+        <span class="category-label">Unisexe</span>
+        <h3>Olfazeta Luxury Blanc</h3>
+        <div class="brand">Extrait de Parfum — 50 ml</div>
+        <div class="desc">Délicat et raffiné, un extrait de parfum d'une élégance pure.</div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="img-wrap"><img src="photos/retouchees/parfum-olfazeta-milky-musk.jpg" alt="Olfazeta Milky Musk" loading="lazy"></div>
+      <div class="info">
+        <span class="category-label">Femme</span>
+        <h3>Olfazeta Milky Musk</h3>
+        <div class="brand">Extrait de Parfum — 50 ml</div>
+        <div class="desc">Un musc lacté enveloppant, doux et sensuel.</div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="img-wrap"><img src="photos/retouchees/parfum-olfazeta-millesime.jpg" alt="Olfazeta Millésime" loading="lazy"></div>
+      <div class="info">
+        <span class="category-label">Unisexe</span>
+        <h3>Olfazeta Millésime</h3>
+        <div class="brand">Extrait de Parfum — 70 ml</div>
+        <div class="desc">Un grand cru olfactif, précieux et intemporel.</div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="img-wrap"><img src="photos/retouchees/soin-olfazeta-corps.jpg" alt="Soins Corps Olfazeta" loading="lazy"></div>
+      <div class="info">
+        <span class="category-label">Soins</span>
+        <h3>Soins Corps Olfazeta</h3>
+        <div class="brand">Luxury Collection</div>
+        <div class="desc">Gel douche parfumé + Lait corps + Huile d'amande douce.</div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="img-wrap"><img src="photos/retouchees/soin-olfazeta-bain.jpg" alt="Soins Bain Olfazeta" loading="lazy"></div>
+      <div class="info">
+        <span class="category-label">Soins</span>
+        <h3>Rituel du Bain</h3>
+        <div class="brand">Olfazeta</div>
+        <div class="desc">Huile d'amande douce + Gel douche + Lait corps — le rituel complet.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BABY -->
+<section id="baby">
+  <div class="section-title">
+    <h2>Bébé &amp; Enfants</h2>
+    <div class="divider"></div>
+    <p>Douceur et délicatesse pour les petits</p>
+  </div>
+  <div class="products">
+    <div class="product-card">
+      <div class="img-wrap"><img src="photos/retouchees/parfum-olfazeta-baby.jpg" alt="Parfum Bébé" loading="lazy"></div>
+      <div class="info">
+        <span class="category-label">Bébé</span>
+        <h3>Olfazeta Baby Eau de Parfum</h3>
+        <div class="brand">Parfum Naissance</div>
+        <div class="desc">Disponible en version petite fille (rose), petit garçon (bleu) &amp; naissance (jaune).</div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="img-wrap"><img src="photos/retouchees/coffret-olfazeta-baby.jpg" alt="Coffret Bébé" loading="lazy"></div>
+      <div class="info">
+        <span class="category-label">Bébé</span>
+        <h3>Coffret Bambino</h3>
+        <div class="brand">Olfazeta &amp; Aurodhea</div>
+        <div class="desc">Parfum naissance au choix + Lait corporel Baby Aurodhea pour peaux sensibles.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AMBIANCE -->
+<section id="ambiance">
+  <div class="section-title">
+    <h2>Parfums d'Ambiance</h2>
+    <div class="divider"></div>
+    <p>Embaumez votre intérieur</p>
+  </div>
+  <div class="products">
+    <div class="product-card">
+      <div class="img-wrap"><img src="photos/retouchees/parfum-ambiance-cooperativa.jpg" alt="Parfum d'Ambiance" loading="lazy"></div>
+      <div class="info">
+        <span class="category-label">Maison</span>
+        <h3>Parfum d'Ambiance</h3>
+        <div class="brand">Cooperativa Profumieri</div>
+        <div class="desc">Disponible en 100 ml, 200 ml, 500 ml, 1,5 L et 3 L. Plusieurs senteurs au choix.</div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="img-wrap"><img src="photos/retouchees/parfum-hugo-boss.jpg" alt="Hugo Boss" loading="lazy"></div>
+      <div class="info">
+        <span class="category-label">Homme</span>
+        <h3>Hugo Boss</h3>
+        <div class="brand">Millésime Extrait de Parfum — 100 ml</div>
+        <div class="desc">Une fragrance emblématique, intemporelle et élégante.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <h3>Chez Virginie</h3>
+  <p>Parfums, maquillage &amp; soins de qualité — Chogan, Olfazeta, Aurodhea &amp; plus</p>
+  <div class="contact">
+      <a href="https://wa.me/YOUR_NUMBER" target="_blank">📱 WhatsApp</a>
+      <a href="https://t.me/LionelJores" target="_blank">✈️ Telegram</a>
+    </div>
+  <p style="margin-top:20px;font-size:0.8rem;color:rgba(255,255,255,0.4)">© 2026 Chez Virginie — Tous droits réservés</p>
+</footer>
+
+<script>
+  // Smooth scroll & nav highlight
+  const nav = document.getElementById('nav');
+  const links = nav.querySelectorAll('a');
+  links.forEach(a => {
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      const id = a.getAttribute('href').substring(1);
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+      links.forEach(l => l.classList.remove('active'));
+      a.classList.add('active');
+    });
+  });
+
+  // Intersection observer for nav
+  const sections = document.querySelectorAll('section[id]');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        links.forEach(l => l.classList.remove('active'));
+        const active = document.querySelector(`nav a[href="#${entry.target.id}"]`);
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { threshold: 0.3 });
+  sections.forEach(s => observer.observe(s));
+</script>
+
+</body>
+</html>
